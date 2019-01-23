@@ -37,9 +37,4 @@ export default {
   font-size: 40px;
   font-family: 'frontmania';
 }
-
-@font-face {
-  font-family: 'frontmania';
-  src: url(~assets/fonts/frontmania-tape.woff2) format('woff2');
-}
 </style>
