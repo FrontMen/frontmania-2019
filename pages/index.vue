@@ -4,6 +4,8 @@
     <logo/>
     <div class="date">15th November, 2019</div>
     <div class="date">The Netherlands</div>
+
+    <nuxt-link to="/privacy">Privacy</nuxt-link>
   </section>
 </template>
 
