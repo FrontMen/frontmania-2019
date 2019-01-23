@@ -6,18 +6,9 @@
 
 <style scoped>
 img {
-  width: 400px;
-}
-
-@media screen and (min-width: 600px) {
-  img {
-    width: 600px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  img {
-    width: 900px;
-  }
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 150px;
 }
 </style>

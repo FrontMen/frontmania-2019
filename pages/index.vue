@@ -1,9 +1,9 @@
 <template>
-  <section class="container">
-    <fm-video/>
+  <section class="page-home">
+    <fm-slider :imgs="sliderImages"/>
     <logo/>
     <div class="date">15th November, 2019</div>
-    <div class="date">The Netherlands</div>
+    <div class="location">The Netherlands</div>
 
     <nuxt-link to="/privacy">Privacy</nuxt-link>
   </section>
@@ -11,36 +11,60 @@
 
 <script>
 import Logo from '~/components/Logo.vue'
-import FmVideo from '~/components/Video.vue'
+import FmSlider from '~/components/Slider.vue'
 
 export default {
   components: {
     Logo,
-    FmVideo
+    FmSlider
+  },
+  data() {
+    return {
+      sliderImages: [
+        '/images/slider/1.png',
+        '/images/slider/2.png',
+        '/images/slider/3.png',
+        '/images/slider/4.png',
+        '/images/slider/5.png',
+        '/images/slider/6.png'
+      ]
+    }
   }
 }
 </script>
 
 <style lang="scss">
-.container {
+.page-home {
+  @include dead-centered();
+
+  color: white;
   margin: 0 auto;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   flex-direction: column;
-  color: white;
 }
 
 a {
   color: white;
-  text-decoration: none;
   margin-top: 10px;
 }
 
-.date {
-  font-size: 40px;
+.date,
+.location {
+  font-size: 70px;
   font-family: 'frontmania';
+}
+
+.location {
+  font-size: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .date {
+    font-size: 100px;
+  }
+
+  .location {
+    font-size: 40px;
+  }
 }
 </style>
