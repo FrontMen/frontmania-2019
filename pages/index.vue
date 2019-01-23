@@ -21,7 +21,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 .container {
   margin: 0 auto;
   min-height: 100vh;
@@ -30,10 +30,16 @@ export default {
   align-items: center;
   text-align: center;
   flex-direction: column;
+  color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  margin-top: 10px;
 }
 
 .date {
-  color: white;
   font-size: 40px;
   font-family: 'frontmania';
 }
