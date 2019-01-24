@@ -4,6 +4,7 @@
     <logo/>
     <div class="date">15th November, 2019</div>
     <div class="location">The Netherlands</div>
+    <fm-video/>
 
     <nuxt-link to="/privacy">Privacy</nuxt-link>
   </section>
@@ -11,12 +12,14 @@
 
 <script>
 import Logo from '~/components/Logo.vue'
+import FmVideo from '~/components/Video.vue'
 import FmSlider from '~/components/Slider.vue'
 
 export default {
   components: {
     Logo,
-    FmSlider
+    FmSlider,
+    FmVideo
   },
   data() {
     return {
