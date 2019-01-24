@@ -5,21 +5,14 @@
         <video
           ref="videoEl"
           class="video-player"
-          src="~assets/videos/aftermovie.mp4"
+          src="/videos/aftermovie.mp4"
           poster="/images/poster.jpg"
           preload="auto"
           @canplaythrough="allowPlay = true"
           @endded="hide"
-        >
-          <source
-            src="~assets/videos/aftermovie.mp4"
-            type="video/mp4; codecs='avc1.4D401E, mp4a.40.2'"
-          >
-          <p>Sorry, but your browser does not support this video format.</p>
-        </video>
+        />
         <button class="action action--close" @click="hide">
           <i class="fa fa-times"/>
-          <span class="action__label action__label--hidden">Close</span>
         </button>
       </div>
     </div>
@@ -46,7 +39,7 @@ export default {
   },
   methods: {
     play() {
-      this.$refs.videoEl.currentTime = 0
+      this.$refs.videoEl.currentTime = 1
       this.playing = true
       setTimeout(() => this.$refs.videoEl.play(), 600)
     },
@@ -103,11 +96,8 @@ export default {
 }
 
 .loader {
-  font-size: 2.5em;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate3d(-50%, -50%, 0);
+  @include dead-centered('position');
+  font-size: 40px;
 }
 
 .video-loaded .loader {
