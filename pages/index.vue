@@ -48,7 +48,6 @@ export default {
 
 a {
   color: white;
-  margin-top: 10px;
 }
 
 .date,

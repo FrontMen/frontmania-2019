@@ -21,11 +21,7 @@ export default {
 <style lang="scss" scoped>
 .fm-slideshow,
 .fm-slideshow:after {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
+  @include full-screen();
   z-index: -1;
 }
 
@@ -36,11 +32,8 @@ export default {
 }
 
 .fm-slideshow li span {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0px;
-  left: 0px;
+  @include cover-parent();
+
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: none;
