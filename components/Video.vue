@@ -25,7 +25,6 @@
 
       <template slot="default">
         <span v-if="allowPlay">Watch 2018 video</span>
-
         <span v-else>Loading...</span>
       </template>
     </fm-btn>
@@ -108,8 +107,8 @@ export default {
   position: absolute;
   font-size: 100px;
   z-index: 1000;
-  top: 30px;
-  right: 30px;
+  top: 10px;
+  right: 0px;
   width: 60px;
   height: 60px;
   padding: 0;
@@ -117,6 +116,11 @@ export default {
   outline: none;
   transition: transform 0.3s, opacity 0.3s;
   transform: scale3d(0.7, 0.7, 1);
+
+  @include media('>=tablet') {
+    top: 20px;
+    right: 20px;
+  }
 }
 
 .video-wrap--show .action--close {

@@ -17,6 +17,8 @@ export default {
 
 <style lang="scss">
 .app__content {
-  margin-left: 360px;
+  @include media('>=tablet') {
+    margin-left: $sidebar-width;
+  }
 }
 </style>

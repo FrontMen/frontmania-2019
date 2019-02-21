@@ -24,20 +24,30 @@ export default {
 
 <style scoped lang="scss">
 .fm-sidebar {
-  position: fixed;
-  height: 100vh;
-  width: 360px;
+  position: relative;
+  width: 100%;
   background-color: black;
   text-align: center;
   padding: 50px 0;
+
+  @include media('>=tablet') {
+    position: fixed;
+    width: 360px;
+    height: 100vh;
+  }
 }
 
 .fm-sidebar__info {
-  position: absolute;
   color: white;
   padding: 0 32px;
   bottom: 50px;
-  text-align: left;
+  text-align: center;
+  margin-top: 50px;
+
+  @include media('>=tablet') {
+    text-align: left;
+    position: absolute;
+  }
 
   p {
     margin-bottom: 24px;

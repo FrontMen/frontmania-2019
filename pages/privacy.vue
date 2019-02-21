@@ -87,13 +87,13 @@
 
 <style scoped lang="scss">
 .page-privacy {
+  padding: 32px;
   background: black;
   color: white;
-  padding-top: 32px;
 }
 
 article {
-  width: 1000px;
+  width: 100%;
   margin: 0 auto;
 }
 

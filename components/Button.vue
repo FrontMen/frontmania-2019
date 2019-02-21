@@ -1,42 +1,38 @@
 <template>
   <button @click="$emit('click')">
     <div class="btn__icon">
-      <slot name="icon"></slot>
+      <slot name="icon"/>
     </div>
 
     <span class="btn__text">
-      <slot></slot>
+      <slot/>
     </span>
   </button>
 </template>
 
 <script>
 export default {
-  name: 'FmBtn',
-  props: {
-    icon: {
-      type: String,
-      default: ''
-    }
-  }
+  name: 'FmBtn'
 }
 </script>
 
 <style scoped lang="scss">
 button {
   appearance: none;
-  width: 400px;
+  width: 100%;
   height: 96px;
   display: flex;
   align-items: center;
   background-color: #ffed00;
   font: normal bold 24px/1 GTAmericaMono;
   letter-spacing: 1px;
-  text-align: center;
   color: #000000;
   text-transform: uppercase;
-  transform: rotate(-10deg);
   padding: 0 30px;
+
+  @include media('>=tablet') {
+    width: 400px;
+  }
 }
 
 .btn__icon {

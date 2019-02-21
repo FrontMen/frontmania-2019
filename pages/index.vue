@@ -1,6 +1,6 @@
 <template>
   <section class="page-home">
-    <fm-slider :imgs="sliderImages"/>
+    <fm-slider class="slider" :imgs="sliderImages"/>
     <div class="date">15.11.19</div>
     <svg
       class="decor"
@@ -47,38 +47,59 @@ export default {
 <style lang="scss">
 .page-home {
   display: flex;
-  height: 100vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @include media('>=tablet') {
+    height: 100vh;
+  }
+}
+
+.slider {
+  display: none;
+
+  @include media('>=tablet') {
+    display: block;
+  }
 }
 
 .decor {
-  width: 400px;
+  max-width: 80%;
 
-  @include tablet {
-    width: 500px;
+  @include media('>=tablet') {
+    max-width: 90%;
   }
 
-  @include desktop {
-    width: auto;
+  @include media('>=1300px') {
+    max-width: 100%;
   }
 }
 
 .call-2-action {
   position: relative;
 
-  @include desktop {
+  @include media('>=tablet') {
+    top: -60px;
+    left: 45px;
+    transform: rotate(-10deg);
+  }
+
+  @include media('>=desktop') {
     top: -25px;
     left: 45px;
+    transform: rotate(-10deg);
   }
 }
 
 .date {
   position: relative;
-  top: -21px;
-  left: -138px;
   font: normal 300 60px / normal GTAmericaMono;
   color: #ffed00;
+
+  @include media('>=desktop') {
+    top: -21px;
+    left: -138px;
+  }
 }
 </style>
