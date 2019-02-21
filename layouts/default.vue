@@ -1,19 +1,22 @@
 <template>
-  <div>
-    <nuxt/>
+  <div class="app">
+    <fm-sidebar/>
+    <div class="app__content">
+      <nuxt/>
+    </div>
   </div>
 </template>
 
-<style>
-html {
-  font-family: 'Avenir Next', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
+<script>
+import FmSidebar from '@/components/Sidebar'
+
+export default {
+  components: { FmSidebar }
+}
+</script>
+
+<style lang="scss">
+.app__content {
+  margin-left: 360px;
 }
 </style>

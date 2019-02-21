@@ -1,7 +1,7 @@
 <template>
   <ul class="fm-slideshow">
     <li v-for="(img, index) in imgs" :key="index">
-      <span :style="{ backgroundImage: `url(${img})` }"/>
+      <span :style="{ backgroundImage: `url(${img})` }" />
     </li>
   </ul>
 </template>

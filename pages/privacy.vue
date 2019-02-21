@@ -112,7 +112,7 @@ h2 {
     content: '';
     position: relative;
     width: 20%;
-    border-bottom: 2px solid #00ff00;
+    border-bottom: 2px solid #ffed00;
     display: block;
     top: 5px;
   }
