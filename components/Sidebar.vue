@@ -63,7 +63,7 @@ export default {
   }
 
   a {
-    color: #ffed00;
+    color: var(--accent-color);
   }
 
   p,

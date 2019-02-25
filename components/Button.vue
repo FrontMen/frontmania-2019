@@ -23,7 +23,7 @@ button {
   height: 96px;
   display: flex;
   align-items: center;
-  background-color: #ffed00;
+  background-color: var(--accent-color);
   font: normal bold 24px/1 GTAmericaMono;
   letter-spacing: 1px;
   color: #000000;

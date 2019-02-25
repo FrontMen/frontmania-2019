@@ -1,5 +1,6 @@
 <template>
   <div class="app">
+    <fm-theme/>
     <fm-sidebar/>
     <div class="app__content">
       <nuxt/>
@@ -8,10 +9,10 @@
 </template>
 
 <script>
+import FmTheme from '@/components/Theme'
 import FmSidebar from '@/components/Sidebar'
-
 export default {
-  components: { FmSidebar }
+  components: { FmSidebar, FmTheme }
 }
 </script>
 

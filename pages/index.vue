@@ -95,7 +95,7 @@ export default {
 .date {
   position: relative;
   font: normal 300 60px / normal GTAmericaMono;
-  color: #ffed00;
+  color: var(--accent-color);
 
   @include media('>=desktop') {
     top: -21px;
