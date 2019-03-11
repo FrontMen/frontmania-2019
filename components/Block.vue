@@ -19,6 +19,12 @@ export default {
 
   @include media('>=tablet') {
     padding: 65px;
+    width: 85%;
+  }
+
+  @include media('>=desktop') {
+    width: 75%;
+    max-width: 940px;
   }
 }
 </style>

@@ -2,9 +2,9 @@
   <section class="page-home">
     <fm-slider class="slider" :imgs="sliderImages"/>
     <fm-block>
-      <fm-row event="Frontmania Pubquiz" date="28.03.2019" venue="venue" location="veghel"></fm-row>
-      <fm-row event="meetup" date="28.03.2019" venue="venue" location="veghel"></fm-row>
-      <fm-row event="Frontmania Conference" date="28.03.2019" venue="venue" location="veghel"></fm-row>
+      <div v-for="event in fmEvents" :key="event.id" :v-if="fmEvents.length">
+        <fm-row :event="event"/>
+      </div>
     </fm-block>
   </section>
 </template>
@@ -22,6 +22,32 @@ export default {
   },
   data() {
     return {
+      fmEvents: [
+        {
+          id: '001',
+          eventName: 'Frontmania Pubquiz',
+          date: '28.03.2019',
+          venue: 'Jumbo Foodmarkt',
+          location: 'Veghel',
+          buttonAngle: '2.25'
+        },
+        {
+          id: '002',
+          eventName: 'meetup',
+          date: '28.03.2019',
+          venue: 'Rabobank',
+          location: 'Utrecht',
+          buttonAngle: '-1.50'
+        },
+        {
+          id: '003',
+          eventName: 'Frontmania Conference',
+          date: '28.03.2019',
+          venue: 'Pand Noord',
+          location: 'Amsterdam',
+          buttonAngle: '1.75'
+        }
+      ],
       sliderImages: [
         '/images/slider/1.jpg',
         '/images/slider/2.jpg',
