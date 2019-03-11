@@ -7,12 +7,14 @@
 <script>
 export default {
   name: 'FmFancyLink',
-  props: ['href', 'angle'],
+  props: ['href', 'themeColor', 'angle'],
 
   computed: {
     linkStyle: props => {
       const angle = props.angle
-      return `transform: rotate(${angle}deg)`
+      const themeColor = props.themeColor || '#ffed00'
+
+      return `transform: rotate(${angle}deg); background-color: ${themeColor}`
     }
   }
 }
@@ -27,7 +29,7 @@ export default {
   font-weight: 300;
   font-size: 18px;
   letter-spacing: 1px;
-  color: #000000;
+  color: #fff;
   text-transform: uppercase;
   padding: 2px 8px;
   text-align: center;

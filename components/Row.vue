@@ -6,7 +6,11 @@
       <div class="section-row__column section-row__venue">{{event.venue}}</div>
       <div class="section-row__column section-row__location">{{event.location}}</div>
       <div class="section-row__column section-row__call-to-action">
-        <FmFancyLink href="#" :angle="event.buttonAngle">See event details</FmFancyLink>
+        <FmFancyLink
+          :href="event.href"
+          :themeColor="event.themeColor"
+          :angle="event.buttonAngle"
+        >{{event.linkText}}</FmFancyLink>
       </div>
     </div>
   </div>
@@ -22,10 +26,13 @@ export default {
   props: {
     event: {
       eventName: String,
+      linkText: String,
+      href: String,
       date: String,
       venue: String,
       location: String,
-      buttonAngle: String
+      buttonAngle: String,
+      themeColor: String
     }
   }
 }
@@ -55,6 +62,7 @@ export default {
   @include media('>=desktop') {
     width: 100%;
     flex-direction: row;
+    border-bottom: 1px solid #fff;
   }
 
   @include media('>=xl') {
@@ -81,6 +89,10 @@ export default {
   &__location,
   &__venue {
     flex-basis: 33%;
+
+    @include media('>=desktop') {
+      text-align: center;
+    }
   }
 
   &__date {
@@ -94,6 +106,11 @@ export default {
   &__call-to-action {
     border-top: none;
     flex-wrap: wrap;
+
+    @include media('>=xl') {
+      width: 245px;
+      flex-shrink: 0;
+    }
   }
 }
 </style>

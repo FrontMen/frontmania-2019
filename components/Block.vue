@@ -13,7 +13,7 @@ export default {
 <style scoped lang="scss">
 .fm-block {
   position: relative;
-  padding: 45px;
+  padding: 0 24px;
   background-color: black;
   color: #fff;
 
