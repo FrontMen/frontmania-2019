@@ -1,15 +1,17 @@
 <template>
   <div class="fm-sidebar">
     <nuxt-link to="/">
-      <fm-logo/>
+      <fm-logo />
     </nuxt-link>
 
     <div class="fm-sidebar__info">
       <p>FrontMania is a group of people who are crazy about frontend development a.k.a. frontend maniacs.</p>
       <p>We as a group believe that frontend development should be fun for everyone!</p>
 
-      <span class="divider"/>
-      <nuxt-link to="/privacy" class="link__privacy">PRIVACY POLICY</nuxt-link>
+      <span class="divider" />
+      <nuxt-link to="/privacy" class="link__privacy">
+        PRIVACY POLICY
+      </nuxt-link>
     </div>
   </div>
 </template>
