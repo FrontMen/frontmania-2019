@@ -1,11 +1,11 @@
 <template>
   <button @click="$emit('click')">
     <div class="btn__icon">
-      <slot name="icon"/>
+      <slot name="icon" />
     </div>
 
     <span class="btn__text">
-      <slot/>
+      <slot />
     </span>
   </button>
 </template>

@@ -10,7 +10,9 @@
           @canplaythrough="allowPlay = true"
           @endded="hide"
         />
-        <button class="action action--close" @click="hide">˟</button>
+        <button class="action action--close" @click="hide">
+          ˟
+        </button>
       </div>
     </div>
     <fm-btn class="call-2-action" @click="play">
@@ -19,13 +21,17 @@
           <path
             fill-rule="evenodd"
             d="M5.352.875l-.969 4.13L.268 6.04l10.27 40.934 5.753-1.444.583.688 1.399-1.185.497-.124-.061-.244 30.044-25.44-.52-.613 1.709-7.278L5.352.875zm4.841 9.852l27.772 6.513-21.557 18.253-6.215-24.766z"
-          ></path>
+          />
         </svg>
       </template>
 
       <template slot="default">
-        <span v-if="allowPlay">Watch 2018 video</span>
-        <span v-else>Loading...</span>
+        <span v-if="allowPlay">
+          Watch 2018 video
+        </span>
+        <span v-else>
+          Loading...
+        </span>
       </template>
     </fm-btn>
   </div>

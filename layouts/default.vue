@@ -1,8 +1,8 @@
 <template>
   <div class="app">
-    <fm-sidebar/>
+    <fm-sidebar />
     <div class="app__content">
-      <nuxt/>
+      <nuxt />
     </div>
   </div>
 </template>

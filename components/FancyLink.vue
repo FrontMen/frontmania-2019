@@ -1,20 +1,31 @@
 <template>
-  <a :href="href" class="fm-fancy-link" v-bind:style="linkStyle">
-    <slot></slot>
-  </a>
+  <span>
+    <nuxt-link v-if="!isExternal" :to="to" class="fm-fancy-link" :style="linkStyle">
+      <slot/>
+    </nuxt-link>
+    <a v-else :href="to" class="fm-fancy-link" :style="linkStyle" target="_blank" rel="noopener">
+      <slot/>
+    </a>
+  </span>
 </template>
 
 <script>
 export default {
   name: 'FmFancyLink',
-  props: ['href', 'themeColor', 'angle'],
-
+  props: {
+    to: String,
+    themeColor: String,
+    angle: String
+  },
   computed: {
     linkStyle: props => {
       const angle = props.angle
       const themeColor = props.themeColor || '#ffed00'
 
       return `transform: rotate(${angle}deg); background-color: ${themeColor}`
+    },
+    isExternal() {
+      return this.to.startsWith('http')
     }
   }
 }
