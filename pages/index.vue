@@ -43,7 +43,7 @@ export default {
           date: '15.11.2019',
           venue: 'Croeselaan 18',
           location: 'Utrecht',
-          buttonAngle: '1.25',
+          buttonAngle: '-1.25',
           themeColor: '#13a538'
         }
       ],
