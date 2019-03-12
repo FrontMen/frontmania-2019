@@ -30,30 +30,19 @@ export default {
           linkText: 'See event details',
           href: 'https://www.meetup.com',
           date: '28.03.2019',
-          venue: 'Jumbo Foodmarkt',
-          location: 'Veghel',
+          venue: 'Claude Debussylaan 2',
+          location: 'Amsterdam',
           buttonAngle: '1.5',
           themeColor: '#e4032e'
         },
         {
           id: '002',
-          eventName: 'meetup',
-          linkText: 'See event details',
-          href: 'https://www.meetup.com',
-          date: '28.03.2019',
-          venue: 'Rabobank',
-          location: 'Utrecht',
-          buttonAngle: '-1.15',
-          themeColor: '#ea5297'
-        },
-        {
-          id: '003',
           eventName: 'Frontmania Conference',
           linkText: 'Get tickets',
           href: '/conference',
-          date: '28.03.2019',
-          venue: 'Pand Noord',
-          location: 'Amsterdam',
+          date: '15.11.2019',
+          venue: 'Croeselaan 18',
+          location: 'Utrecht',
           buttonAngle: '1.25',
           themeColor: '#13a538'
         }
