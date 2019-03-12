@@ -28,7 +28,7 @@ export default {
           id: '001',
           eventName: 'Frontmania Pubquiz',
           linkText: 'See event details',
-          href: 'https://www.meetup.com',
+          href: 'https://www.meetup.com/FrontMania/events/259185705/',
           date: '28.03.2019',
           venue: 'Claude Debussylaan 2',
           location: 'Amsterdam',
