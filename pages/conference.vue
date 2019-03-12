@@ -1,6 +1,5 @@
 <template>
   <section class="page-home">
-    <fm-slider class="slider" :imgs="sliderImages"/>
     <div class="date">15.11.19</div>
     <svg
       class="decor"
@@ -21,25 +20,11 @@
 </template>
 
 <script>
-import FmSlider from '~/components/Slider.vue'
 import FmVideo from '~/components/Video.vue'
 
 export default {
   components: {
-    FmVideo,
-    FmSlider
-  },
-  data() {
-    return {
-      sliderImages: [
-        '/images/slider/1.jpg',
-        '/images/slider/2.jpg',
-        '/images/slider/3.jpg',
-        '/images/slider/4.jpg',
-        '/images/slider/5.jpg',
-        '/images/slider/6.jpg'
-      ]
-    }
+    FmVideo
   }
 }
 </script>
