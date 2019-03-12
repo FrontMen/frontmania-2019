@@ -1,6 +1,5 @@
 <template>
   <section class="page-home">
-    <fm-slider class="slider" :imgs="sliderImages"/>
     <h1 class="events-header">Events</h1>
     <fm-block>
       <div v-for="event in fmEvents" :key="event.id" :v-if="fmEvents.length">
@@ -11,14 +10,12 @@
 </template>
 
 <script>
-import FmSlider from '~/components/Slider.vue'
 import FmBlock from '~/components/Block.vue'
 import FmRow from '~/components/Row.vue'
 
 export default {
   components: {
     FmBlock,
-    FmSlider,
     FmRow
   },
   data() {
@@ -46,14 +43,6 @@ export default {
           buttonAngle: '-1.25',
           themeColor: '#13a538'
         }
-      ],
-      sliderImages: [
-        '/images/slider/1.jpg',
-        '/images/slider/2.jpg',
-        '/images/slider/3.jpg',
-        '/images/slider/4.jpg',
-        '/images/slider/5.jpg',
-        '/images/slider/6.jpg'
       ]
     }
   }

@@ -21,6 +21,27 @@ module.exports = {
         integrity:
           'sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/',
         crossorigin: 'anonymous'
+      },
+      {
+        rel: 'preload',
+        href: '/fonts/frontmania-tape.woff2',
+        as: 'font',
+        type: 'font/woff2',
+        crossorigin: 'anonymous'
+      },
+      {
+        rel: 'preload',
+        href: '/fonts/GT-America-Mono-Light.woff2',
+        as: 'font',
+        type: 'font/woff2',
+        crossorigin: 'anonymous'
+      },
+      {
+        rel: 'preload',
+        href: '/fonts/GT-America-Mono-Bold.woff2',
+        as: 'font',
+        type: 'font/woff2',
+        crossorigin: 'anonymous'
       }
     ]
   },
