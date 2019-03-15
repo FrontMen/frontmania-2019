@@ -34,13 +34,25 @@ export default {
         },
         {
           id: '002',
+          eventName: 'Frontmania Pubquiz',
+          linkText: 'See event details',
+          href:
+            'https://www.meetup.com/Building-an-e-commerce-platform-withTypeScript-React-GraphQL/events/259723732/?joinRsvpYes=true',
+          date: '16.04.2019',
+          venue: 'Kramp Groep Breukelaarweg 33 ',
+          location: 'Varsseveld',
+          buttonAngle: '1.5',
+          themeColor: '#ea5297'
+        },
+        {
+          id: '003',
           eventName: 'Frontmania Conference',
           linkText: 'Get tickets',
           href: '/conference',
           date: '15.11.2019',
           venue: 'Croeselaan 18',
           location: 'Utrecht',
-          buttonAngle: '-1.25',
+          buttonAngle: '0',
           themeColor: '#13a538'
         }
       ]

@@ -15,6 +15,7 @@
     "cm": "git-cz"
   },
   "dependencies": {
+    "@nuxtjs/google-analytics": "^2.2.0",
     "@nuxtjs/pwa": "^2.6.0",
     "cross-env": "^5.2.0",
     "lity": "^2.3.1",
