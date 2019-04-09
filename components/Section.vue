@@ -29,6 +29,7 @@ export default {
   align-items: center;
   background-repeat: no-repeat;
   background-size: cover;
+  min-height: 100vh;
 }
 
 .fm-section.is-peek {

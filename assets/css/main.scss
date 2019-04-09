@@ -51,10 +51,10 @@ $colors: (
 
 @each $color, $hex in $colors {
   .#{ $color } {
-    background-color: $hex;
+    background-color: $hex !important;
   }
 
   .#{ $color }--text {
-    color: $hex;
+    color: $hex !important;
   }
 }

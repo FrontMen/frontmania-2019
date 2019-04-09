@@ -75,10 +75,12 @@ export default {
   pointer-events: none;
   display: flex;
   align-items: center;
+  opacity: 0;
 }
 
 .video-wrap--show {
   pointer-events: auto;
+  opacity: 1;
 }
 
 .video-inner {

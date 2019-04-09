@@ -3,7 +3,8 @@
     <h1 class="events-header">
       Events
     </h1>
-    <fm-slider />
+    <fm-slider :imgs="sliderImages" />
+
     <fm-block>
       <div v-for="event in fmEvents" :key="event.id" :v-if="fmEvents.length">
         <fm-row :event="event" />
@@ -13,8 +14,8 @@
 </template>
 
 <script>
-import FmRow from '~/components/Row.vue'
-import FmBlock from '~/components/Block.vue'
+import FmRow from '~/components/Home/Row.vue'
+import FmBlock from '~/components/Home/Block.vue'
 import FmSlider from '~/components/Slider.vue'
 
 export default {
@@ -38,17 +39,6 @@ export default {
           id: '001',
           eventName: 'Frontmania Pubquiz',
           linkText: 'See event details',
-          href: 'https://www.meetup.com/FrontMania/events/259185705/',
-          date: '28.03.2019',
-          venue: 'Claude Debussylaan 2',
-          location: 'Amsterdam',
-          buttonAngle: '1.5',
-          themeColor: '#e4032e'
-        },
-        {
-          id: '002',
-          eventName: 'Frontmania Pubquiz',
-          linkText: 'See event details',
           href:
             'https://www.meetup.com/Building-an-e-commerce-platform-withTypeScript-React-GraphQL/events/259723732/?joinRsvpYes=true',
           date: '16.04.2019',
@@ -58,7 +48,7 @@ export default {
           themeColor: '#ea5297'
         },
         {
-          id: '003',
+          id: '002',
           eventName: 'Frontmania Conference',
           linkText: 'Get tickets',
           href: '/conference',
