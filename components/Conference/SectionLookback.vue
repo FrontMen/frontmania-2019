@@ -1,5 +1,5 @@
 <template>
-  <fm-section class="py-32" background="/images/bg-pink.png">
+  <fm-section background="/images/bg-pink.png">
     <div class="blue">
       <div class="flex flex-wrap items-center">
         <div class="w-full xl:w-1/2 sm:text-center mb-4 px-6 pt-8">
