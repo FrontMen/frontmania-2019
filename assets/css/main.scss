@@ -1,3 +1,5 @@
+@import '_tailwind';
+
 @font-face {
   font-family: 'frontmania';
   src: url(/fonts/frontmania-tape.woff2) format('woff2');
@@ -29,4 +31,30 @@ html {
 body {
   background: black;
   min-width: 320px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.8px;
+}
+
+$colors: (
+  red: #e4032e,
+  black: #000000,
+  yellow: #ffed00,
+  green: #13a538,
+  blue: #00afcb,
+  white: #ffffff,
+  pink: #ea5297
+);
+
+@each $color, $hex in $colors {
+  .#{ $color } {
+    background-color: $hex;
+  }
+
+  .#{ $color }--text {
+    color: $hex;
+  }
 }

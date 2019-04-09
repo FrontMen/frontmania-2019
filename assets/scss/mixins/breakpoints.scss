@@ -1,8 +1,8 @@
 $breakpoints: (
-  'phone': 320px,
+  'phone': 576px,
   'tablet': 768px,
-  'desktop': 1024px,
-  'xl': 1280px
+  'desktop': 992px,
+  'xl': 1200px
 ) !default;
 
 $media-expressions: (
