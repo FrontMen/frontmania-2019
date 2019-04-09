@@ -3,6 +3,7 @@
     <nuxt-link v-if="!isExternal" :to="to" class="fm-fancy-link" :style="linkStyle">
       <slot/>
     </nuxt-link>
+
     <a
       v-else
       :href="to"

@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import FmFancyLink from '~/components/FancyLink.vue'
+import FmFancyLink from '~/components/Home/FancyLink.vue'
 export default {
   name: 'FmBlock',
   components: {
