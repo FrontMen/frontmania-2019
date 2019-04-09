@@ -1,17 +1,15 @@
 <template>
   <fm-section background="/images/bg-blue.png">
-    <div class="flex px-4 py-10 white block--main">
-      <img class="h-32" src="/images/fm-logo.png" alt="">
+    <div class="flex px-4 md:px-8 white block--main">
+      <img class="w-1/2 sm:w-1/3 xl:w-1/4 h-auto object-contain" src="/images/fm-logo.png" alt="">
     </div>
 
-    <div class="yellow py-5">
-      <div class="flex items-center h-32">
-        <p class="w-3/4 pl-8 text-center">
-          <img class="h-24" src="~/assets/images/sponsors.svg" alt="">
-        </p>
+    <div class="yellow flex flex-wrap items-center p-4 md:p-8">
+      <p class="w-full sm:w-1/2 xl:w-3/4 sm:pr-4 text-center">
+        <img class="h-24" src="~/assets/images/sponsors.svg" alt="">
+      </p>
 
-        <p class="w-1/4 pr-10">A shout out to our sponsors</p>
-      </div>
+      <p class="w-full sm:w-1/2 xl:w-1/4 sm:pl-4">A shout out to our sponsors!</p>
     </div>
   </fm-section>
 </template>
@@ -23,3 +21,9 @@ export default {
   components: { FmSection }
 }
 </script>
+
+<style lang="scss" scoped>
+img {
+  object-fit: contain;
+}
+</style>
