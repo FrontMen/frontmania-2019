@@ -1,5 +1,5 @@
 <template>
-  <div class="fm-section p-4" :class="{'is-peek': peek}" :style="`background-image: url(${ background })`">
+  <div class="fm-section p-4 sm:py-16 md:py-20 lg:py-8 xl:py-32" :class="{'is-peek': peek}" :style="`background-image: url(${ background })`">
     <div class="fm-section__content">
       <slot />
     </div>
@@ -21,7 +21,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .fm-section {
   display: flex;
   flex-direction: column;
@@ -29,15 +29,11 @@ export default {
   align-items: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
 
-  @include media('>=tablet') {
-    min-height: 100vh;
-
-    &.is-peek {
-      min-height: 80vh;
-      max-height: 80vh;
-    }
-  }
+.fm-section.is-peek {
+  max-height: 85vh;
+  height: 85vh;
 }
 
 .fm-section__content {
