@@ -1,25 +1,38 @@
 <template>
   <section class="page-home">
-    <h1 class="events-header">Events</h1>
+    <h1 class="events-header">
+      Events
+    </h1>
+    <fm-slider />
     <fm-block>
       <div v-for="event in fmEvents" :key="event.id" :v-if="fmEvents.length">
-        <fm-row :event="event"/>
+        <fm-row :event="event" />
       </div>
     </fm-block>
   </section>
 </template>
 
 <script>
-import FmBlock from '~/components/Block.vue'
 import FmRow from '~/components/Row.vue'
+import FmBlock from '~/components/Block.vue'
+import FmSlider from '~/components/Slider.vue'
 
 export default {
   components: {
+    FmRow,
     FmBlock,
-    FmRow
+    FmSlider
   },
   data() {
     return {
+      sliderImages: [
+        '/images/slider/1.jpg',
+        '/images/slider/2.jpg',
+        '/images/slider/3.jpg',
+        '/images/slider/4.jpg',
+        '/images/slider/5.jpg',
+        '/images/slider/6.jpg'
+      ],
       fmEvents: [
         {
           id: '001',

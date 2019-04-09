@@ -192,4 +192,20 @@ export default {
     transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 0deg);
   }
 }
+
+.call-2-action {
+  position: relative;
+
+  @include media('>=tablet') {
+    top: -60px;
+    left: 45px;
+    transform: rotate(-10deg);
+  }
+
+  @include media('>=desktop') {
+    top: -25px;
+    left: 45px;
+    transform: rotate(-10deg);
+  }
+}
 </style>

@@ -1,18 +1,26 @@
 <template>
-  <button @click="$emit('click')">
-    <div class="btn__icon">
+  <button :class="[ size ]" @click="$emit('click')">
+    <div v-if="$slots.icon" class="btn__icon">
       <slot name="icon" />
     </div>
+    
+    <slot />
 
-    <span class="btn__text">
-      <slot />
-    </span>
+    <div v-if="$slots.icon_append" class="btn__icon">
+      <slot name="icon_append" />
+    </div>
   </button>
 </template>
 
 <script>
 export default {
-  name: 'FmBtn'
+  name: 'FmBtn',
+  props: {
+    size: {
+      type: String,
+      default: 'large'
+    }
+  }
 }
 </script>
 
@@ -30,8 +38,24 @@ button {
   text-transform: uppercase;
   padding: 0 30px;
 
-  @include media('>=tablet') {
-    width: 400px;
+  &.large {
+    width: 100%;
+    height: 96px;
+
+    @include media('>=tablet') {
+      width: 400px;
+    }
+  }
+
+  &.medium {
+    width: 100%;
+    height: 64px;
+    font-size: 20px;
+    padding: 0 16px;
+
+    @include media('>=tablet') {
+      width: 328px;
+    }
   }
 }
 
