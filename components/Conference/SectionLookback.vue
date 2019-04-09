@@ -1,93 +1,89 @@
 <template>
   <fm-section class="py-32" background="/images/bg-pink.png">
-    <div class="red py-3">
-      <div class="flex items-center h-32">
-        <div class="w-1/2 p-8">
-          <svg xmlns="http://www.w3.org/2000/svg" width="337" height="91" viewBox="0 0 337 91">
-            <path fill="#FFED00" fill-rule="evenodd" d="M318.92 10.974l.115-.974L337 12.355l-.786 6.596-14.991-1.965-1.66 16.54h14.798v6.647h-15.466l-1.163 11.587 18.191-1.734.574 6.619-24.7 2.355-.313-3.604-.484-.053.257-2.564-.034-.398.075-.007 4.193-41.78 3.428.38zM5.374 7.323L5.765 4 23.61 6.373l-.78 6.646-14.446-1.92-1.917 50.996 18.432-3.486L26 65.204 5.926 69l-.376-2.245L0 66.519l2.23-59.33 3.145.134zm38.22 16.71L31.307 25.18l-1.555 22.319 15.474 1.586-1.63-25.05zm6.142-3.99L52 54.844l-3.414.233-.09.922-22.629-2.32.093-.954-2.96-.217 1.862-26.729-.65.06-.579-6.52L48.525 17l.275 3.106.937-.064zm27.34 28.912V4.916H84v60.168h-5.915L74.75 66 62.69 23.744l1.68 41.205-6.917.27L55 5.053l6.32-.248L64.247 4l12.83 44.955zM122.35 33.07l.649 6.654-21.031 2.157-1.45 49.12L94 90.797l2.212-74.857-.968.09-.59-6.66L120.07 7l.59 6.66-17.906 1.67-.586 19.81 20.183-2.07zm33.017-20.168l-18.96-1.968 1.08 25.775h15.945v6.597h-15.67l.777 18.542 16.828-1.748.632 6.564L133.49 69l-.531-5.508-.708.032L130 9.763l2.947-.134L133.49 4 156 6.337l-.632 6.564zM176.147 0l19.021 2.4-.71 5.736 3.64.282-2.378 31.194-3.346-.26v5.786h-4.555L205 88.485 198.77 91l-18.178-45.862h-3.005l-.882 23.139-6.705-.26 2.378-62.388 3.057.119.712-5.748zm2.887 7.189l-1.189 31.177h11.24l2.257-29.625-12.308-1.552zm89.042 38.386V4H275v64.87h-6.924v-1.852l-13.52-39.723L252.92 69l-6.92-.26 2.453-62.468 6.919.261-.06 1.537 12.764 37.505zm23.471-34.908l1.776 49.02 17.346 1.675L310.1 68l-24.472-2.362.569-6.638.82.079L285 3.397l6.274-.256.029.78L309.769 0 311 6.537l-19.453 4.13zm-71.95 51.219l16.097-.776.306 6.835L214.114 69l-.262-5.842H213V4.97h3.59l.118-.97 18.7 2.424-.818 6.79-14.993-1.944v21.797h13.064v6.842h-13.064v21.977z"/>
-          </svg>
+    <div class="blue">
+      <div class="flex flex-wrap items-center">
+        <div class="w-full xl:w-1/2 sm:text-center mb-4 px-6 pt-8">
+          <img src="~/assets/images/conference.svg">
         </div>
 
-        <div class="w-1/2">
-          <p class="text-white">
+        <div class="yellow w-full xl:w-1/2 p-4 sm:p-8 xl:pl-0 xl:pr-4 xl:bg-transparent black--text xl:text-white">
+          <p>
             Last year was our first Frontmania and what a party it was. But don't take our word for it, here are some interesting facts about last year.
           </p>
         </div>
       </div>
     </div>
 
-    <div class="flex">
-      <div class="w-1/2 black square">
-        <div class="square__content flex flex-col justify-center items-center ">
-          <img src="~/assets/images/t-shirt.svg">
+    <div class="flex flex-wrap">
+      <div class="w-full sm:w-1/2 black flex flex-col justify-center items-center p-4 pt-12">
+        <img class="px-16" src="~/assets/images/t-shirt.svg">
 
-          <div class="ml-8 self-start">
-            <div class="divider mt-12" />
-            <div class="flex">
-              <span class="num blue--text mr-4">
-                205
-              </span>
-              <span class="label white--text">
-                CUSTOM T-SHIRT DESIGNS
-              </span>
+        <div class="w-full self-start">
+          <div class="flex flex-wrap mt-10">
+            <div class="w-full sm:w-2/5 num blue--text mb-4 sm:text-4xl">
+              <div class="divider w-12 h-2 sm:mb-8" />
+              205
+              <div class="divider w-12 h-2 sm:hidden" />
+            </div>
+
+            <div class="w-full sm:w-3/5 sm:mt-10 label white--text sm:text-lg">
+              CUSTOM T-SHIRT DESIGNS
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="w-full sm:w-1/2 yellow flex flex-col justify-center items-center p-4 pt-12">
+        <img class="px-16" src="~/assets/images/person.svg">
+
+        <div class="w-full self-start">
+          <div class="flex flex-wrap mt-10">
+            <div class="w-full sm:w-2/5 num red--text mb-4 sm:text-4xl">
+              <div class="divider w-12 h-2 sm:mb-8" />
+              325
+              <div class="divider w-12 h-2 sm:hidden" />
+            </div>
+
+            <div class="w-full sm:w-3/5 sm:mt-10 label black--text sm:text-lg">
+              ENTHUSIASTIC FRONTMANIACS
             </div>
           </div>
         </div>
       </div>
 
-      <div class="w-1/2 yellow square">
-        <div class="square__content flex flex-col justify-center items-center">
-          <img src="~/assets/images/person.svg">
+      <div class="w-full sm:w-1/2 blue flex flex-col justify-center items-center p-4 pt-12">
+        <img class="px-16" src="~/assets/images/phone.svg">
 
-          <div class="ml-8 self-start">
-            <div class="divider mt-12" />
-            <div class="flex">
-              <span class="num red--text mr-4">
-                325
-              </span>
-              <span class="label black--text">
-                ENTHUSIASTIC FRONTMANIACS
-              </span>
+        <div class="w-full self-start">
+          <div class="flex flex-wrap mt-10">
+            <div class="w-full sm:w-2/5 num yellow--text mb-4 sm:text-4xl">
+              <div class="divider w-12 h-2 sm:mb-8" />
+              42
+              <div class="divider w-12 h-2 sm:hidden" />
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="flex">
-      <div class="w-1/2 blue square">
-        <div class="square__content flex flex-col justify-center items-center ">
-          <img src="~/assets/images/phone.svg">
-
-          <div class="ml-8 self-start">
-            <div class="divider mt-12" />
-            <div class="flex">
-              <span class="num yellow--text mr-4">
-                42
-              </span>
-              <span class="label white--text">
-                INSPIRING
-                <br>
-                SPEAKERS
-              </span>
+            <div class="w-full sm:w-3/5 sm:mt-10 label white--text sm:text-lg">
+              INSPIRING
+              <br>
+              SPEAKERS
             </div>
           </div>
         </div>
       </div>
 
-      <div class="w-1/2 green square">
-        <div class="square__content flex flex-col justify-center items-center ">
-          <img src="~/assets/images/right.svg">
+      <div class="w-full sm:w-1/2 green flex flex-col justify-center items-center p-4 pt-12">
+        <img class="px-16" src="~/assets/images/right.svg">
 
-          <div class="ml-8 self-start">
-            <div class="divider mt-12" />
-            <div class="flex">
-              <span class="num white--text mr-4">
-                123
-              </span>
-              <span class="label white--text">
-                OTHER AWESOME THINGS
-              </span>
+        <div class="w-full self-start">
+          <div class="flex flex-wrap mt-10">
+            <div class="w-full sm:w-2/5 num white--text mb-4 sm:text-4xl">
+              <div class="divider w-12 h-2 sm:mb-8" />
+              123
+              <div class="divider w-12 h-2 sm:hidden" />
+            </div>
+
+            <div class="w-full sm:w-3/5 sm:mt-10 label white--text sm:text-lg">
+              OTHER AWESOME THINGS
             </div>
           </div>
         </div>
@@ -105,31 +101,30 @@ export default {
 </script>
 
 <style lang="scss">
-.square {
-  position: relative;
-  width: 100%;
+// .square {
+//   position: relative;
+//   width: 100%;
 
-  &:before {
-    content: '';
-    display: block;
-    padding-top: 100%;
-  }
-}
+//   &:before {
+//     content: '';
+//     display: block;
+//     padding-top: 100%;
+//   }
+// }
 
-.square__content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-}
+// .square__content {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   bottom: 0;
+//   right: 0;
+// }
 
 .divider {
   display: block;
   height: 8px;
   width: 64px;
   background: #fff;
-  margin-bottom: 10px;
 }
 
 .num {
