@@ -1,3 +1,4 @@
+const map = require('lodash/map')
 /*
 
 Tailwind - The Utility-First CSS Framework
@@ -489,6 +490,7 @@ module.exports = {
     '32': '8rem',
     '48': '12rem',
     '64': '16rem',
+    '75': '18.75rem',
     '90': '22.5rem',
     '1/2': '50%',
     '1/3': '33.33333%',
@@ -937,7 +939,24 @@ module.exports = {
     require('tailwindcss/plugins/container')({
       // center: true,
       // padding: '1rem',
-    })
+    }),
+    function({ e, addUtilities }) {
+      const angles = {
+        '1/4': '90deg',
+        '1/2': '180deg',
+        '3/4': '270deg'
+      }
+
+      const rotateUtilities = map(angles, (value, key) => {
+        return {
+          [`.${e(`rotate-${key}`)}`]: {
+            transform: `rotate(${value})`
+          }
+        }
+      })
+
+      addUtilities(rotateUtilities)
+    }
   ],
 
   /*

@@ -14,7 +14,7 @@
       </p>
 
       <div class="w-full md:w-1/2 p-4 md:p-8 lg:pl-4 xl:pl-8">
-        <fm-btn size="medium" class="w-full text-base">
+        <fm-btn tag="a" size="medium" class="w-full text-base" href="https://www.papercall.io/frontmania-2019">
           SUBMIT YOUR PAPER
         </fm-btn>
       </div>
