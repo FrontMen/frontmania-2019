@@ -1,5 +1,5 @@
 <template>
-  <div class="fm-menu flex flex-wrap -mx-2 mt-12">
+  <div class="fm-menu flex flex-wrap -mx-2">
     <div v-for="section in sections" :key="section.name" class="w-1/2 h-12 px-2 mb-2" @click="navigateTo(section)">
       <fm-btn
         :class="[section.active ? `bg-fm-black` : `bg-fm-${ section.color }`, `border-fm-${ section.color }`]"
@@ -30,6 +30,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-</style>

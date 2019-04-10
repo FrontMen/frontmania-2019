@@ -1,5 +1,17 @@
 <template>
   <section class="page-conference">
+    <fm-toolbar>
+      <template #contentTrigger>
+        <button class="text-fm-white appearance-none">menu</button>
+      </template>
+
+      <template #content>
+        <div class="bg-fm-black p-8">
+          <fm-navigation />
+        </div>
+      </template>
+    </fm-toolbar>
+
     <component
       :is="`Section${ section.name }`"
       v-for="section in sections"
@@ -12,6 +24,8 @@
 
 <script>
 import { mapActions, mapState } from 'vuex'
+import FmToolbar from '~/components/Toolbar.vue'
+import FmNavigation from '~/components/Navigation.vue'
 import SectionHome from '~/components/Conference/SectionHome.vue'
 import SectionPapercall from '~/components/Conference/SectionPapercall.vue'
 import SectionConference from '~/components/Conference/SectionConference.vue'
@@ -20,6 +34,8 @@ import SectionTickets from '~/components/Conference/SectionTickets.vue'
 
 export default {
   components: {
+    FmToolbar,
+    FmNavigation,
     SectionHome,
     SectionPapercall,
     SectionConference,

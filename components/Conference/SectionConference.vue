@@ -21,9 +21,9 @@
         <div class="w-full self-start">
           <div class="flex flex-wrap mt-10">
             <div class="w-full sm:w-2/5 num blue--text mb-4 sm:text-4xl">
-              <div class="divider w-12 h-2 sm:mb-8" />
+              <fm-divider medium class="sm:mb-8" />
               205
-              <div class="divider w-12 h-2 sm:hidden" />
+              <fm-divider medium class="sm:hidden" />
             </div>
 
             <div class="w-full sm:w-3/5 sm:mt-10 label white--text sm:text-lg">
@@ -39,9 +39,9 @@
         <div class="w-full self-start">
           <div class="flex flex-wrap mt-10">
             <div class="w-full sm:w-2/5 num red--text mb-4 sm:text-4xl">
-              <div class="divider w-12 h-2 sm:mb-8" />
+              <fm-divider medium class="sm:mb-8" />
               325
-              <div class="divider w-12 h-2 sm:hidden" />
+              <fm-divider medium class="sm:hidden" />
             </div>
 
             <div class="w-full sm:w-3/5 sm:mt-10 label black--text sm:text-lg">
@@ -57,9 +57,9 @@
         <div class="w-full self-start">
           <div class="flex flex-wrap mt-10">
             <div class="w-full sm:w-2/5 num yellow--text mb-4 sm:text-4xl">
-              <div class="divider w-12 h-2 sm:mb-8" />
+              <fm-divider medium class="sm:mb-8" />
               42
-              <div class="divider w-12 h-2 sm:hidden" />
+              <fm-divider medium class="sm:hidden" />
             </div>
 
             <div class="w-full sm:w-3/5 sm:mt-10 label white--text sm:text-lg">
@@ -72,14 +72,14 @@
       </div>
 
       <div class="w-full sm:w-1/2 green flex flex-col justify-center items-center p-4 pt-12">
-        <img class="px-16" src="~/assets/images/right.svg">
+        <img class="px-16" src="~/assets/images/hand-right.svg">
 
         <div class="w-full self-start">
           <div class="flex flex-wrap mt-10">
             <div class="w-full sm:w-2/5 num white--text mb-4 sm:text-4xl">
-              <div class="divider w-12 h-2 sm:mb-8" />
+              <fm-divider medium class=" sm:mb-8" />
               123
-              <div class="divider w-12 h-2 sm:hidden" />
+              <fm-divider medium class="sm:hidden" />
             </div>
 
             <div class="w-full sm:w-3/5 sm:mt-10 label white--text sm:text-lg">
@@ -94,39 +94,14 @@
 
 <script>
 import FmSection from '~/components/Section.vue'
+import FmDivider from '~/components/Divider.vue'
 
 export default {
-  components: { FmSection }
+  components: { FmSection, FmDivider }
 }
 </script>
 
 <style lang="scss">
-// .square {
-//   position: relative;
-//   width: 100%;
-
-//   &:before {
-//     content: '';
-//     display: block;
-//     padding-top: 100%;
-//   }
-// }
-
-// .square__content {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   bottom: 0;
-//   right: 0;
-// }
-
-.divider {
-  display: block;
-  height: 8px;
-  width: 64px;
-  background: #fff;
-}
-
 .num {
   font-size: 60px;
   font-weight: bold;

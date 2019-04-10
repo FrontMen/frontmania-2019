@@ -1,5 +1,5 @@
 <template functional>
-  <svg xmlns="http://www.w3.org/2000/svg" width="240" height="139" viewBox="0 0 240 139">
+  <svg :class="[data.class, data.staticClass]" xmlns="http://www.w3.org/2000/svg" width="240" height="139" viewBox="0 0 240 139">
     <g fill="none" fill-rule="evenodd">
       <path fill="#FFED00" d="M4.413 0L0 63.115l220.57 15.423 4.413-63.115z" />
       <path
