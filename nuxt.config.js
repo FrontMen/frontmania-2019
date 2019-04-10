@@ -54,7 +54,7 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: ['ress', '@/assets/css/main.scss'],
+  css: ['@/assets/css/main.scss'],
 
   /*
   ** Plugins to load before mounting the App
@@ -65,10 +65,6 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
-    [
-      'nuxt-sass-resources-loader',
-      ['@/assets/scss/variables.scss', '@/assets/scss/mixins.scss']
-    ],
     [
       '@nuxtjs/google-analytics',
       {
@@ -86,6 +82,9 @@ module.exports = {
       plugins: {
         tailwindcss: './tailwind.js'
       }
+    },
+    styleResources: {
+      scss: './assets/scss/globals.scss'
     },
     /*
     ** You can extend webpack config here

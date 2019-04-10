@@ -1,14 +1,18 @@
-<template functional>
-  <span class="divider" />
+<template>
+  <div :class="[ size === 'large' ? 'w-16' : 'w-12' ]" class="bg-fm-white h-2 mb-2" />
 </template>
 
-
-<style scoped lang="scss">
-.divider {
-  display: block;
-  height: 8px;
-  width: 64px;
-  background: #fff;
-  margin-bottom: 10px;
+<script>
+export default {
+  name: 'FmDivider',
+  props: {
+    size: {
+      type: String,
+      default: 'large',
+      validator: size => {
+        return ['large', 'medium', 'small'].includes(size)
+      }
+    }
+  }
 }
-</style>
+</script>
