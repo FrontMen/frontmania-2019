@@ -10,14 +10,16 @@
         <p class="hidden sm:block text-4xl w-2/3">
           GET THEM WHILE THEY'RE HOT
         </p>
-        <a
-          class="w-1/2 bg-fm-pink mx-10 sm:mx-0 h-16 text-sm sm:text-lg font-bold flex items-center justify-center no-underline text-fm-black w-full sm:w-75"
+        <fm-btn
+          tag="a"
+          class="mx-10 sm:mx-0 h-16 text-sm sm:text-lg justify-center p-0 w-full sm:w-75"
+          color="bg-fm-pink"
           href="https://www.eventbrite.nl/e/tickets-frontmania-conference-2019-58636364946"
           rel="noopener noreferrer"
           target="_blank"
         >
           GET TICKETS FOR 2019
-        </a>
+        </fm-btn>
       </div>
     </div>
   </fm-section>
@@ -25,8 +27,9 @@
 
 <script>
 import FmSection from '~/components/Section.vue'
+import FmBtn from '~/components/Button.vue'
 
 export default {
-  components: { FmSection }
+  components: { FmSection, FmBtn }
 }
 </script>
