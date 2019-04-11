@@ -25,14 +25,8 @@ export default {
   },
   props: {
     event: {
-      eventName: String,
-      linkText: String,
-      href: String,
-      date: String,
-      venue: String,
-      location: String,
-      buttonAngle: String,
-      themeColor: String
+      type: Object,
+      required: true
     }
   }
 }
@@ -57,9 +51,9 @@ export default {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin: 0 0 18px;
+  margin: 0 0 16px;
 
-  @include media('>=desktop') {
+  @include media('>=tablet') {
     width: 100%;
     flex-direction: row;
     border-bottom: 1px solid #fff;
@@ -79,7 +73,7 @@ export default {
       border-top: none;
     }
 
-    @include media('>=desktop') {
+    @include media('>=tablet') {
       widh: auto;
       border-top: none;
       padding-right: 12px;
@@ -90,7 +84,7 @@ export default {
   &__venue {
     flex-basis: 33%;
 
-    @include media('>=desktop') {
+    @include media('>=tablet') {
       text-align: center;
     }
   }
@@ -98,7 +92,7 @@ export default {
   &__date {
     flex-grow: 0;
 
-    @include media('>=desktop') {
+    @include media('>=tablet') {
       width: 120px;
     }
   }

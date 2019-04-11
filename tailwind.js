@@ -942,16 +942,23 @@ module.exports = {
       // padding: '1rem',
     }),
     function({ e, addUtilities }) {
+      // 2,4,5,10,14,60
       const angles = {
-        '1/4': '90deg',
-        '1/2': '180deg',
-        '3/4': '270deg'
+        xs: '2deg',
+        s: '4deg',
+        m: '5deg',
+        l: '10deg',
+        xl: '14deg',
+        xxl: '60deg'
       }
 
       const rotateUtilities = map(angles, (value, key) => {
         return {
           [`.${e(`rotate-${key}`)}`]: {
             transform: `rotate(${value})`
+          },
+          [`.-${e(`rotate-${key}`)}`]: {
+            transform: `rotate(-${value})`
           }
         }
       })
