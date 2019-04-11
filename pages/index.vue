@@ -1,28 +1,46 @@
 <template>
-  <section class="page-home">
-    <h1 class="events-header">
-      Events
-    </h1>
+  <section class="flex items-center justify-center h-screen">
     <fm-slider :imgs="sliderImages" />
 
-    <fm-block>
-      <div v-for="event in fmEvents" :key="event.id" :v-if="fmEvents.length">
-        <fm-row :event="event" />
+    <fm-toolbar>
+      <template #contentTrigger>
+        <button class="text-fm-white appearance-none">menu</button>
+      </template>
+
+      <template #content>
+        <div class="bg-fm-white text-fm-black p-8">
+          <p class="mb-4">FrontMania is a group of people who are crazy about frontend development a.k.a. frontend maniacs.</p>
+          <p>We as a group believe that frontend development should be fun for everyone!</p>
+        </div>
+      </template>
+    </fm-toolbar>
+
+    <div class="flex flex-col p-4 xl:max-w-lg">
+      <div class="bg-fm-blue w-full py-4 items-center text-center font-bold text-fm-yellow">
+        EVENTS
       </div>
-    </fm-block>
+
+      <fm-block>
+        <div v-for="event in events" :key="event.id" :v-if="events.length">
+          <fm-row :event="event" />
+        </div>
+      </fm-block>
+    </div>
   </section>
 </template>
 
 <script>
 import FmRow from '~/components/Home/Row.vue'
-import FmBlock from '~/components/Home/Block.vue'
 import FmSlider from '~/components/Slider.vue'
+import FmToolbar from '~/components/Toolbar.vue'
+import FmBlock from '~/components/Home/Block.vue'
 
 export default {
   components: {
     FmRow,
     FmBlock,
-    FmSlider
+    FmSlider,
+    FmToolbar
   },
   data() {
     return {
@@ -34,7 +52,7 @@ export default {
         '/images/slider/5.jpg',
         '/images/slider/6.jpg'
       ],
-      fmEvents: [
+      events: [
         {
           id: '001',
           eventName: 'Frontmania Pubquiz',
@@ -65,17 +83,6 @@ export default {
 </script>
 
 <style lang="scss">
-.page-home {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  @include media('>=tablet') {
-    height: 100vh;
-  }
-}
-
 .events-header {
   display: block;
   text-indent: -9999px;
