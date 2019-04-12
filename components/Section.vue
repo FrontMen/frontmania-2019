@@ -4,7 +4,7 @@
     :class="{'is-peek': peek}" 
     :style="`background-image: url(${ background })`"
   >
-    <div class="fm-section__content max-w-full md:max-w-md xl:max-w-lg">
+    <div class="fm-section__content max-w-full md:max-w-md">
       <slot />
     </div>
   </div>
@@ -24,11 +24,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.fm-section__content {
-  @include media('>=desktop') {
-    max-width: 600px !important;
-  }
-}
-</style>

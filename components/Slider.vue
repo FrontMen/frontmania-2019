@@ -12,7 +12,16 @@ export default {
   props: {
     imgs: {
       type: Array,
-      required: true
+      default() {
+        return [
+          '/images/slider/1.jpg',
+          '/images/slider/2.jpg',
+          '/images/slider/3.jpg',
+          '/images/slider/4.jpg',
+          '/images/slider/5.jpg',
+          '/images/slider/6.jpg'
+        ]
+      }
     }
   }
 }

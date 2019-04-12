@@ -1,3 +1,7 @@
 {
-  "vetur.format.defaultFormatter.html": "prettier"
+  "vetur.format.defaultFormatter.html": "prettier",
+  "cSpell.words": [
+    "front",
+    "mania"
+  ]
 }
