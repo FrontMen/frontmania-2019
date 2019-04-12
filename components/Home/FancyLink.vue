@@ -1,13 +1,13 @@
 <template>
   <span>
-    <nuxt-link v-if="!isExternal" :to="to" class="fm-fancy-link" :style="linkStyle">
+    <nuxt-link v-if="!isExternal" :to="to" class="app-fancy-link" :style="linkStyle">
       <slot/>
     </nuxt-link>
 
     <a
       v-else
       :href="to"
-      class="fm-fancy-link"
+      class="app-fancy-link"
       :style="linkStyle"
       target="_blank"
       rel="noopener"
@@ -19,7 +19,7 @@
 
 <script>
 export default {
-  name: 'FmFancyLink',
+  name: 'AppFancyLink',
   props: {
     to: String,
     themeColor: String,
@@ -40,7 +40,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.fm-fancy-link {
+.app-fancy-link {
   display: block;
   align-items: center;
   background-color: #ffed00;

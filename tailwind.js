@@ -128,13 +128,13 @@ let colors = {
   'pink-lighter': '#ffbbca',
   'pink-lightest': '#ffebef',
 
-  'fm-red': '#e4032e',
-  'fm-black': '#000000',
-  'fm-yellow': '#ffed00',
-  'fm-green': '#13a538',
-  'fm-blue': '#00afcb',
-  'fm-white': '#ffffff',
-  'fm-pink': '#ea5297'
+  'app-red': '#e4032e',
+  'app-black': '#000000',
+  'app-yellow': '#ffed00',
+  'app-green': '#13a538',
+  'app-blue': '#00afcb',
+  'app-white': '#ffffff',
+  'app-pink': '#ea5297'
 }
 
 module.exports = {

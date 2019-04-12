@@ -38,23 +38,3 @@ p {
   line-height: 1.5;
   letter-spacing: 0.8px;
 }
-
-$colors: (
-  red: #e4032e,
-  black: #000000,
-  yellow: #ffed00,
-  green: #13a538,
-  blue: #00afcb,
-  white: #ffffff,
-  pink: #ea5297
-);
-
-@each $color, $hex in $colors {
-  .#{ $color } {
-    background-color: $hex !important;
-  }
-
-  .#{ $color }--text {
-    color: $hex !important;
-  }
-}

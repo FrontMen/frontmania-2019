@@ -1,27 +1,29 @@
 <template>
-  <div class="fm-row">
+  <div class="app-row">
     <h2 class="section-title">{{ event.eventName }}</h2>
     <div class="section-row">
       <div class="section-row__column section-row__date">{{ event.date }}</div>
       <div class="section-row__column section-row__venue">{{ event.venue }}</div>
       <div class="section-row__column section-row__location">{{ event.location }}</div>
       <div class="section-row__column section-row__call-to-action">
-        <FmFancyLink
+        <app-fancy-link
           :to="event.href"
           :theme-color="event.themeColor"
           :angle="event.buttonAngle"
-        >{{ event.linkText }}</FmFancyLink>
+        >
+          {{ event.linkText }}
+        </app-fancy-link>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import FmFancyLink from '~/components/Home/FancyLink.vue'
+import AppFancyLink from '~/components/Home/FancyLink.vue'
 export default {
-  name: 'FmBlock',
+  name: 'AppRow',
   components: {
-    FmFancyLink
+    AppFancyLink
   },
   props: {
     event: {
@@ -33,7 +35,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.fm-row {
+.app-row {
   margin-bottom: 32px;
 }
 

@@ -15,7 +15,7 @@
         </button>
       </div>
     </div>
-    <fm-btn class="call-2-action text-base sm:text-2xl p-4 h-auto sm:h-24" @click="play">
+    <app-btn class="call-2-action text-base sm:text-2xl p-4 h-auto sm:h-24" @click="play">
       <template slot="icon">
         <svg class="h-8" xmlns="http://www.w3.org/2000/svg" width="50" height="47" viewBox="0 0 50 47">
           <path
@@ -33,16 +33,13 @@
           Loading...
         </span>
       </template>
-    </fm-btn>
+    </app-btn>
   </div>
 </template>
 
 <script>
-import FmBtn from '~/components/Button'
-
 export default {
-  name: 'FmVideo',
-  components: { FmBtn },
+  name: 'AppVideo',
   data() {
     return {
       allowPlay: false,

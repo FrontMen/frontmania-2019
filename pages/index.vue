@@ -1,49 +1,45 @@
 <template>
   <section class="lg:flex items-center justify-center lg:h-screen">
-    <fm-slider />
+    <app-slider />
 
-    <fm-toolbar>
+    <app-toolbar>
       <template #contentTrigger>
-        <button class="text-fm-white appearance-none">
-          <img src="~/assets/images/svg/home/menu.svg" alt="menu">
+        <button class="text-app-white appearance-none">
+          <img src="~/assets/images/home/menu.svg" alt="menu">
         </button>
       </template>
 
       <template #content>
-        <div class="bg-fm-white text-fm-black p-4 sm:p-8">
+        <div class="bg-app-white text-app-black p-4 sm:p-8">
           <p class="mb-4">FrontMania is a group of people who are crazy about frontend development a.k.a. frontend maniacs.</p>
           <p>We as a group believe that frontend development should be fun for everyone!</p>
         </div>
       </template>
-    </fm-toolbar>
+    </app-toolbar>
 
     <div class="flex flex-col p-4 mt-20 lg:mt-0 xl:max-w-lg">
-      <div class="flex bg-fm-blue w-full pt-2 sm:pt-10 sm:pb-8 px-10 sm:px-20 sm:pb-4 items-center text-center font-bold text-fm-yellow">
-        <img class="mr-10 h-24 sm:h-48 w-auto " src="~/assets/images/svg/home/events.svg" alt="Events">
-        <img class="h-24 sm:h-48 w-auto" src="~/assets/images/svg/home/spraycan.svg" alt="Events icon">
+      <div class="flex bg-app-blue w-full pt-2 sm:pt-10 sm:pb-8 px-10 sm:px-20 sm:pb-4 items-center text-center font-bold text-app-yellow">
+        <img class="mr-10 h-24 sm:h-48 w-auto " src="~/assets/images/home/events.svg" alt="Events">
+        <img class="h-24 sm:h-48 w-auto" src="~/assets/images/home/spraycan.svg" alt="Events icon">
       </div>
 
-      <fm-block :v-if="events.length">
+      <app-block :v-if="events.length">
         <div v-for="event in events" :key="event.id">
-          <fm-row :event="event" />
+          <app-row :event="event" />
         </div>
-      </fm-block>
+      </app-block>
     </div>
   </section>
 </template>
 
 <script>
-import FmRow from '~/components/Home/Row.vue'
-import FmSlider from '~/components/Slider.vue'
-import FmToolbar from '~/components/Toolbar.vue'
-import FmBlock from '~/components/Home/Block.vue'
+import AppRow from '~/components/Home/Row.vue'
+import AppBlock from '~/components/Home/Block.vue'
 
 export default {
   components: {
-    FmRow,
-    FmBlock,
-    FmSlider,
-    FmToolbar
+    AppRow,
+    AppBlock
   },
   data() {
     return {
@@ -54,7 +50,7 @@ export default {
           linkText: 'See event details',
           href:
             'https://www.meetup.com/Building-an-e-commerce-platform-withTypeScript-React-GraphQL/events/259723732/?joinRsvpYes=true',
-          date: '16.04.2019',
+          date: '16.04',
           venue: 'Kramp Groep Breukelaarweg 33 ',
           location: 'Varsseveld',
           buttonAngle: '1.5',
@@ -65,7 +61,7 @@ export default {
           eventName: 'Frontmania Conference',
           linkText: 'Get tickets',
           href: '/conference',
-          date: '15.11.2019',
+          date: '15.11',
           venue: 'Croeselaan 18',
           location: 'Utrecht',
           buttonAngle: '0',
