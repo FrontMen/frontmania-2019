@@ -6,13 +6,13 @@
     class="flex items-center appearance-none no-underline uppercase text-fm-black"
     @click="onClick"
   >
-    <div v-if="$slots.icon" class="btn__icon">
+    <div v-if="$slots.icon" class="btn__icon mr-4">
       <slot name="icon" />
     </div>
 
     <slot />
 
-    <div v-if="$slots.icon_append" class="btn__icon">
+    <div v-if="$slots.icon_append" class="btn__icon ml-4">
       <slot name="icon_append" />
     </div>
   </component>
@@ -48,7 +48,7 @@ export default {
   },
   computed: {
     anchorAttrs() {
-      if (!this.tag === 'a') {
+      if (this.tag !== 'a') {
         return {}
       }
 
@@ -96,9 +96,5 @@ a {
       width: 328px;
     }
   }
-}
-
-.btn__icon {
-  margin-right: 18px;
 }
 </style>

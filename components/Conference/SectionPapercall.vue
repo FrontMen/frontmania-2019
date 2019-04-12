@@ -16,6 +16,10 @@
       <div class="w-full md:w-1/2 p-4 md:p-8 lg:pl-4 xl:pl-8">
         <fm-btn tag="a" size="medium" class="w-full text-base" href="https://www.papercall.io/frontmania-2019">
           SUBMIT YOUR PAPER
+
+          <template #icon_append>
+            <svg xmlns="http://www.w3.org/2000/svg" width="37" height="32" viewBox="0 0 37 32"><path d="M13.61 0v1.654h1.62v11.238h21.341v3.307h-22.96v-.482H11.99V3.307h-.823l-6.44 13.15-2.898-1.479L8.717.914l.3.154V0zm13.819 21.029h-9.143V17.37h9.143zm-10.058 2.119l7.785-1.205.444 3.366-7.784 1.205zm7.315 6.506L17.523 32l-1.066-3.14 7.163-2.346zM6.283 28.78h8.346V32H4.499v-.474L0 26.963l2.246-2.277z" fill="#1D1D1B" fill-rule="evenodd"/></svg>
+          </template>
         </fm-btn>
       </div>
     </div>

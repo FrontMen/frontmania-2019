@@ -2,7 +2,9 @@
   <section>
     <fm-toolbar>
       <template #contentTrigger>
-        <button class="text-fm-white appearance-none">menu</button>
+        <button class="text-fm-white appearance-none">
+          <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80"><path d="M58.875 16L20 18.287l.379 6.442 38.875-2.286zM20 43.024l38.875 2.287.379-6.443-38.875-2.287zm0 14.138l.38 6.442 38.874-2.286-.379-6.443z" fill="#FFF" fill-rule="evenodd"/></svg>
+        </button>
       </template>
 
       <template #content>
