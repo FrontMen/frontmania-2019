@@ -22,6 +22,7 @@
     "lodash": "^4.17.11",
     "nuxt": "^2.6.1",
     "nuxt-sass-resources-loader": "^2.0.5",
+    "portal-vue": "^2.0.1",
     "ress": "^1.2.2"
   },
   "devDependencies": {

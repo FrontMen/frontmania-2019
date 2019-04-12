@@ -1,5 +1,9 @@
 <template>
   <section>
+    <portal to="sidebar">
+      <app-navigation class="mt-12" />
+    </portal>
+
     <app-toolbar>
       <template #contentTrigger>
         <button class="text-app-white appearance-none">

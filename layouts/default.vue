@@ -1,13 +1,11 @@
 <template>
-  <div class="fm">
+  <div class="app">
     <div class="hidden lg:block fixed w-90 h-screen bg-app-black p-8 pt-12 text-center">
       <nuxt-link to="/">
         <app-logo />
       </nuxt-link>
 
-      <transition name="fade">
-        <app-navigation v-if="$route.name === 'conference'" class="mt-12" />
-      </transition>
+      <portal-target name="sidebar" />
 
       <div class="absolute pin-l pin-b text-app-white text-left px-8 pb-8">
         <p class="mb-6 text-base">
