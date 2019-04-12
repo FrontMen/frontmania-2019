@@ -54,7 +54,7 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: ['@/assets/css/main.scss'],
+  css: ['@/assets/scss/app.scss'],
 
   /*
   ** Plugins to load before mounting the App
@@ -84,7 +84,7 @@ module.exports = {
       }
     },
     styleResources: {
-      scss: './assets/scss/globals.scss'
+      scss: './assets/scss/helpers.scss'
     },
     /*
     ** You can extend webpack config here

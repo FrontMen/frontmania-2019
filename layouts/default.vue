@@ -5,7 +5,9 @@
         <app-logo />
       </nuxt-link>
 
-      <app-navigation v-if="$route.name === 'conference'" class="mt-12" />
+      <transition name="fade">
+        <app-navigation v-if="$route.name === 'conference'" class="mt-12" />
+      </transition>
 
       <div class="absolute pin-l pin-b text-app-white text-left px-8 pb-8">
         <p class="mb-6 text-base">

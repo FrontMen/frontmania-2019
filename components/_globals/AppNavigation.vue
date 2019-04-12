@@ -1,5 +1,5 @@
 <template>
-  <div class="app-menu flex flex-wrap -mx-2">
+  <div class="flex flex-wrap -mx-2">
     <div v-for="section in sections" :key="section.name" class="w-1/2 h-12 px-2 mb-2" @click="navigateTo(section)">
       <app-btn
         :color="section.color"

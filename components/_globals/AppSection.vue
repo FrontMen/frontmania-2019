@@ -4,7 +4,7 @@
     :class="{'is-peek': peek}"
     :style="`background-image: url(${ background })`"
   >
-    <div class="app-section__content max-w-full md:max-w-md">
+    <div class="max-w-full md:max-w-md">
       <slot />
     </div>
   </div>
