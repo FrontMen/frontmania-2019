@@ -1,36 +1,24 @@
 <template>
-  <fm-section background="/images/bg-yellow.png">
-    <div class="flex flex-wrap items-start justify-around red p-8 xl:py-16">
-      <svg class="w-full xl:w-1/2 mb-10" xmlns="http://www.w3.org/2000/svg" width="256" height="266" viewBox="0 0 256 266">
-        <path fill="#FFF" fill-rule="evenodd" d="M142.726 59.647L148.87 54l105.157 113.436-2.929 2.69 4.903 2.441-26.29 52.357-3.27-1.63-2.025 8.068-18.544-4.616-20.432 33.909-3.3-1.974-2.45 7.319-52.577-17.452.987-2.955h-9.444v-40.56l-34.449-8.574 1.037-4.131L76 188.032 130.89 70.91l-.192-.206.507-.468 6.136-13.092 5.385 2.503zM108.415 177.1L213 203.136l14.217-28.314-78.2-84.357-40.602 86.635zm34.971 50.893l27.41 9.097 9.996-16.588-37.406-9.312v16.803zM121 61.117l-47.561 40.356V175H49V95.646h12.22l-7.823-9.559L105.355 42 121 61.117zM78.62 0L95 18.435 29.253 76.9V184H4.6V75.088L0 69.914 78.62 0z"/>
-      </svg>
-
-      <svg class="w-full xl:w-1/2" xmlns="http://www.w3.org/2000/svg" width="345" height="304" viewBox="0 0 345 304"><g fill="#FFED00" fill-rule="evenodd"><path d="M285.8 12.454l-1.8.07 4.424 116.212 12.477-.485-1.81-47.545 12.265-1.377L332.8 179l12.2-2.68-21.168-98.39 11.335-1.274-.69-6.268h1.819V16.75h-1.82l.566-6.282L286.38 6l-.58 6.454zm10.965 7.166l27.046 2.484v43.134l-25.202 2.83-1.844-48.448zM1.202 13.576l2.991.3L0 199.714l12.544.287 1.68-74.434h40.953v-6.5l1.823-.073L52.554 7.036l-5.822.234.178-1.792L2.45 1 1.203 13.576zm15.513 1.561l23.698 2.388 3.79 95.401H14.509l2.206-97.789zm123.582-2.513l2.85.241L139 185.691l12.457.309 1.487-61.98 32.707-3.693-.688-6.295 6.207.55L200 11.348l-6.207-.55.517-6.31L141.33 0l-1.033 12.624zm15.288 1.295l31.46 2.665-7.846 91.726-25.949 2.93 2.335-97.321zM264 15.605L262.868 3l-48.7 4.486.374 4.166-3.542.139 4.427 116.608 1.816-.071V130h44.272v-12.658h-34.004l-1.732-45.647h35.736V59.037h-36.218L223.79 19.31zM78.72 1v1.845l-6.272-.226L68 128.289l12.544.452 1.543-43.64 26.795-3.379L112.486 129l12.514-.971-8.895-116.694-1.808.14V1H78.719zm5.896 12.667h19.08l4.223 55.41-25.377 3.202 2.074-58.612zm35.069 240.709l1.83-40.693h19.225l3.912 37.54-24.967 3.153zm31.623-43.015V201H115.72v1.847l-6.27-.288-4.45 98.866 12.543.575 1.564-34.77 26.86-3.391 3.547 34.044L162 296.554l-8.897-85.383-1.795.19z"/><path d="M48.817 175.68L38 176.082l4.488 121.332 6.736-.25.167 1.836 49.37-4.494-1.147-12.629-42.882 3.902-3.665-99.097H170V174H48.817zM181 180.49l4.549 117.384 1.866-.071V304H242v-12.742h-43.86L193.827 180zm73 115.98l6.414.234V303H315v-12.592h-47.926l4.303-113.942-12.828-.466z"/></g></svg>
+  <app-section background="/images/bg-yellow.png">
+    <div class="flex flex-wrap items-start justify-around bg-app-red p-8 xl:py-16">
+      <img class="w-full xl:w-1/2 mb-10" src="~/assets/images/conference/announcement.svg" alt="announcement">
+      <img class="w-full xl:w-1/2" src="~/assets/images/conference/papercall.svg" alt="for papercall">
     </div>
 
-    <div class="flex flex-wrap items-center white">
+    <div class="flex flex-wrap items-center bg-app-white">
       <p class="w-full md:w-1/2 p-4 md:p-8 lg:pr-4">
         Do you  have an awesome idea for a talk at our 2019 conference? We would love to hear from you.
       </p>
 
       <div class="w-full md:w-1/2 p-4 md:p-8 lg:pl-4 xl:pl-8">
-        <fm-btn tag="a" size="medium" class="w-full text-base" href="https://www.papercall.io/frontmania-2019">
+        <app-btn tag="a" size="medium" class="w-full text-base" href="https://www.papercall.io/frontmania-2019">
           SUBMIT YOUR PAPER
 
           <template #icon_append>
-            <svg xmlns="http://www.w3.org/2000/svg" width="37" height="32" viewBox="0 0 37 32"><path d="M13.61 0v1.654h1.62v11.238h21.341v3.307h-22.96v-.482H11.99V3.307h-.823l-6.44 13.15-2.898-1.479L8.717.914l.3.154V0zm13.819 21.029h-9.143V17.37h9.143zm-10.058 2.119l7.785-1.205.444 3.366-7.784 1.205zm7.315 6.506L17.523 32l-1.066-3.14 7.163-2.346zM6.283 28.78h8.346V32H4.499v-.474L0 26.963l2.246-2.277z" fill="#1D1D1B" fill-rule="evenodd"/></svg>
+            <img src="~/assets/images/conference/point-right.svg" alt="submit icon">
           </template>
-        </fm-btn>
+        </app-btn>
       </div>
     </div>
-  </fm-section>
+  </app-section>
 </template>
-
-<script>
-import FmBtn from '~/components/Button'
-import FmSection from '~/components/Section.vue'
-
-export default {
-  components: { FmSection, FmBtn }
-}
-</script>

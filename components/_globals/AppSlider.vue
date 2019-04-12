@@ -1,5 +1,5 @@
 <template>
-  <ul class="fm-slideshow">
+  <ul class="app-slideshow">
     <li v-for="(img, index) in imgs" :key="index">
       <span :style="{ backgroundImage: `url(${img})` }" />
     </li>
@@ -28,19 +28,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.fm-slideshow,
-.fm-slideshow:after {
+.app-slideshow,
+.app-slideshow:after {
   @include full-screen();
   z-index: -1;
 }
 
-.fm-slideshow:after {
+.app-slideshow:after {
   content: '';
   background: transparent url(~assets/images/pattern.png) repeat top left;
   z-index: 0;
 }
 
-.fm-slideshow li span {
+.app-slideshow li span {
   @include cover-parent();
 
   background-size: cover;
@@ -51,19 +51,19 @@ export default {
   animation: imageAnimation 36s linear infinite 0s;
 }
 
-.fm-slideshow li:nth-child(2) span {
+.app-slideshow li:nth-child(2) span {
   animation-delay: 6s;
 }
-.fm-slideshow li:nth-child(3) span {
+.app-slideshow li:nth-child(3) span {
   animation-delay: 12s;
 }
-.fm-slideshow li:nth-child(4) span {
+.app-slideshow li:nth-child(4) span {
   animation-delay: 18s;
 }
-.fm-slideshow li:nth-child(5) span {
+.app-slideshow li:nth-child(5) span {
   animation-delay: 24s;
 }
-.fm-slideshow li:nth-child(6) span {
+.app-slideshow li:nth-child(6) span {
   animation-delay: 30s;
 }
 

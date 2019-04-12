@@ -2,8 +2,8 @@
   <component
     :is="tag"
     v-bind="anchorAttrs"
-    :class="[ size, active ? 'bg-fm-black' : color, `border-fm-${color}` ]"
-    class="flex items-center appearance-none no-underline uppercase text-fm-black"
+    :class="[ size, active ? 'bg-app-black' : `bg-app-${color}`, `border-app-${color}` ]"
+    class="flex items-center appearance-none no-underline uppercase text-app-black"
     @click="onClick"
   >
     <div v-if="$slots.icon" class="btn__icon mr-4">
@@ -39,7 +39,7 @@ export default {
     },
     color: {
       type: String,
-      default: 'bg-fm-yellow'
+      default: 'yellow'
     },
     active: {
       type: Boolean,

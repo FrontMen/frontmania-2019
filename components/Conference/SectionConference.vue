@@ -1,12 +1,12 @@
 <template>
-  <fm-section background="/images/bg-pink.png">
-    <div class="blue">
+  <app-section background="/images/bg-pink.png">
+    <div class="bg-app-blue">
       <div class="flex flex-wrap items-center">
         <div class="w-full xl:w-1/2 sm:text-center mb-4 px-6 pt-8">
           <img src="~/assets/images/conference.svg">
         </div>
 
-        <div class="yellow w-full xl:w-1/2 p-4 sm:p-8 xl:pl-0 xl:pr-4 xl:bg-transparent black--text xl:text-white">
+        <div class="bg-app-yellow w-full xl:w-1/2 p-4 sm:p-8 xl:pl-0 xl:pr-4 xl:bg-transparent text-app-black xl:text-white">
           <p>
             Last year was our first Frontmania and what a party it was. But don't take our word for it, here are some interesting facts about last year.
           </p>
@@ -15,54 +15,54 @@
     </div>
 
     <div class="flex flex-wrap">
-      <div class="w-full sm:w-1/2 black flex flex-col justify-center items-center p-4 pt-12">
-        <img class="px-16" src="~/assets/images/t-shirt.svg">
+      <div class="w-full sm:w-1/2 bg-app-black flex flex-col justify-center items-center p-4 pt-12">
+        <img class="px-16" src="~/assets/images/conference/t-shirt.svg">
 
         <div class="w-full self-start">
           <div class="flex flex-wrap mt-10">
-            <div class="w-full sm:w-2/5 num blue--text mb-4 sm:text-4xl">
-              <fm-divider medium class="sm:mb-8" />
+            <div class="w-full sm:w-2/5 num text-app-blue mb-4 sm:text-4xl">
+              <app-divider medium class="sm:mb-8" />
               205
-              <fm-divider medium class="sm:hidden" />
+              <app-divider medium class="sm:hidden" />
             </div>
 
-            <div class="w-full sm:w-3/5 sm:mt-10 label white--text sm:text-lg">
+            <div class="w-full sm:w-3/5 sm:mt-10 label text-app-white sm:text-lg">
               CUSTOM T-SHIRT DESIGNS
             </div>
           </div>
         </div>
       </div>
 
-      <div class="w-full sm:w-1/2 yellow flex flex-col justify-center items-center p-4 pt-12">
-        <img class="px-16" src="~/assets/images/person.svg">
+      <div class="w-full sm:w-1/2 bg-app-yellow flex flex-col justify-center items-center p-4 pt-12">
+        <img class="px-16" src="~/assets/images/conference/person.svg">
 
         <div class="w-full self-start">
           <div class="flex flex-wrap mt-10">
-            <div class="w-full sm:w-2/5 num red--text mb-4 sm:text-4xl">
-              <fm-divider medium class="sm:mb-8" />
+            <div class="w-full sm:w-2/5 num text-app-red mb-4 sm:text-4xl">
+              <app-divider medium class="sm:mb-8" />
               325
-              <fm-divider medium class="sm:hidden" />
+              <app-divider medium class="sm:hidden" />
             </div>
 
-            <div class="w-full sm:w-3/5 sm:mt-10 label black--text sm:text-lg">
+            <div class="w-full sm:w-3/5 sm:mt-10 label text-app-black sm:text-lg">
               ENTHUSIASTIC FRONTMANIACS
             </div>
           </div>
         </div>
       </div>
 
-      <div class="w-full sm:w-1/2 blue flex flex-col justify-center items-center p-4 pt-12">
-        <img class="px-16" src="~/assets/images/phone.svg">
+      <div class="w-full sm:w-1/2 bg-app-blue flex flex-col justify-center items-center p-4 pt-12">
+        <img class="px-16" src="~/assets/images/conference/phone.svg">
 
         <div class="w-full self-start">
           <div class="flex flex-wrap mt-10">
-            <div class="w-full sm:w-2/5 num yellow--text mb-4 sm:text-4xl">
-              <fm-divider medium class="sm:mb-8" />
+            <div class="w-full sm:w-2/5 num text-app-yellow mb-4 sm:text-4xl">
+              <app-divider medium class="sm:mb-8" />
               42
-              <fm-divider medium class="sm:hidden" />
+              <app-divider medium class="sm:hidden" />
             </div>
 
-            <div class="w-full sm:w-3/5 sm:mt-10 label white--text sm:text-lg">
+            <div class="w-full sm:w-3/5 sm:mt-10 label text-app-white sm:text-lg">
               INSPIRING
               <br>
               SPEAKERS
@@ -71,35 +71,26 @@
         </div>
       </div>
 
-      <div class="w-full sm:w-1/2 green flex flex-col justify-center items-center p-4 pt-12">
+      <div class="w-full sm:w-1/2 bg-app-green flex flex-col justify-center items-center p-4 pt-12">
         <img class="px-16" src="~/assets/images/hand-right.svg">
 
         <div class="w-full self-start">
           <div class="flex flex-wrap mt-10">
-            <div class="w-full sm:w-2/5 num white--text mb-4 sm:text-4xl">
-              <fm-divider medium class=" sm:mb-8" />
+            <div class="w-full sm:w-2/5 num text-app-white mb-4 sm:text-4xl">
+              <app-divider medium class=" sm:mb-8" />
               123
-              <fm-divider medium class="sm:hidden" />
+              <app-divider medium class="sm:hidden" />
             </div>
 
-            <div class="w-full sm:w-3/5 sm:mt-10 label white--text sm:text-lg">
+            <div class="w-full sm:w-3/5 sm:mt-10 label text-app-white sm:text-lg">
               OTHER AWESOME THINGS
             </div>
           </div>
         </div>
       </div>
     </div>
-  </fm-section>
+  </app-section>
 </template>
-
-<script>
-import FmSection from '~/components/Section.vue'
-import FmDivider from '~/components/Divider.vue'
-
-export default {
-  components: { FmSection, FmDivider }
-}
-</script>
 
 <style lang="scss">
 .num {

@@ -1,5 +1,5 @@
 <template>
-  <div :class="[ size === 'large' ? 'w-16' : 'w-12' ]" class="bg-fm-white h-2 mb-2" />
+  <div :class="[ size === 'large' ? 'w-16' : 'w-12' ]" class="bg-app-white h-2 mb-2" />
 </template>
 
 <script>
