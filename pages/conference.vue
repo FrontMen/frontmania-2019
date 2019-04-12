@@ -1,5 +1,5 @@
 <template>
-  <section class="page-conference">
+  <section>
     <fm-toolbar>
       <template #contentTrigger>
         <button class="text-fm-white appearance-none">menu</button>
