@@ -1,7 +1,8 @@
 <template>
   <div
+    ref="section"
     :class="[heightClass]"
-    :style="`background-image: url(${ background })`"
+    :style="backgroundStyle"
     class="app-section flex flex-col justify-center items-center bg-no-repeat bg-cover"
   >
     <div v-if="$slots.call2Action" class="hidden sm:flex items-center justify-center w-full h-24">
@@ -21,6 +22,10 @@ export default {
       type: String,
       required: true
     },
+    lazy: {
+      type: Boolean,
+      default: true
+    },
     fullWidth: {
       type: Boolean,
       default: false
@@ -30,9 +35,35 @@ export default {
       default: false
     }
   },
+  data() {
+    return {
+      observer: null,
+      lazyload: this.lazy,
+      heightClass: this.peek ? 'min-h-screen-peek' : 'min-h-screen'
+    }
+  },
   computed: {
-    heightClass() {
-      return this.peek ? 'min-h-screen-peek' : 'min-h-screen'
+    backgroundStyle() {
+      return this.lazyload ? '' : `background-image: url(${this.background})`
+    }
+  },
+  mounted() {
+    if (this.lazyload) {
+      this.observer = new IntersectionObserver(this.onIntersection.bind(this))
+      this.observer.observe(this.$refs.section)
+    }
+  },
+  beforeDestroy() {
+    this.observer && this.observer.disconnect()
+  },
+  methods: {
+    onIntersection(changes) {
+      changes.forEach(change => {
+        if (this.lazyload && change.isIntersecting) {
+          this.lazyload = false
+          this.observer.unobserve(this.$refs.section)
+        }
+      })
     }
   }
 }
