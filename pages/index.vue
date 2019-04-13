@@ -19,8 +19,8 @@
 
     <div class="flex flex-col p-4 mt-20 lg:mt-0 xl:max-w-lg">
       <div class="flex bg-app-blue w-full pt-2 sm:pt-10 sm:pb-8 px-10 sm:px-20 sm:pb-4 items-center text-center font-bold text-app-yellow">
-        <img class="mr-10 h-24 sm:h-48 w-auto " src="~/assets/images/home/events.svg" alt="Upcoming Frontmania events">
-        <img class="h-24 sm:h-48 w-auto" src="~/assets/images/home/spraycan.svg" alt="Announcement icon">
+        <img class="mr-10 h-24 sm:h-48 w-auto " src="~/assets/images/home/events.svg" alt="Events">
+        <img class="h-24 sm:h-48 w-auto" src="~/assets/images/home/spraycan.svg" alt="Events icon">
       </div>
 
       <app-block :v-if="events.length">
