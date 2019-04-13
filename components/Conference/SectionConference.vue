@@ -1,5 +1,5 @@
 <template>
-  <app-section background="/images/bg-pink.png">
+  <app-section background="/images/bg-pink.jpg">
     <div class="bg-app-blue">
       <div class="flex flex-wrap items-center">
         <div class="w-full xl:w-1/2 sm:text-center mb-4 px-6 pt-8">

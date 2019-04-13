@@ -1,5 +1,5 @@
 <template>
-  <app-section background="/images/bg-yellow-green.png">
+  <app-section background="/images/bg-yellow-green.jpg">
     <div class="flex flex-col justify-center">
       <p class="text-4xl pl-4 sm:hidden">
         GET THEM WHILE THEY'RE HOT

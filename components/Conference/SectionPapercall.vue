@@ -1,5 +1,5 @@
 <template>
-  <app-section background="/images/bg-yellow.png">
+  <app-section background="/images/bg-yellow.jpg">
     <template #call2Action>
       <img src="~/assets/images/conference/point-down.svg" alt="scroll down">
     </template>
