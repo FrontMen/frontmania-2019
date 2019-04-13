@@ -1,5 +1,9 @@
 <template>
   <app-section background="/images/bg-yellow.png">
+    <template #call2Action>
+      <img src="~/assets/images/conference/point-down.svg" alt="scroll down">
+    </template>
+
     <div class="flex flex-wrap items-start justify-around bg-app-red p-8 xl:py-16">
       <img class="w-full xl:w-1/2 mb-10" src="~/assets/images/conference/announcement.svg" alt="announcement">
       <img class="w-full xl:w-1/2" src="~/assets/images/conference/papercall.svg" alt="for papercall">

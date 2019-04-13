@@ -13,7 +13,7 @@
         <app-btn
           tag="a"
           class="mx-10 sm:mx-0 h-16 text-sm sm:text-lg justify-center p-0 w-full sm:w-75"
-          color="bg-app-pink"
+          color="pink"
           href="https://www.eventbrite.nl/e/tickets-frontmania-conference-2019-58636364946"
           rel="noopener noreferrer"
           target="_blank"
