@@ -58,6 +58,8 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/pwa',
+    '@nuxtjs/style-resources',
     'nuxt-purgecss',
     [
       '@nuxtjs/google-analytics',
@@ -72,6 +74,10 @@ module.exports = {
     whitelistPatterns: [/^bg-app-/, /^border-app-/]
   },
 
+  styleResources: {
+    scss: ['~/assets/scss/helpers.scss']
+  },
+
   /*
   ** Build configuration
   */
@@ -81,9 +87,6 @@ module.exports = {
       plugins: {
         tailwindcss: './tailwind.js'
       }
-    },
-    styleResources: {
-      scss: './assets/scss/helpers.scss'
     },
     /*
     ** You can extend webpack config here
