@@ -1,6 +1,5 @@
 <template>
   <div
-    ref="section"
     :class="[heightClass]"
     :style="backgroundStyle"
     class="app-section flex flex-col justify-center items-center bg-no-repeat bg-cover"
@@ -9,7 +8,7 @@
       <slot name="call2Action" />
     </div>
 
-    <div class="max-w-full p-4 sm:py-16 md:py-20 lg:py-8 xl:py-32" :class="[ !fullWidth && 'md:max-w-md' ]">
+    <div ref="sectionContent" class="max-w-full p-4 sm:py-16 md:py-20 lg:py-8 xl:py-32" :class="[ !fullWidth && 'md:max-w-md' ]">
       <slot />
     </div>
   </div>
@@ -24,7 +23,7 @@ export default {
     },
     lazy: {
       type: Boolean,
-      default: true
+      default: false
     },
     fullWidth: {
       type: Boolean,
@@ -50,7 +49,7 @@ export default {
   mounted() {
     if (this.lazyload) {
       this.observer = new IntersectionObserver(this.onIntersection.bind(this))
-      this.observer.observe(this.$refs.section)
+      this.observer.observe(this.$refs.sectionContent)
     }
   },
   beforeDestroy() {
@@ -61,7 +60,7 @@ export default {
       changes.forEach(change => {
         if (this.lazyload && change.isIntersecting) {
           this.lazyload = false
-          this.observer.unobserve(this.$refs.section)
+          this.observer.unobserve(this.$refs.sectionContent)
         }
       })
     }
