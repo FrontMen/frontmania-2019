@@ -7,7 +7,7 @@
 
       <portal-target name="sidebar" />
 
-      <div class="absolute pin-l pin-b text-app-white text-left px-8 pb-8">
+      <div class="sidebar__text absolute pin-l pin-b text-app-white text-left px-8 pb-8">
         <p class="mb-6 text-base">
           FrontMania is a group of people who are crazy about frontend development a.k.a. frontend maniacs.
         </p>
@@ -28,3 +28,11 @@
     </div>
   </div>
 </template>
+
+<style lang="scss" scoped>
+@media screen and (max-height: 685px) {
+  .sidebar__text p {
+    display: none;
+  }
+}
+</style>
