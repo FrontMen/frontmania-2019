@@ -1,7 +1,8 @@
 <template>
   <app-section background="/images/bg-blue.jpg">
-    <div class="flex px-4 md:px-8 bg-app-white block--main">
-      <img class="w-1/2 sm:w-1/3 xl:w-1/4 h-auto object-contain" src="/images/app-logo.png" alt="">
+    <div class="flex items-center p-4 md:px-8 bg-app-white">
+      <img class="w-1/2 sm:w-1/3 w-auto" src="~/assets/images/sponsors/frontmen.svg" alt="Frontmen sponsor">
+      <img class="w-1/2 sm:w-1/3 w-auto" src="~/assets/images/sponsors/rabobank.svg" alt="Rabobank sponsor">
     </div>
 
     <div class="bg-app-yellow flex flex-wrap items-center p-4 sm:p-8">
@@ -17,5 +18,6 @@
 <style lang="scss" scoped>
 img {
   object-fit: contain;
+  max-height: 120px;
 }
 </style>
