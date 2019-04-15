@@ -77,6 +77,13 @@ a {
   font: normal bold 24px/1 GTAmericaMono;
   padding: 0 30px;
 
+  &:hover,
+  &:focus {
+    animation: vibrationMania 0.8s cubic-bezier(0.4, 0.05, 0.2, 0.9) both;
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+
   &.large {
     width: 100%;
     height: 96px;
@@ -95,6 +102,29 @@ a {
     @include media('>=tablet') {
       width: 328px;
     }
+  }
+}
+
+@keyframes vibrationMania {
+  10%,
+  90% {
+    transform: rotate(2deg);
+  }
+
+  20%,
+  80% {
+    transform: rotate(-2deg);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: rotate(2deg);
+  }
+
+  40%,
+  60% {
+    transform: rotate(-2deg);
   }
 }
 </style>
