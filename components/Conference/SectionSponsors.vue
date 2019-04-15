@@ -1,8 +1,13 @@
 <template>
   <app-section background="/images/bg-blue.jpg">
     <div class="flex items-center p-4 md:px-8 bg-app-white">
-      <img class="w-1/2 sm:w-1/3 w-auto" src="~/assets/images/sponsors/frontmen.svg" alt="Frontmen sponsor">
-      <img class="w-1/2 sm:w-1/3 w-auto" src="~/assets/images/sponsors/rabobank.svg" alt="Rabobank sponsor">
+      <a class="w-1/2 sm:w-1/3 w-auto text-center" href="https://frontmen.nl" target="_blank" rel="noopener noreferrer" title="to Frontmen website">
+        <img src="~/assets/images/sponsors/frontmen.svg" alt="Frontmen sponsor">
+      </a>
+
+      <a class="w-1/2 sm:w-1/3 w-auto text-center" href="https://www.rabobank.nl" target="_blank" rel="noopener noreferrer" title="to Rabobank website">
+        <img src="~/assets/images/sponsors/rabobank.svg" alt="Rabobank sponsor">
+      </a>
     </div>
 
     <div class="bg-app-yellow flex flex-wrap items-center p-4 sm:p-8">
