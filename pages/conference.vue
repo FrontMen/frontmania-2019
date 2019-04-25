@@ -50,6 +50,11 @@ export default {
       observer: null
     }
   },
+  async asyncData ({ req, res }) {
+    return {
+      host: process.server ? req.headers.host : window.location.host
+    }
+  },
   computed: {
     ...mapState('conference', ['sections']),
 
@@ -84,15 +89,17 @@ export default {
       })
     }
   },
-  head: {
-    meta: [
-      { name: 'twitter:card', content: 'summary_large_image' },
-      { name: 'twitter:site', content: '@frontmania' },
-      { name: 'twitter:title', content: 'Frontmania 2019 Conference' },
-      { name: 'twitter:description', content: 'Come and be part of great Frontmania Conference!' },
-      { name: 'twitter:image', content: (process.env.URL || process.env.DEPLOY_PRIME_URL) + twitterCardImage },
-      { name: 'twitter:image:alt', content: 'Frontmania 2019' }
-    ]
+  head() {
+    return {
+      meta: [
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:site', content: '@frontmania' },
+        { name: 'twitter:title', content: 'Frontmania 2019 Conference' },
+        { name: 'twitter:description', content: 'Come and be part of great Frontmania Conference!' },
+        { name: 'twitter:image', content: `https://${this.host}${twitterCardImage}` },
+        { name: 'twitter:image:alt', content: 'Frontmania 2019' }
+      ]
+    }
   }
 }
 </script>
