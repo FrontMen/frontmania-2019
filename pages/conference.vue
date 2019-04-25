@@ -35,7 +35,7 @@ import SectionPapercall from '~/components/Conference/SectionPapercall.vue'
 import SectionConference from '~/components/Conference/SectionConference.vue'
 import SectionSponsors from '~/components/Conference/SectionSponsors.vue'
 import SectionTickets from '~/components/Conference/SectionTickets.vue'
-import twitterCardImage from '~/assets/images/conference/twitter-card.jpg'
+import twitterCardImage from '~/assets/images/conference/twitter-card.png'
 
 export default {
   components: {
