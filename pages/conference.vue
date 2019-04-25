@@ -47,12 +47,10 @@ export default {
   },
   data() {
     return {
-      observer: null
-    }
-  },
-  async asyncData ({ host }) {
-    return {
-      baseUrl: process.server ? (process.env.DEPLOY_URL || process.env.URL) : window.location.origin
+      observer: null,
+      baseUrl: process.server
+        ? (process.env.DEPLOY_URL || process.env.URL || 'http://localhost:3000')
+        : window.location.origin
     }
   },
   computed: {
