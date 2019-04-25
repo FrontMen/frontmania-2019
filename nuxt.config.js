@@ -44,9 +44,6 @@ module.exports = {
   */
   loading: { color: '#fff' },
 
-  router: {
-    middleware: 'request'
-  },
   /*
   ** Global CSS
   */
