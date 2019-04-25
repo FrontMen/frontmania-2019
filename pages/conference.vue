@@ -85,7 +85,7 @@ export default {
   },
   head: {
     meta: [
-      { name: 'twitter:card', content: 'summary' },
+      { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:site', content: '@frontmania' },
       { name: 'twitter:title', content: 'Frontmania 2019 Conference' },
       { name: 'twitter:description', content: 'Come and be part of great Frontmania Conference!' },
