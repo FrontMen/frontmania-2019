@@ -51,9 +51,8 @@ export default {
     }
   },
   async asyncData ({ host }) {
-    console.log(process.env)
     return {
-      host: host
+      baseUrl: process.server ? (process.env.DEPLOY_URL || process.env.URL) : window.location.origin
     }
   },
   computed: {
@@ -97,7 +96,7 @@ export default {
         { name: 'twitter:site', content: '@frontmania' },
         { name: 'twitter:title', content: 'Frontmania 2019 Conference' },
         { name: 'twitter:description', content: 'Come and be part of great Frontmania Conference!' },
-        { name: 'twitter:image', content: `https://${this.host}${twitterCardImage}` },
+        { name: 'twitter:image', content: `${this.baseUrl}${twitterCardImage}` },
         { name: 'twitter:image:alt', content: 'Frontmania 2019' }
       ]
     }
