@@ -50,7 +50,8 @@ export default {
       observer: null
     }
   },
-  async asyncData ({ req, res }) {
+  async asyncData (params) {
+    console.log(params)
     return {
       host: process.server ? req.headers.host : window.location.host
     }
