@@ -51,6 +51,7 @@ export default {
     }
   },
   async asyncData ({ host }) {
+    console.log(process.env)
     return {
       host: host
     }
