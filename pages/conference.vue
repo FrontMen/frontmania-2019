@@ -92,10 +92,10 @@ export default {
       meta: [
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:site', content: '@frontmania' },
-        { name: 'twitter:title', content: 'Frontmania 2019 Conference' },
-        { name: 'twitter:description', content: 'Come and be part of great Frontmania Conference!' },
+        { name: 'twitter:title', content: 'FrontMania 2019 Conference' },
+        { name: 'twitter:description', content: 'Come and be part of great FrontMania Conference!' },
         { name: 'twitter:image', content: `${this.baseUrl}${twitterCardImage}` },
-        { name: 'twitter:image:alt', content: 'Frontmania 2019' }
+        { name: 'twitter:image:alt', content: 'FrontMania 2019' }
       ]
     }
   }
