@@ -89,7 +89,7 @@ export default {
       { name: 'twitter:site', content: '@frontmania' },
       { name: 'twitter:title', content: 'Frontmania 2019 Conference' },
       { name: 'twitter:description', content: 'Come and be part of great Frontmania Conference!' },
-      { name: 'twitter:image', content: '/images/conference/twitter-card.jpg' },
+      { name: 'twitter:image', content: '/images/twitter-card.jpg' },
       { name: 'twitter:image:alt', content: 'Frontmania 20019' }
     ]
   }
