@@ -35,6 +35,7 @@ import SectionPapercall from '~/components/Conference/SectionPapercall.vue'
 import SectionConference from '~/components/Conference/SectionConference.vue'
 import SectionSponsors from '~/components/Conference/SectionSponsors.vue'
 import SectionTickets from '~/components/Conference/SectionTickets.vue'
+import twitterCardImage from '~/assets/images/conference/twitter-card.jpg'
 
 export default {
   components: {
@@ -89,8 +90,8 @@ export default {
       { name: 'twitter:site', content: '@frontmania' },
       { name: 'twitter:title', content: 'Frontmania 2019 Conference' },
       { name: 'twitter:description', content: 'Come and be part of great Frontmania Conference!' },
-      { name: 'twitter:image', content: '/images/twitter-card.jpg' },
-      { name: 'twitter:image:alt', content: 'Frontmania 20019' }
+      { name: 'twitter:image', content: (process.env.URL || process.env.DEPLOY_PRIME_URL) + twitterCardImage },
+      { name: 'twitter:image:alt', content: 'Frontmania 2019' }
     ]
   }
 }
