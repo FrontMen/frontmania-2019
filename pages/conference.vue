@@ -35,6 +35,7 @@ import SectionPapercall from '~/components/Conference/SectionPapercall.vue'
 import SectionConference from '~/components/Conference/SectionConference.vue'
 import SectionSponsors from '~/components/Conference/SectionSponsors.vue'
 import SectionTickets from '~/components/Conference/SectionTickets.vue'
+import twitterCardImage from '~/assets/images/conference/twitter-card.png'
 
 export default {
   components: {
@@ -46,7 +47,10 @@ export default {
   },
   data() {
     return {
-      observer: null
+      observer: null,
+      baseUrl: process.server
+        ? (process.env.DEPLOY_URL || process.env.URL || 'http://localhost:3000')
+        : window.location.origin
     }
   },
   computed: {
@@ -81,6 +85,18 @@ export default {
           this.setActiveMenuItem(change.target.getAttribute('id'))
         }
       })
+    }
+  },
+  head() {
+    return {
+      meta: [
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:site', content: '@frontmania' },
+        { name: 'twitter:title', content: 'FrontMania 2019 Conference' },
+        { name: 'twitter:description', content: 'Come and be part of great FrontMania Conference!' },
+        { name: 'twitter:image', content: `${this.baseUrl}${twitterCardImage}` },
+        { name: 'twitter:image:alt', content: 'FrontMania 2019' }
+      ]
     }
   }
 }
