@@ -55,7 +55,7 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: ['~/plugins/globalComponents', '~/plugins/portal'],
+  plugins: ['~/plugins/globalComponents', '~/plugins/portal', '~/filters/date'],
 
   /*
   ** Nuxt.js modules

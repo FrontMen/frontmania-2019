@@ -1,17 +1,17 @@
 <template>
   <div class="app-row">
-    <h2 class="section-title">{{ event.eventName }}</h2>
+    <h2 class="section-title">FrontMania {{ event.type }}</h2>
     <div class="section-row">
-      <div class="section-row__column section-row__date">{{ event.date }}</div>
-      <div class="section-row__column section-row__venue">{{ event.venue }}</div>
-      <div class="section-row__column section-row__location">{{ event.location }}</div>
+      <div class="section-row__column section-row__date">{{ event.date | date }}</div>
+      <div class="section-row__column section-row__venue">{{ event.address }}</div>
+      <div class="section-row__column section-row__location">{{ event.city }}</div>
       <div class="section-row__column section-row__call-to-action">
         <app-fancy-link
-          :to="event.href"
-          :theme-color="event.themeColor"
-          :angle="event.buttonAngle"
+          :to="event.link"
+          :theme-color="event.color"
+          :angle="event.rotation"
         >
-          {{ event.linkText }}
+          {{ event.linktext }}
         </app-fancy-link>
       </div>
     </div>

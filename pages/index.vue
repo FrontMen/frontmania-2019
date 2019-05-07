@@ -43,32 +43,18 @@ export default {
   },
   data() {
     return {
-      events: [
-        {
-          id: '001',
-          eventName: 'Frontmania Pubquiz',
-          linkText: 'See event details',
-          href:
-            'https://www.meetup.com/Building-an-e-commerce-platform-withTypeScript-React-GraphQL/events/259723732/?joinRsvpYes=true',
-          date: '16.04',
-          venue: 'Kramp Groep Breukelaarweg 33 ',
-          location: 'Varsseveld',
-          buttonAngle: '1.5',
-          themeColor: '#ea5297'
-        },
-        {
-          id: '002',
-          eventName: 'Frontmania Conference',
-          linkText: 'Get tickets',
-          href: '/conference',
-          date: '15.11',
-          venue: 'Croeselaan 18',
-          location: 'Utrecht',
-          buttonAngle: '0',
-          themeColor: '#13a538'
-        }
-      ]
+      events: []
     }
+  },
+  async asyncData() {
+    const context = await require.context('~/events/', false, /\.json$/)
+
+    const events = await context.keys().map(key => ({
+      ...context(key),
+      _path: `/${key.replace('.json', '').replace('./', '')}`
+    }))
+
+    return { events }
   }
 }
 </script>

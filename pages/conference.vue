@@ -49,7 +49,7 @@ export default {
     return {
       observer: null,
       baseUrl: process.server
-        ? (process.env.DEPLOY_URL || process.env.URL || 'http://localhost:3000')
+        ? process.env.DEPLOY_URL || process.env.URL || 'http://localhost:3000'
         : window.location.origin
     }
   },
@@ -93,8 +93,14 @@ export default {
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:site', content: '@frontmania' },
         { name: 'twitter:title', content: 'FrontMania 2019 Conference' },
-        { name: 'twitter:description', content: 'Come and be part of great FrontMania Conference!' },
-        { name: 'twitter:image', content: `${this.baseUrl}${twitterCardImage}` },
+        {
+          name: 'twitter:description',
+          content: 'Come and be part of great FrontMania Conference!'
+        },
+        {
+          name: 'twitter:image',
+          content: `${this.baseUrl}${twitterCardImage}`
+        },
         { name: 'twitter:image:alt', content: 'FrontMania 2019' }
       ]
     }
