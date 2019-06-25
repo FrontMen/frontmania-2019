@@ -8,6 +8,10 @@
       <a class="w-1/2 sm:w-1/3 w-auto text-center" href="https://www.rabobank.nl" target="_blank" rel="noopener noreferrer" title="to Rabobank website">
         <img src="~/assets/images/sponsors/rabobank.svg" alt="Rabobank sponsor">
       </a>
+
+      <a class="w-1/2 sm:w-1/3 w-auto text-center" href="https://www.klm.com/" target="_blank" rel="noopener noreferrer" title="to KLM website">
+        <img src="~/assets/images/sponsors/klm.svg" alt="KLM sponsor">
+      </a>
     </div>
 
     <div class="bg-app-yellow flex flex-wrap items-center p-4 sm:p-8">
