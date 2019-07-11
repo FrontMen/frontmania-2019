@@ -2,6 +2,25 @@
   <section id="canvas-wrapper" class="lg:flex items-center justify-center lg:h-screen">
     <app-slider />
 
+    <!--
+      id="canvas-wrapper" is going to be the container
+      we attach the canvas to. Find a good place for it
+      in the new layout, I think as high-level as you
+      can within the main content area would be good.
+
+      You'll also need to place in the actual canvas
+      which is right below this comment block. Its
+      width and height are reformatted to
+      window.width and window.height in mounted().
+
+      But there's a quick demo that's currently working
+      it is however pushing the content to the side.
+      But depending on how you guys change the index
+      layout, it should be quite simply to fix with
+      some position: absolute. :)
+    -->
+    <canvas id="c" width="800" height="600"></canvas>
+
     <app-toolbar>
       <template #contentTrigger>
         <button class="text-app-white appearance-none">
@@ -29,7 +48,6 @@
         </div>
       </app-block>
     </div>
-    <canvas id="c" width="800" height="600"></canvas>
   </section>
 </template>
 
