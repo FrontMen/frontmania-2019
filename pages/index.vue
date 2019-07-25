@@ -1,5 +1,5 @@
 <template>
-  <section id="canvas-wrapper" class="lg:flex items-center justify-center lg:h-screen">
+  <section class="lg:flex items-center justify-center lg:h-screen">
     <app-slider />
 
     <!--
@@ -19,7 +19,7 @@
       layout, it should be quite simply to fix with
       some position: absolute. :)
     -->
-    <canvas id="c" width="800" height="600"></canvas>
+    <app-canvas></app-canvas>
 
     <app-toolbar>
       <template #contentTrigger>
@@ -54,11 +54,13 @@
 <script>
 import AppRow from '~/components/Home/Row.vue'
 import AppBlock from '~/components/Home/Block.vue'
+import AppCanvas from '~/components/_globals/AppCanvas.vue'
 
 export default {
   components: {
     AppRow,
-    AppBlock
+    AppBlock,
+    AppCanvas
   },
   data() {
     return {
@@ -74,62 +76,11 @@ export default {
     }))
 
     return { events }
-  },
-  mounted() {
-    const el = document.getElementById('c')
-    const container = document.querySelector('#canvas-wrapper')
-    const canvasWidth = window.innerWidth - 1
-    const canvasHeight = window.innerHeight - 1
-    el.width = canvasWidth - el.offsetLeft
-    el.height = canvasHeight
-    const ctx = el.getContext('2d')
-    let clientX, clientY, timeout
-    const density = 25
-
-    function getRandomInt(max) {
-      return Math.floor(Math.random() * Math.floor(max))
-    }
-
-    function getRandomFloat(min, max) {
-      return Math.random() * (max - min) + min
-    }
-
-    container.onmousemove = function(e) {
-      ctx.lineJoin = ctx.lineCap = 'round'
-      clientX = e.clientX - el.offsetLeft
-      clientY = e.clientY
-
-      timeout = setTimeout(function draw() {
-        for (let i = density; i--; ) {
-          const angle = getRandomFloat(0, Math.PI * 2)
-          const radius = getRandomFloat(0, 40)
-          ctx.fillStyle = '#ffed00'
-          ctx.shadowColor = '#fff78c'
-          ctx.shadowBlur = 10
-          ctx.fillRect(
-            clientX + radius * Math.cos(angle),
-            clientY + radius * Math.sin(angle),
-            getRandomInt(3),
-            getRandomInt(3)
-          )
-        }
-        if (!timeout) return
-        timeout = setTimeout(draw, 50)
-      }, 50)
-    }
-    container.onmouseleave = function() {
-      clearTimeout(timeout)
-    }
   }
 }
 </script>
 
 <style>
-#c {
-  top: 0;
-  z-index: -1;
-}
-
 .content {
   position: absolute;
   margin: 0;
