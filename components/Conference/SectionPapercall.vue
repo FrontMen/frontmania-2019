@@ -1,7 +1,7 @@
 <template>
   <app-section background="/images/bg-yellow.jpg">
     <template #call2Action>
-      <img src="~/assets/images/conference/point-down.svg" alt="scroll down">
+      <img class="point-down" src="~/assets/images/conference/point-down.svg" alt="scroll down">
     </template>
 
     <div class="flex flex-wrap items-start justify-around bg-app-red p-8 xl:py-16">
@@ -26,3 +26,23 @@
     </div>
   </app-section>
 </template>
+
+<style lang="scss">
+.point-down {
+  animation: bounce 0.8s ease-in infinite;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate3d(0, -5px, 0);
+  }
+  50% {
+    transform: translate3d(0, 5px, 0);
+  }
+  100% {
+    transform: translate3d(0, -5px, 0);
+  }
+}
+</style>
