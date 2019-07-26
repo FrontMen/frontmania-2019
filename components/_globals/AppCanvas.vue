@@ -1,7 +1,8 @@
 <template>
-  <section class="canvas-wrapper">
-    <canvas class="c" width="800" height="600"></canvas>
-  </section>
+  <div ref="sprayCanWrapper" class="spray-can-wrapper" @mousemove="mouseMove">
+    <slot />
+    <canvas ref="sprayCanCanvas" class="spray-canvas" width="800" height="600" />
+  </div>
 </template>
 
 <script>
@@ -13,53 +14,54 @@ export default {
       default: 'yellow'
     }
   },
+  data: function() {
+    return {
+      ctx: false,
+      density: 50,
+      clientX: 0,
+      clientY: 0
+    }
+  },
   mounted() {
-    const el = document.querySelector('.canvas-wrapper .c')
-    const container = document.querySelector('.canvas-wrapper')
-    const canvasWidth = window.innerWidth - 1
-    const canvasHeight = window.innerHeight - 1
-    el.width = canvasWidth
-    el.height = canvasHeight
-    const ctx = el.getContext('2d')
-    let clientX, clientY
-    const density = 45
-
-    function getRandomInt(max) {
+    const el = this.$refs.sprayCanCanvas
+    el.width = window.innerWidth
+    el.height = window.innerHeight
+    this.ctx = el.getContext('2d')
+  },
+  methods: {
+    getRandomInt: function(max) {
       return Math.floor(Math.random() * Math.floor(max))
-    }
-
-    function getRandomFloat(min, max) {
+    },
+    getRandomFloat: function(min, max) {
       return Math.random() * (max - min) + min
-    }
-
-    function draw() {
-      for (let i = density; i--; ) {
-        const angle = getRandomFloat(0, Math.PI * 2)
-        const radius = getRandomFloat(0, 50)
-        ctx.fillStyle = '#ffed00'
-        ctx.shadowColor = '#fff78c'
-        ctx.shadowBlur = 10
-        ctx.fillRect(
-          clientX + radius * Math.cos(angle),
-          clientY + radius * Math.sin(angle),
-          getRandomInt(3),
-          getRandomInt(3)
+    },
+    draw: function() {
+      for (let i = this.density; i--; ) {
+        const angle = this.getRandomFloat(0, Math.PI * 2)
+        const radius = this.getRandomFloat(0, 50)
+        this.ctx.fillStyle = '#ffed00'
+        this.ctx.shadowColor = '#fff78c'
+        this.ctx.shadowBlur = 10
+        this.ctx.fillRect(
+          this.clientX + radius * Math.cos(angle),
+          this.clientY + radius * Math.sin(angle),
+          this.getRandomInt(3),
+          this.getRandomInt(3)
         )
       }
-    }
-
-    container.onmousemove = function(e) {
-      ctx.lineJoin = ctx.lineCap = 'round'
-      clientX = e.clientX + 60
-      clientY = e.clientY
-      requestAnimationFrame(draw)
+    },
+    mouseMove: function(e) {
+      this.ctx.lineJoin = this.ctx.lineCap = 'round'
+      this.clientX = e.clientX + 60
+      this.clientY = e.clientY
+      requestAnimationFrame(this.draw)
     }
   }
 }
 </script>
 
 <style scoped lang="scss">
-.canvas-wrapper {
+.spray-can-wrapper {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -70,11 +72,12 @@ export default {
     pointer;
 }
 
-.c {
+.spray-canvas {
   top: 0;
   left: 0;
   right: 0;
   z-index: -1;
   position: absolute;
+  pointer-events: none;
 }
 </style>
