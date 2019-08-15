@@ -9,13 +9,19 @@
     </div>
     <article class="flex flex-wrap items-center p-4 bg-app-yellow">
       <speaker src="/images/speakers/MilicaMIhajlija.jpg" name="Milica Mihajlija">
-          Contractor for Google, writer about performance on web.dev. and Mozilla Tech Speaker
+        Contractor for Google, writer about performance on web.dev. and Mozilla Tech Speaker
       </speaker>
       <speaker src="/images/speakers/nielsleenheer.jpg" name="Niels Leenheer">
         Creator of HTML5test.com is a Mozilla TechSpeaker, Google Developer Expert, Microsoft MVP and CTO of Salonhub
       </speaker>
+      <speaker src="/images/speakers/andrestaltz.jpg" name="Andre Staltz">
+        Open source developer, creator of cycle.JS, a programming instructor and speaker
+      </speaker>
       <speaker src="/images/speakers/rubenvanderleun.jpeg" name="Ruben van der Leun">
         Owner of Leunix and an Augmented and Virtual Reality enthusiast
+      </speaker>
+      <speaker src="/images/speakers/KaterinaSkroumpelou.jpg" name="Katerina Skroumpelou">
+        Frontend developer at Upstream and co-organizing AngularAthens
       </speaker>
       <speaker src="/images/speakers/sebastiangolasch.png" name="Sebastian Golasch">
         “Specialist Senior Manager Software Developer” at Deutsche Telekom
