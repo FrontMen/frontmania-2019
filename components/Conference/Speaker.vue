@@ -1,28 +1,37 @@
 <template>
-  <section class="flex items-center max-w-4xl w-full p-5 border-b border-solid border-color-frontmania">
-    <img class="h-64" :src="src" alt="">
+  <section class="flex items-center max-w-4xl w-full p-5 border-solid border-color-frontmania">
+    <img
+      class="h-64"
+      :src="src"
+      :alt="name"
+    >
     <div class="p-3">
-      <h1 class="text-xl">
-        {{name}}
+      <h1 class="text-xl pb-1">
+        {{ name }}
       </h1>
-      <span>
-      <slot></slot>
-    </span>
+      <span class="leading-normal">
+        <slot />
+      </span>
     </div>
   </section>
 </template>
 
 <script>
 export default {
-  name: 'speaker',
+  name: 'Speaker',
   props: {
-    src: {
+    image: {
       type: String,
       required: true
     },
     name: {
       type: String,
       required: true
+    }
+  },
+  computed: {
+    src() {
+      return require(`~/assets/images/speakers/${this.image}.jpg`)
     }
   }
 }
