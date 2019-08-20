@@ -13,6 +13,15 @@
         <img src="~/assets/images/sponsors/klm.svg" alt="KLM sponsor">
       </a>
     </div>
+    <div class="flex items-center p-4 md:px-8 bg-app-white">
+      <a class="w-1/2 sm:w-1/3 w-auto text-center" href="https://saucelabs.com/" target="_blank" rel="noopener noreferrer" title="to Saucelabs website">
+        <img src="~/assets/images/sponsors/saucelabs.jpg" alt="Saucelabs sponsor">
+      </a>
+
+      <a class="w-1/2 sm:w-1/3 w-auto text-center" href="https://www.honeypot.io/" target="_blank" rel="noopener noreferrer" title="to Honeypot website">
+        <img src="~/assets/images/sponsors/honeypot.jpg" alt="Honeypot sponsor">
+      </a>
+    </div>
 
     <div class="bg-app-yellow flex flex-wrap items-center p-4 sm:p-8">
       <p class="w-full sm:w-1/2 xl:w-3/4 sm:pr-4 text-center">
