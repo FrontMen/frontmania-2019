@@ -1,5 +1,5 @@
 <template>
-  <section class="flex items-center max-w-4xl w-full p-2 lg:p-5 border-solid border-color-frontmania">
+  <section class="flex items-center max-w-4xl w-full p-2 lg:p-5 border-solid">
     <img
       class="h-64"
       :src="src"
@@ -41,9 +41,5 @@ export default {
 img {
   object-fit: contain;
   max-height: 120px;
-}
-
-.border-color-frontmania {
-  border-color: #e4032e !important;
 }
 </style>
