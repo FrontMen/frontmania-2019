@@ -15,11 +15,11 @@
     </div>
     <article class="flex flex-wrap items-center p-4 sm:p-2 bg-app-yellow">
       <speaker
-        v-for="(speaker, index) in speakers"
+        v-for="speaker in speakers"
         :key="speaker.name"
         :image="speaker.image"
         :name="speaker.name"
-        :class="{'border-b': speakers.length - 1 !== index}"
+        class="speaker"
       >
        {{ speaker.description }}
       </speaker>
@@ -103,7 +103,7 @@ export default {
         {
           name: 'Albert Groothedde',
           image: 'albertgroothede',
-          description: `Albert is a Frontend developer @Frontmen, the creator of Ortum and the person who solved the n+1 Graph problem graphql-query-path.`
+          description: `Albert is a Frontend developer @Frontmen, the creator of Ortum and the person who solved the n+1 Graph problem (graphql-query-path).`
         }
       ]
     }
@@ -120,7 +120,11 @@ img {
   background-color: #e4032e;
 }
 
-.border-color-frontmania {
-  border-color: #e4032e !important;
+.speaker {
+  border-bottom: 1px solid #e4032e;
+}
+
+.speaker:last-child {
+  border-bottom: none !important;
 }
 </style>
