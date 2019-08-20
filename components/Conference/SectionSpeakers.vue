@@ -13,15 +13,15 @@
         SPEAKERS
       </p>
     </div>
-    <article class="flex flex-wrap items-center p-4 bg-app-yellow">
+    <article class="flex flex-wrap items-center p-4 sm:p-2 bg-app-yellow">
       <speaker
-        v-for="speaker in speakers"
+        v-for="(speaker, index) in speakers"
         :key="speaker.name"
         :image="speaker.image"
         :name="speaker.name"
-        :class="{'border-b': !speaker.last}"
+        :class="{'border-b': speakers.length - 1 !== index}"
       >
-        {{ speaker.description }}
+       {{ speaker.description }}
       </speaker>
     </article>
   </app-section>
@@ -37,6 +37,12 @@ export default {
   data() {
     return {
       speakers: [
+        {
+          name: 'Seb Lee-Delisle',
+          image: 'sebleedelisle',
+          description:
+            'Seb Lee-Delisle is a digital artist and speaker who specialises in large scale interactive light installations.'
+        },
         {
           name: 'Milica Mihajlija',
           image: 'MilicaMIhajlija',
@@ -82,13 +88,22 @@ export default {
           name: 'Tal Ater',
           image: 'talater',
           description:
-            'A founder, a CTO, an open-sourcerer, an O’Reilly published author, a W3C Invited Expert, and thanks to one sleepless weekend, the creator of a choose-your-own-adventure GitHub template generator featuring Lewis Carroll and Cthulhu.'
+            'A founder, a CTO, an open-sourcerer, an O’Reilly published author, a W3C Invited Expert, and thanks to one sleepless weekend, the creator of a choose-your-own-adventure GitHub template generator featuring Lewis Carroll and Cthulhu'
         },
         {
           name: 'Lucas Fernandes da Costa',
           image: 'LucasFernandesdaCosta',
-          description: 'Core team member of Chai.js and Sinon.js',
-          last: true
+          description: 'Core team member of Chai.js and Sinon.js'
+        },
+        {
+          name: 'Felix Rieseberg',
+          image: 'FelixRieseberg',
+          description: `Felix is a Senior Staff Engineer and Tech Lead at Slack. He is a co-maintainer of Electron and maintainer of numerous open source libraries, focusing on JavaScript and Node.js`
+        },
+        {
+          name: 'Albert Groothedde',
+          image: 'albertgroothede',
+          description: `Albert is a Frontend developer @Frontmen, the creator of Ortum and the person who solved the n+1 Graph problem graphql-query-path.`
         }
       ]
     }

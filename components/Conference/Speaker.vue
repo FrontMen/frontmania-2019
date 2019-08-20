@@ -1,15 +1,15 @@
 <template>
-  <section class="flex items-center max-w-4xl w-full p-5 border-solid border-color-frontmania">
+  <section class="flex items-center max-w-4xl w-full p-2 lg:p-5 border-solid border-color-frontmania">
     <img
       class="h-64"
       :src="src"
       :alt="name"
     >
     <div class="p-3">
-      <h1 class="text-xl pb-1">
+      <h1 class="text-sm lg:text-lg pb-1">
         {{ name }}
       </h1>
-      <span class="leading-normal">
+      <span class="text-sm lg:text-md leading-normal">
         <slot />
       </span>
     </div>
