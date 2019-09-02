@@ -50,6 +50,12 @@ export default {
             'Contractor for Google, writer about performance on web.dev. and Mozilla Tech Speaker'
         },
         {
+          name: 'Jeremy Wagner',
+          image: 'jlwagner',
+          description:
+            'Jeremy Wagner is an independent web performance consultant, author, and speaker from Minnesota doing his level best to make the web faster for everyone, everywhere.'
+        },
+        {
           name: 'Niels Leenheer',
           image: 'nielsleenheer',
           description:
