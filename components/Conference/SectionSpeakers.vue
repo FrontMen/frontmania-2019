@@ -108,8 +108,8 @@ export default {
         },
         {
           name: 'Albert Groothedde',
-          image: 'albertgroothede',
-          description: `Albert is a Frontend developer @Frontmen, the creator of Ortum and the person who solved the n+1 Graph problem (graphql-query-path).`
+          image: 'albertgroothedde',
+          description: `Albert is a Frontmaniac @Frontmen, the creator of Ortum and GraphQL enthusiast. He also created graphql-query-path and uses Colemak.`
         }
       ]
     }
