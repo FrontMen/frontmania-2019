@@ -47,152 +47,234 @@ collections:
     create: true
     slug: '{{slug}}'
     fields:
+      - { label: 'Title', name: 'title', widget: 'string', default: 'FrontMania 2019 Speakers' }
       - label: 'Speaker_1'
         name: 'speaker_1'
         widget: 'object'
         fields:
-          - {label: 'Name', name: 'name', widget: 'string'}
-          - {label: 'Twitter', name: 'twitter', widget: 'string'}
-          - {label: 'Bio ', name: 'bio', widget: 'text'}
+          - {label: 'Name', name: 'name', widget: 'string', required: false}
+          - {label: 'Twitter', name: 'twitter', widget: 'string',  required: false}
+          - {label: 'Bio', name: 'bio', widget: 'text',  required: false}
+          - {label: 'Image', name: 'imgurl', widget: 'text',  required: false}
+          - {label: 'Talk Title', name: 'talkTitle', widget: 'string',  required: false}
+          - {label: 'Talk Description', name: 'talkDescription', widget: 'text',  required: false}
+
       - label: 'Speaker_2'
         name: 'speaker_2'
         widget: 'object'
         fields:
-          - {label: 'Name', name: 'name', widget: 'string'}
-          - {label: 'Twitter', name: 'twitter', widget: 'string'}
-          - {label: 'Bio ', name: 'bio', widget: 'text'}
+          - {label: 'Name', name: 'name', widget: 'string',  required: false}
+          - {label: 'Twitter', name: 'twitter', widget: 'string',  required: false}
+          - {label: 'Bio', name: 'bio', widget: 'text',  required: false}
+          - {label: 'Image', name: 'imgurl', widget: 'text',  required: false}
+          - {label: 'Talk Title', name: 'talkTitle', widget: 'string',  required: false}
+          - {label: 'Talk Description', name: 'talkDescription', widget: 'text',  required: false}
+
       - label: 'Speaker_3'
         name: 'speaker_3'
         widget: 'object'
         fields:
-          - {label: 'Name', name: 'name', widget: 'string'}
-          - {label: 'Twitter', name: 'twitter', widget: 'string'}
-          - {label: 'Bio ', name: 'bio', widget: 'text'}
+          - {label: 'Name', name: 'name', widget: 'string',  required: false}
+          - {label: 'Twitter', name: 'twitter', widget: 'string',  required: false}
+          - {label: 'Bio', name: 'bio', widget: 'text',  required: false}
+          - {label: 'Image', name: 'imgurl', widget: 'text',  required: false}
+          - {label: 'Talk Title', name: 'talkTitle', widget: 'string',  required: false}
+          - {label: 'Talk Description', name: 'talkDescription', widget: 'text',  required: false}
+
       - label: 'Speaker_4'
         name: 'speaker_4'
         widget: 'object'
         fields:
-          - {label: 'Name', name: 'name', widget: 'string'}
-          - {label: 'Twitter', name: 'twitter', widget: 'string'}
-          - {label: 'Bio ', name: 'bio', widget: 'text'}
+          - {label: 'Name', name: 'name', widget: 'string',  required: false}
+          - {label: 'Twitter', name: 'twitter', widget: 'string',  required: false}
+          - {label: 'Bio', name: 'bio', widget: 'text',  required: false}
+          - {label: 'Image', name: 'imgurl', widget: 'text',  required: false}
+          - {label: 'Talk Title', name: 'talkTitle', widget: 'string',  required: false}
+          - {label: 'Talk Description', name: 'talkDescription', widget: 'text',  required: false}
+
       - label: 'Speaker_5'
         name: 'speaker_5'
         widget: 'object'
         fields:
-          - {label: 'Name', name: 'name', widget: 'string'}
-          - {label: 'Twitter', name: 'twitter', widget: 'string'}
-          - {label: 'Bio ', name: 'bio', widget: 'text'}
+          - {label: 'Name', name: 'name', widget: 'string',  required: false}
+          - {label: 'Twitter', name: 'twitter', widget: 'string',  required: false}
+          - {label: 'Bio', name: 'bio', widget: 'text',  required: false}
+          - {label: 'Image', name: 'imgurl', widget: 'text',  required: false}
+          - {label: 'Talk Title', name: 'talkTitle', widget: 'string',  required: false}
+          - {label: 'Talk Description', name: 'talkDescription', widget: 'text',  required: false}
+
       - label: 'Speaker_6'
         name: 'speaker_6'
         widget: 'object'
         fields:
-          - {label: 'Name', name: 'name', widget: 'string'}
-          - {label: 'Twitter', name: 'twitter', widget: 'string'}
-          - {label: 'Bio ', name: 'bio', widget: 'text'}
+          - {label: 'Name', name: 'name', widget: 'string',  required: false}
+          - {label: 'Twitter', name: 'twitter', widget: 'string',  required: false}
+          - {label: 'Bio', name: 'bio', widget: 'text',  required: false}
+          - {label: 'Image', name: 'imgurl', widget: 'text',  required: false}
+          - {label: 'Talk Title', name: 'talkTitle', widget: 'string',  required: false}
+          - {label: 'Talk Description', name: 'talkDescription', widget: 'text',  required: false}
+
       - label: 'Speaker_7'
         name: 'speaker_7'
         widget: 'object'
         fields:
-          - {label: 'Name', name: 'name', widget: 'string'}
-          - {label: 'Twitter', name: 'twitter', widget: 'string'}
-          - {label: 'Bio ', name: 'bio', widget: 'text'}
+          - {label: 'Name', name: 'name', widget: 'string',  required: false}
+          - {label: 'Twitter', name: 'twitter', widget: 'string',  required: false}
+          - {label: 'Bio', name: 'bio', widget: 'text',  required: false}
+          - {label: 'Image', name: 'imgurl', widget: 'text',  required: false}
+          - {label: 'Talk Title', name: 'talkTitle', widget: 'string',  required: false}
+          - {label: 'Talk Description', name: 'talkDescription', widget: 'text',  required: false}
+
       - label: 'Speaker_8'
         name: 'speaker_8'
         widget: 'object'
         fields:
-          - {label: 'Name', name: 'name', widget: 'string'}
-          - {label: 'Twitter', name: 'twitter', widget: 'string'}
-          - {label: 'Bio ', name: 'bio', widget: 'text'}
+          - {label: 'Name', name: 'name', widget: 'string',  required: false}
+          - {label: 'Twitter', name: 'twitter', widget: 'string',  required: false}
+          - {label: 'Bio', name: 'bio', widget: 'text',  required: false}
+          - {label: 'Image', name: 'imgurl', widget: 'text',  required: false}
+          - {label: 'Talk Title', name: 'talkTitle', widget: 'string',  required: false}
+          - {label: 'Talk Description', name: 'talkDescription', widget: 'text',  required: false}
+
       - label: 'Speaker_9'
         name: 'speaker_9'
         widget: 'object'
         fields:
-          - {label: 'Name', name: 'name', widget: 'string'}
-          - {label: 'Twitter', name: 'twitter', widget: 'string'}
-          - {label: 'Bio ', name: 'twitter', widget: 'text'}
+          - {label: 'Name', name: 'name', widget: 'string',  required: false}
+          - {label: 'Twitter', name: 'twitter', widget: 'string',  required: false}
+          - {label: 'Bio', name: 'twitter', widget: 'text',  required: false}
+          - {label: 'Image', name: 'imgurl', widget: 'text',  required: false}
+          - {label: 'Talk Title', name: 'talkTitle', widget: 'string',  required: false}
+          - {label: 'Talk Description', name: 'talkDescription', widget: 'text',  required: false}
+
       - label: 'Speaker_10'
         name: 'speaker_10'
         widget: 'object'
         fields:
-          - {label: 'Name', name: 'name', widget: 'string'}
-          - {label: 'Twitter', name: 'twitter', widget: 'string'}
-          - {label: 'Bio ', name: 'bio', widget: 'text'}
+          - {label: 'Name', name: 'name', widget: 'string',  required: false}
+          - {label: 'Twitter', name: 'twitter', widget: 'string',  required: false}
+          - {label: 'Bio', name: 'bio', widget: 'text',  required: false}
+          - {label: 'Image', name: 'imgurl', widget: 'text',  required: false}
+          - {label: 'Talk Title', name: 'talkTitle', widget: 'string',  required: false}
+          - {label: 'Talk Description', name: 'talkDescription', widget: 'text',  required: false}
+
       - label: 'Speaker_11'
         name: 'speaker_11'
         widget: 'object'
         fields:
-          - {label: 'Name', name: 'name', widget: 'string'}
-          - {label: 'Twitter', name: 'twitter', widget: 'string'}
-          - {label: 'Bio ', name: 'bio', widget: 'text'}
+          - {label: 'Name', name: 'name', widget: 'string',  required: false}
+          - {label: 'Twitter', name: 'twitter', widget: 'string',  required: false}
+          - {label: 'Bio', name: 'bio', widget: 'text',  required: false}
+          - {label: 'Image', name: 'imgurl', widget: 'text',  required: false}
+          - {label: 'Talk Title', name: 'talkTitle', widget: 'string',  required: false}
+          - {label: 'Talk Description', name: 'talkDescription', widget: 'text',  required: false}
+
       - label: 'Speaker_12'
         name: 'speaker_12'
         widget: 'object'
         fields:
-          - {label: 'Name', name: 'name', widget: 'string'}
-          - {label: 'Twitter', name: 'twitter', widget: 'string'}
-          - {label: 'Bio ', name: 'bio', widget: 'text'}
+          - {label: 'Name', name: 'name', widget: 'string',  required: false}
+          - {label: 'Twitter', name: 'twitter', widget: 'string',  required: false}
+          - {label: 'Bio', name: 'bio', widget: 'text',  required: false}
+          - {label: 'Image', name: 'imgurl', widget: 'text',  required: false}
+          - {label: 'Talk Title', name: 'talkTitle', widget: 'string',  required: false}
+          - {label: 'Talk Description', name: 'talkDescription', widget: 'text',  required: false}
+
       - label: 'Speaker_13'
         name: 'speaker_13'
         widget: 'object'
         fields:
-          - {label: 'Name', name: 'name', widget: 'string'}
-          - {label: 'Twitter', name: 'twitter', widget: 'string'}
-          - {label: 'Bio ', name: 'bio', widget: 'text'}
+          - {label: 'Name', name: 'name', widget: 'string',  required: false}
+          - {label: 'Twitter', name: 'twitter', widget: 'string',  required: false}
+          - {label: 'Bio', name: 'bio', widget: 'text',  required: false}
+          - {label: 'Image', name: 'imgurl', widget: 'text',  required: false}
+          - {label: 'Talk Title', name: 'talkTitle', widget: 'string',  required: false}
+          - {label: 'Talk Description', name: 'talkDescription', widget: 'text',  required: false}
+
       - label: 'Speaker_14'
         name: 'speaker_14'
         widget: 'object'
         fields:
-          - {label: 'Name', name: 'name', widget: 'string'}
-          - {label: 'Twitter', name: 'twitter', widget: 'string'}
-          - {label: 'Bio ', name: 'bio', widget: 'text'}
+          - {label: 'Name', name: 'name', widget: 'string',  required: false}
+          - {label: 'Twitter', name: 'twitter', widget: 'string',  required: false}
+          - {label: 'Bio', name: 'bio', widget: 'text',  required: false}
+          - {label: 'Image', name: 'imgurl', widget: 'text',  required: false}
+          - {label: 'Talk Title', name: 'talkTitle', widget: 'string',  required: false}
+          - {label: 'Talk Description', name: 'talkDescription', widget: 'text',  required: false}
+
       - label: 'Speaker_15'
         name: 'speaker_5'
         widget: 'object'
         fields:
-          - {label: 'Name', name: 'name', widget: 'string'}
-          - {label: 'Twitter', name: 'twitter', widget: 'string'}
-          - {label: 'Bio ', name: 'bio', widget: 'text'}
+          - {label: 'Name', name: 'name', widget: 'string',  required: false}
+          - {label: 'Twitter', name: 'twitter', widget: 'string',  required: false}
+          - {label: 'Bio', name: 'bio', widget: 'text',  required: false}
+          - {label: 'Image', name: 'imgurl', widget: 'text',  required: false}
+          - {label: 'Talk Title', name: 'talkTitle', widget: 'string',  required: false}
+          - {label: 'Talk Description', name: 'talkDescription', widget: 'text',  required: false}
+
       - label: 'Speaker_16'
         name: 'speaker_16'
         widget: 'object'
         fields:
-          - {label: 'Name', name: 'name', widget: 'string'}
-          - {label: 'Twitter', name: 'twitter', widget: 'string'}
-          - {label: 'Bio ', name: 'bio', widget: 'text'}
+          - {label: 'Name', name: 'name', widget: 'string',  required: false}
+          - {label: 'Twitter', name: 'twitter', widget: 'string',  required: false}
+          - {label: 'Bio', name: 'bio', widget: 'text',  required: false}
+          - {label: 'Image', name: 'imgurl', widget: 'text',  required: false}
+          - {label: 'Talk Title', name: 'talkTitle', widget: 'string',  required: false}
+          - {label: 'Talk Description', name: 'talkDescription', widget: 'text',  required: false}
+
       - label: 'Speaker_17'
         name: 'speaker_17'
         widget: 'object'
         fields:
-          - {label: 'Name', name: 'name', widget: 'string'}
-          - {label: 'Twitter', name: 'twitter', widget: 'string'}
-          - {label: 'Bio ', name: 'bio', widget: 'text'}
+          - {label: 'Name', name: 'name', widget: 'string',  required: false}
+          - {label: 'Twitter', name: 'twitter', widget: 'string',  required: false}
+          - {label: 'Bio', name: 'bio', widget: 'text',  required: false}
+          - {label: 'Image', name: 'imgurl', widget: 'text',  required: false}
+          - {label: 'Talk Title', name: 'talkTitle', widget: 'string',  required: false}
+          - {label: 'Talk Description', name: 'talkDescription', widget: 'text',  required: false}
+
       - label: 'Speaker_18'
         name: 'speaker_18'
         widget: 'object'
         fields:
-          - {label: 'Name', name: 'name', widget: 'string'}
-          - {label: 'Twitter', name: 'twitter', widget: 'string'}
-          - {label: 'Bio ', name: 'bio', widget: 'text'}
+          - {label: 'Name', name: 'name', widget: 'string',  required: false}
+          - {label: 'Twitter', name: 'twitter', widget: 'string',  required: false}
+          - {label: 'Bio', name: 'bio', widget: 'text',  required: false}
+          - {label: 'Image', name: 'imgurl', widget: 'text',  required: false}
+          - {label: 'Talk Title', name: 'talkTitle', widget: 'string',  required: false}
+          - {label: 'Talk Description', name: 'talkDescription', widget: 'text',  required: false}
+
       - label: 'Speaker_19'
         name: 'speaker_19'
         widget: 'object'
         fields:
-          - {label: 'Name', name: 'name', widget: 'string'}
-          - {label: 'Twitter', name: 'twitter', widget: 'string'}
-          - {label: 'Bio ', name: 'bio', widget: 'text'}
+          - {label: 'Name', name: 'name', widget: 'string',  required: false}
+          - {label: 'Twitter', name: 'twitter', widget: 'string',  required: false}
+          - {label: 'Bio', name: 'bio', widget: 'text',  required: false}
+          - {label: 'Image', name: 'imgurl', widget: 'text',  required: false}
+          - {label: 'Talk Title', name: 'talkTitle', widget: 'string',  required: false}
+          - {label: 'Talk Description', name: 'talkDescription', widget: 'text',  required: false}
+
       - label: 'Speaker_20'
         name: 'speaker_20'
         widget: 'object'
         fields:
-          - {label: 'Name', name: 'name', widget: 'string'}
-          - {label: 'Twitter', name: 'twitter', widget: 'string'}
-          - {label: 'Bio ', name: 'bio', widget: 'text'}
+          - {label: 'Name', name: 'name', widget: 'string',  required: false}
+          - {label: 'Twitter', name: 'twitter', widget: 'string',  required: false}
+          - {label: 'Bio', name: 'bio', widget: 'text',  required: false}
+          - {label: 'Image', name: 'imgurl', widget: 'text',  required: false}
+          - {label: 'Talk Title', name: 'talkTitle', widget: 'string',  required: false}
+          - {label: 'Talk Description', name: 'talkDescription', widget: 'text',  required: false}
+
   - name: 'schedule'
     label: 'Schedule'
     folder: 'schedule'
     format: 'json'
     create: true
     slug: '{{slug}}'
+    identifier_field: name
     fields:
       - { label: 'Title', name: 'title', widget: 'string', default: 'FrontMania 2019 Schedule' }
       - label: 'Events'
