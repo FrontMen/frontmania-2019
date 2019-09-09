@@ -1,6 +1,51 @@
 {
   "title": "FrontMania 2019 Schedule",
   "time1": [
-    {}
+    {
+      "track1": [
+        {
+          "title": "Opening Show",
+          "speaker": "Seb Lee Delisle"
+        }
+      ],
+      "track2": [
+        {
+          "title": "''",
+          "speaker": "''"
+        }
+      ]
+    }
+  ],
+  "time2": [
+    {
+      "track1": [
+        {
+          "title": "The Weird—Yet Practical—World of Paint Worklets",
+          "speaker": "Jeremy Wagner"
+        }
+      ],
+      "track2": [
+        {
+          "title": "Keynote",
+          "speaker": "FrontMania"
+        }
+      ]
+    }
+  ],
+  "time3": [
+    {
+      "track1": [
+        {
+          "title": "WebAssembly: Binary in Plain English",
+          "speaker": "Milica Mihajlija"
+        }
+      ],
+      "track2": [
+        {
+          "title": "What Can We Learn With JavaScript Fatigue",
+          "speaker": "Lucas Fernandes da Costa"
+        }
+      ]
+    }
   ]
 }
