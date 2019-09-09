@@ -2,17 +2,6 @@
   "title": "Frontmania 2019",
   "speaker_1": {
     "name": "Speaker1",
-    "bio": "This is the bio of speaker 1",
-    "talkTitle": "Talk1"
-  },
-  "speaker_2": {
-    "name": "Speaker 2",
-    "bio": "Bio of speaker2",
-    "talkTitle": "Talk2"
-  },
-  "speaker_3": {
-    "name": "Speaker 3",
-    "bio": "Bio Speaker 3",
-    "talkTitle": "Talk3"
+    "bio": "This is the bio of speaker 1"
   }
 }
