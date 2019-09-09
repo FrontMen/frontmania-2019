@@ -1,11 +1,7 @@
 {
-  "color": "#13a538",
-  "linktext": "Find information",
-  "city": "Utrecht",
-  "date": "2019-11-15T21:21:40.037Z",
-  "address": "Croeselaan 18",
   "title": "Frontmania 2019",
-  "type": "conference",
-  "link": "/conference",
-  "rotation": "1.5"
+  "speaker_1": {
+    "name": "Speaker1",
+    "bio": "This is the bio of speaker 1"
+  }
 }
