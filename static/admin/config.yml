@@ -39,3 +39,171 @@ collections:
           widget: 'select',
           options: ['#ea5297', '#13a538'],
         }
+  - name: 'schedule'
+    label: 'Schedule'
+    folder: 'schedule'
+    format: 'json'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string', default: 'FrontMania 2019 Schedule' }
+      - name: 'time1'
+        label: '09:00 - 09:30'
+        widget: list
+        fields:
+          - name: 'track1'
+            label: 'Track1'
+            widget: 'list'
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string'}
+              - { label: 'Speaker', name: 'speaker', widget: 'string'}
+          - name: 'track2'
+            label: 'Track2'
+            widget: 'list'
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string'}
+              - { label: 'Speaker', name: 'speaker', widget: 'string'}
+      - name: 'time2'
+        label: '09:30 - 10:30'
+        widget: list
+        fields:
+          - name: 'track1'
+            label: 'Track1'
+            widget: 'list'
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string'}
+              - { label: 'Speaker', name: 'speaker', widget: 'string'}
+          - name: 'track2'
+            label: 'Track2'
+            widget: 'list'
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string'}
+              - { label: 'Speaker', name: 'speaker', widget: 'string'}
+      - name: 'time3'
+        label: '10:30 - 11:30'
+        widget: list
+        fields:
+          - name: 'track1'
+            label: 'Track1'
+            widget: 'list'
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string'}
+              - { label: 'Speaker', name: 'speaker', widget: 'string'}
+          - name: 'track2'
+            label: 'Track2'
+            widget: 'list'
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string'}
+              - { label: 'Speaker', name: 'speaker', widget: 'string'}
+      - name: 'time4'
+        label: '11:30 - 12:30'
+        widget: list
+        fields:
+          - name: 'track1'
+            label: 'Track1'
+            widget: 'list'
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string'}
+              - { label: 'Speaker', name: 'speaker', widget: 'string'}
+          - name: 'track2'
+            label: 'Track2'
+            widget: 'list'
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string'}
+              - { label: 'Speaker', name: 'speaker', widget: 'string'}
+      - name: 'time4'
+        label: '12:30 - 13:30'
+        widget: list
+        fields:
+          - name: 'track1'
+            label: 'Track1'
+            widget: 'list'
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string'}
+              - { label: 'Speaker', name: 'speaker', widget: 'string'}
+          - name: 'track2'
+            label: 'Track2'
+            widget: 'list'
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string'}
+              - { label: 'Speaker', name: 'speaker', widget: 'string'}
+      - name: 'time5'
+        label: '13:30 - 14:30'
+        widget: list
+        fields:
+          - name: 'track1'
+            label: 'Track1'
+            widget: 'list'
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string'}
+              - { label: 'Speaker', name: 'speaker', widget: 'string'}
+          - name: 'track2'
+            label: 'Track2'
+            widget: 'list'
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string'}
+              - { label: 'Speaker', name: 'speaker', widget: 'string'}
+      - name: 'time6'
+        label: '14:30 - 15:30'
+        widget: list
+        fields:
+          - name: 'track1'
+            label: 'Track1'
+            widget: 'list'
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string'}
+              - { label: 'Speaker', name: 'speaker', widget: 'string'}
+          - name: 'track2'
+            label: 'Track2'
+            widget: 'list'
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string'}
+              - { label: 'Speaker', name: 'speaker', widget: 'string'}
+      - name: 'time7'
+        label: '15:30 - 16:00'
+        widget: list
+        fields:
+          - name: 'track1'
+            label: 'Track1'
+            widget: 'list'
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string'}
+              - { label: 'Speaker', name: 'speaker', widget: 'string'}
+          - name: 'track2'
+            label: 'Track2'
+            widget: 'list'
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string'}
+              - { label: 'Speaker', name: 'speaker', widget: 'string'}
+      - name: 'time8'
+        label: '16:00 - 17:00'
+        widget: list
+        fields:
+          - name: 'track1'
+            label: 'Track1'
+            widget: 'list'
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string'}
+              - { label: 'Speaker', name: 'speaker', widget: 'string'}
+          - name: 'track2'
+            label: 'Track2'
+            widget: 'list'
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string'}
+              - { label: 'Speaker', name: 'speaker', widget: 'string'}
+      - name: 'time9'
+        label: '17:00 - 18:00'
+        widget: list
+        fields:
+          - name: 'track1'
+            label: 'Track1'
+            widget: 'list'
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string'}
+              - { label: 'Speaker', name: 'speaker', widget: 'string'}
+          - name: 'track2'
+            label: 'Track2'
+            widget: 'list'
+            fields:
+              - { label: 'Title', name: 'title', widget: 'string'}
+              - { label: 'Speaker', name: 'speaker', widget: 'string'}
