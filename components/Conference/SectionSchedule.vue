@@ -24,6 +24,9 @@
           10:00
         </h2>
 
+        <schedule-card v-bind="sessions.session2a" />
+        <schedule-card v-bind="sessions.session2b" />
+
         <h2 class="time-slot" style="grid-row: time-1030;">
           10:30
         </h2>
@@ -31,9 +34,6 @@
         <h2 class="time-slot" style="grid-row: time-1100;">
           11:00
         </h2>
-        <schedule-card
-            v-bind="sessions.session1"
-        />
 
         <h2 class="time-slot" style="grid-row: time-1130;">
           11:30
@@ -136,23 +136,214 @@ export default {
   data() {
     return {
       sessions: {
-        session1: {
-          speakerName: 'Seb Lee-Delisle',
-          image: 'http://place-puppy.com/250x250',
-          speakerDescription: 'Seb Lee-Delisle is a digital artist',
-          trackNumber: 1,
-          timeStart: '10:30',
-          timeEnd: '11:30',
-          sessionTitle: 'Learning Graphic Art'
+        session1a: {
+          sessiontitle: 'Opening Show',
+          speakername: 'Seb Lee Delisle',
+          sessiondescription: "'",
+          speakerdescription:
+            'Seb Lee-Delisle is a digital artist and speaker who specialises in large scale interactive light installations.',
+          image: "'",
+          tracknumber: 0,
+          timestart: '9:00',
+          timeend: '10:00',
+          twitterurl: "'"
         },
-        session2: {
-          speakerName: 'Foo',
-          image: 'http://place-puppy.com/250x250',
-          speakerDescription: 'Bar',
-          trackNumber: 2,
-          timeStart: '10:30',
-          timeEnd: '11:30',
-          sessionTitle: 'Web Worker n stuff'
+        session2a: {
+          sessiontitle: 'The Weird—Yet Practical—World of Paint Worklets',
+          speakername: 'Jeremy Wagner',
+          sessiondescription:
+            'Come to this session and you’ll understand how paint worklets, well, work. But the really good stuff will be in all the inspired experimentation that can come from experimenting with the programatic generation of art and graphics, and how we can practically use it in our designs. If the intersection between weird and usable is your thing, you’ll feel right at home with paint worklets!',
+          speakerdescription:
+            'Jeremy Wagner is an independent web performance consultant, author, and speaker from Minnesota doing his level best to make the web faster for everyone, everywhere.',
+          image: "'",
+          tracknumber: 1,
+          timestart: '10:00',
+          timeend: '11:00',
+          twitterurl: "'"
+        },
+        session2b: {
+          sessiontitle: '???',
+          speakername: 'Lee Boonstra',
+          sessiondescription: "'",
+          speakerdescription:
+            'Sales engineer in the Google Cloud team where she assist the sales team with technical knowledge about cloud computing and machine learning for the financial industry.',
+          image: "'",
+          tracknumber: 2,
+          timestart: '10:00',
+          timeend: '11:00',
+          twitterurl: "'"
+        },
+        session3a: {
+          sessiontitle: 'WebAssembly: Binary in Plain English',
+          speakername: 'Milica Mihajlija',
+          sessiondescription:
+            'How to run native code in the browser, why would you do that, and what does it all mean for the future of web development.',
+          speakerdescription:
+            'Contractor for Google, writer about performance on web.dev. and Mozilla Tech Speaker',
+          image: "'",
+          tracknumber: 1,
+          timestart: '11:00',
+          timeend: '12:00',
+          twitterurl: ''
+        },
+        session3b: {
+          sessiontitle: 'What Can We Learn With Javascript Fatigue',
+          speakername: 'Lucas Fernandes da Costa',
+          sessiondescription:
+            'Explore the goals of software engineers, the UNIX philosophy and the history and causes of JavaScript fatigue. In this talk he creates a parallel between psychology, decision making and JavaScript.',
+          speakerdescription: 'Core team member of Chai.js and Sinon.js',
+          image: "'",
+          tracknumber: 2,
+          timestart: '11:00',
+          timeend: '12:00',
+          twitterurl: "'"
+        },
+        session4: {
+          sessiontitle: 'Break',
+          speakername: 'FrontMania',
+          sessiondescription: "'",
+          speakerdescription: "'",
+          image: "'",
+          tracknumber: 0,
+          timestart: '12:00',
+          timeend: '13:00',
+          twitterurl: "'"
+        },
+        session5a: {
+          sessiontitle: 'The Intranet of Things',
+          speakername: 'Sebastian Golasch',
+          sessiondescription:
+            'The dust around everybody’s fav buzzword from 2015 “IoT” has settled, but do solutions exist  that value our privacy & autonomy? No really.',
+          speakerdescription:
+            'Specialist Senior Manager Software Developer at Qivicon, IoT reverse engineer, Long time JavaScript lover',
+          image: "'",
+          tracknumber: 1,
+          timestart: '13:00',
+          timeend: '14:00',
+          twitterurl: "'"
+        },
+        session5b: {
+          sessiontitle: 'Puppeteer',
+          speakername: 'Önder Ceylan',
+          sessiondescription:
+            'Talk on Puppeteer: a Node library which provides a high-level API to control headless Chrome or Chromium over the DevTools Protocol. ',
+          speakerdescription:
+            'Self-established JavaScript professional and a Google Developers Expert in Web Technologies',
+          image: "'",
+          tracknumber: 2,
+          timestart: '13:00',
+          timeend: '14:00',
+          twitterurl: "'"
+        },
+        session6a: {
+          sessiontitle: 'JavaScript on the Desktop, Fast and Slow',
+          speakername: 'Felix Rieseberg',
+          sessiondescription:
+            'We need to talk about JavaScript performance on the desktop. Why does it seem like so many Electron apps consume more resources than their native counterparts? Felix explores the architectural tricks separating slow and fast Electron apps.',
+          speakerdescription:
+            'Felix is a Senior Staff Engineer and Tech Lead at Slack. He is a co-maintainer of Electron and maintainer of numerous open source libraries, focusing on JavaScript and Node.js',
+          image: "'",
+          tracknumber: 1,
+          timestart: '14:00',
+          timeend: '15:00',
+          twitterurl: "'"
+        },
+        session6b: {
+          sessiontitle: 'Raising $24 million to Build an Open Source Skynet',
+          speakername: 'Tal Ater',
+          sessiondescription:
+            "An adventure story with drones, robots, autonomous boats, astronauts, and JavaScript… and what it means for tomorrow's autonomous cars.",
+          speakerdescription:
+            "Founder and CTO of the DAV Foundation, the creator of a number of popular open source libraries,  an O'Reilly published autho and an W3C Invited Expert.",
+          image: "'",
+          tracknumber: 2,
+          timestart: '14:00',
+          timeend: '15:00',
+          twitterurl: "'"
+        },
+        session7a: {
+          sessiontitle: 'JavaScript on Microcontrollers',
+          speakername: 'Niels Leenheer',
+          sessiondescription:
+            'Building an IoT device feels out of reach to a lot of web developers. Most of us didn’t study electrical engineering, and never learned to solder. And programming a microcontroller is on a completely different level than building a website.\n\nBut that is just not true anymore. Nowadays microcontrollers have become powerful enough to run JavaScript. And that opens up IoT to all of us.',
+          speakerdescription:
+            'Creator of HTML5test.com is a Mozilla TechSpeaker, Google Developer Expert, Microsoft MVP and CTO of Salonhub',
+          image: "'",
+          tracknumber: 1,
+          timestart: '15:00',
+          timeend: '16:00',
+          twitterurl: "'"
+        },
+        session7b: {
+          sessiontitle: 'Cloudflare Workers and the application with GraphQL',
+          speakername: 'Albert Groothedde',
+          sessiondescription:
+            "GraphQL is a great technology. But... your backend developers might not want to convert just yet. That's where Cloudflare Workers can step in. In the talk we'll talk about example application leveraging Cloudflare workers using Graphql, seeing how to deal with the limitations of the workers and how to make use Cloudflare's cache.",
+          speakerdescription:
+            'Albert is a Frontmaniac @Frontmen, the creator of Ortum and GraphQL enthusiast. He also created graphql-query-path and uses Colemak.',
+          image: "'",
+          tracknumber: 2,
+          timestart: '15:00',
+          timeend: '16:00',
+          twitterurl: "'"
+        },
+        session8: {
+          sessiontitle: 'Break',
+          speakername: 'FrontMania',
+          sessiondescription: "'",
+          speakerdescription: "'",
+          image: "'",
+          tracknumber: 0,
+          timestart: '16:00',
+          timeend: '16:30',
+          twitterurl: "'"
+        },
+        session9a: {
+          sessiontitle: 'Node.js on mobile apps',
+          speakername: 'Andre Staltz',
+          sessiondescription: "'",
+          speakerdescription:
+            'Freelancer builds open source software, teaches programming, and write articles. His Areas of focus are: JavaScript, user interfaces, reactive programming, React Native, and peer-to-peer networks.',
+          image: "'",
+          tracknumber: 1,
+          timestart: '16:30',
+          timeend: '17:30',
+          twitterurl: "'"
+        },
+        session9b: {
+          sessiontitle: 'How to build Javascript-powered Smartglasses',
+          speakername: 'Ruben van der Leun',
+          sessiondescription:
+            'After having worked at an AR-focused company with the Vuzix, a Google Glass-like product, Ruben had a lot of fun with the hardware and really wanted to have one at home to play around with. Unfortunately, they are too expensive to get one just for hobby purposes. This session will cover what was required to build his own wearable, the pitfalls, the compromises, and the sheer joy of saying "Screw it, I\'ll build it myself!".',
+          speakerdescription: 'Full Stack Web / XR Developer',
+          image: "'",
+          tracknumber: 2,
+          timestart: '16:30',
+          timeend: '17:30',
+          twitterurl: "'"
+        },
+        session10a: {
+          sessiontitle: 'AI',
+          speakername: 'Katerina Skroumpelou',
+          sessiondescription: "'",
+          speakerdescription:
+            'Google Developer Expert in Angular and Web Technologies',
+          image: "'",
+          tracknumber: 1,
+          timestart: '17:30',
+          timeend: '18:30',
+          twitterurl: "'"
+        },
+        session10b: {
+          sessiontitle: 'Keynote',
+          speakername: 'FrontMania',
+          sessiondescription: "'",
+          speakerdescription: "'",
+          image: "'",
+          tracknumber: 2,
+          timestart: '17:30',
+          timeend: '18:30',
+          twitterurl: "'"
         }
       }
     }

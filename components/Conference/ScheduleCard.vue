@@ -1,19 +1,26 @@
 <template>
-  <div class="session track-1" style="grid-column: track-1; grid-row: time-1030 / time-1130;">
+  <div class="session" :class="`track-${tracknumber}`" :style="gridStyle">
     <div class="session-timestamp-box">
-      <span class="session-track">Track {{ trackNumber }}</span>
+      <span class="session-track">Track {{ tracknumber }}</span>
       <span> | </span>
-      <span>{{ timeStart }} - {{ timeEnd }}</span>
+      <span>{{ timestart }} - {{ timeend }}</span>
     </div>
-    <span class="session-time">{{ timeStart }} - {{ timeEnd }}</span>
+    <span class="session-time">{{ timestart }} - {{ timeend }}</span>
     <h3 class="session-title">
-      {{ sessionTitle }}
+      {{ sessiontitle }}
     </h3>
     <hr>
-    <h4 class="session-presenter">
-      {{ speakerName }}
-    </h4>
-    <p>{{ speakerDescription }}</p>
+    <div class="session-speaker-wrapper">
+      <span class="left">
+        <h4 class="session-presenter">
+          {{ speakername }}
+        </h4>
+        <p v-if="speakerdescription.length > 1">{{ speakerdescription }}</p>
+      </span>
+      <span class="right">
+        <img v-if="image.length > 1" :src="image" alt="speaker">
+      </span>
+    </div>
   </div>
 </template>
 
@@ -21,45 +28,70 @@
 export default {
   name: 'ScheduleCard',
   props: {
-    trackNumber: {
+    tracknumber: {
       type: Number,
       required: true
     },
-    timeStart: {
+    timestart: {
       // 10:30
       type: String,
       required: true
     },
-    timeEnd: {
+    timeend: {
       // 11:30
       type: String,
       required: true
     },
-    sessionTitle: {
+    sessiontitle: {
       type: String,
       required: true
     },
-    speakerName: {
+    sessiondescription: {
+      type: String,
+      required: false,
+      default: ''
+    },
+    speakername: {
       type: String,
       required: true
     },
-    speakerDescription: {
+    speakerdescription: {
+      type: String,
+      required: true
+    },
+    image: {
       type: String,
       required: true
     }
   },
   computed: {
-    cssStartTimestamp() {
-      return this.timeStart.replace(':', '')
-    },
-    cssEndTimestamp() {
-      return this.timeEnd.replace(':', '')
+    /* Outputs a style tag like this: grid-column: track-1; grid-row: time-1030 / time-1130; */
+    gridStyle() {
+      // eslint-disable-next-line no-console
+      console.log('data', this.data)
+      return `grid-column: track-${this.tracknumber};
+              grid-row: time-${this.timestart.replace(
+                ':',
+                ''
+              )} / time-${this.timeend.replace(':', '')};`
     }
   }
 }
 </script>
 
 <style lang="scss">
+/*
+Cross Browser text stroke generator
+https://github.com/Owumaro/text-stroke-generator
+*/
+
+@mixin textStroke($color) {
+  text-shadow: $color 1px 0px 0px, $color 0.540302px 0.841471px 0px,
+    $color -0.416147px 0.909297px 0px, $color -0.989992px 0.14112px 0px,
+    $color -0.653644px -0.756802px 0px, $color 0.283662px -0.958924px 0px,
+    $color 0.96017px -0.279415px 0px;
+}
+
 $pink: #ea5297; // Brilliant Rose
 $yellow: #ffed00; // Turbo
 $blue: #00afcb; // Pacific Bluee
@@ -106,6 +138,12 @@ $yellowSpray: nth($yellowImages, random(length($yellowImages)));
       display: none !important; // hide the timestamp box when on desktop view
     }
   }
+
+  @media screen and (max-width: 700px) {
+    .session-time {
+      display: none !important; // hide the timestamp box when on desktop view
+    }
+  }
 }
 
 .session {
@@ -113,7 +151,8 @@ $yellowSpray: nth($yellowImages, random(length($yellowImages)));
   border-radius: 2px;
   font-size: 14px;
   color: $black;
-  background-position-y: -40px;
+  background-repeat: no-repeat;
+  background-position-y: -120px;
   background-position-x: -58px;
   background-size: cover;
 
@@ -128,8 +167,11 @@ $yellowSpray: nth($yellowImages, random(length($yellowImages)));
 
   h3 {
     color: $black;
-    font-size: 20px;
+    font-size: 25px;
     display: block;
+    min-height: 130px;
+
+    @include textStroke($white);
   }
 
   span {
@@ -153,6 +195,7 @@ $yellowSpray: nth($yellowImages, random(length($yellowImages)));
 .track-1 {
   background-color: $yellow;
   background-image: url($greenSpray);
+
   /* box-shadow: 10px 10px 0px 0px $pink; */
 
   .session-timestamp-box {
