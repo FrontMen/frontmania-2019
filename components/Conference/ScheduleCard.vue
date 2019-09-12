@@ -1,32 +1,55 @@
 <template>
-  <div class="session" :class="`track-${tracknumber}`" :style="gridStyle">
-    <div class="session-timestamp-box">
-      <span class="session-track">Track {{ tracknumber }}</span>
-      <span> | </span>
-      <span>{{ timestart }} - {{ timeend }}</span>
+  <vue-flip
+    class="session"
+    :class="`track-${tracknumber}`"
+    width="100%"
+    height="100%"
+    :style="gridStyle"
+    :active-hover="true"
+  >
+    <div slot="front">
+      <div class="session-timestamp-box">
+        <span class="session-track">Track {{ tracknumber }}</span>
+        <span> | </span>
+        <span>{{ timestart }} - {{ timeend }}</span>
+      </div>
+
+      <div class="top-part">
+        <span class="session-time">{{ timestart }} - {{ timeend }}</span>
+        <h3 class="session-title">
+          {{ sessiontitle }}
+        </h3>
+      </div>
+
+      <div class="bottom-part">
+        <hr>
+        <div class="session-speaker-wrapper">
+          <span class="left">
+            <h4 class="session-presenter">
+              {{ speakername }}
+            </h4>
+            <p v-if="speakerdescription.length > 1">{{ speakerdescription }}</p>
+          </span>
+          <span class="right">
+            <img v-if="image.length > 1" :src="image" alt="speaker">
+          </span>
+        </div>
+      </div>
     </div>
-    <span class="session-time">{{ timestart }} - {{ timeend }}</span>
-    <h3 class="session-title">
-      {{ sessiontitle }}
-    </h3>
-    <hr>
-    <div class="session-speaker-wrapper">
-      <span class="left">
-        <h4 class="session-presenter">
-          {{ speakername }}
-        </h4>
-        <p v-if="speakerdescription.length > 1">{{ speakerdescription }}</p>
-      </span>
-      <span class="right">
-        <img v-if="image.length > 1" :src="image" alt="speaker">
-      </span>
+    <div slot="back">
+      {{ sessiondescription }}
     </div>
-  </div>
+  </vue-flip>
 </template>
 
 <script>
+import VueFlip from 'vue-flip'
+
 export default {
   name: 'ScheduleCard',
+  components: {
+    'vue-flip': VueFlip
+  },
   props: {
     tracknumber: {
       type: Number,
@@ -143,18 +166,60 @@ $yellowSpray: nth($yellowImages, random(length($yellowImages)));
     .session-time {
       display: none !important; // hide the timestamp box when on desktop view
     }
+
+    .session {
+      .top-part {
+        min-height: auto !important;
+      }
+    }
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1200px) {
+    .flip-container,
+    .session,
+    .front,
+    .back {
+      min-height: 250px !important;
+    }
   }
 }
 
 .session {
-  padding: 1em;
   border-radius: 2px;
   font-size: 14px;
   color: $black;
-  background-repeat: no-repeat;
-  background-position-y: -120px;
-  background-position-x: -58px;
-  background-size: cover;
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+
+  .flipper {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    min-height: 350px;
+  }
+  .front {
+    display: flex;
+    justify-content: stretch;
+
+    background-repeat: no-repeat;
+    background-position-y: -120px;
+    background-position-x: -58px;
+    background-size: cover;
+    padding: 1em;
+  }
+
+  .back {
+    background: black;
+    color: $white;
+    padding: 1em;
+    min-height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    text-align: center;
+  }
 
   hr {
     border: 5px solid $white;
@@ -169,7 +234,7 @@ $yellowSpray: nth($yellowImages, random(length($yellowImages)));
     color: $black;
     font-size: 25px;
     display: block;
-    min-height: 130px;
+    width: 100%;
 
     @include textStroke($white);
   }
@@ -190,11 +255,24 @@ $yellowSpray: nth($yellowImages, random(length($yellowImages)));
     font-weight: 700;
     justify-content: space-evenly;
   }
+  .top-part {
+    min-height: 150px;
+
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .bottom-part {
+    //  @TODO: HOW DO I ALIGN IT !!!
+  }
 }
 
 .track-1 {
-  background-color: $yellow;
-  background-image: url($greenSpray);
+  .front {
+    background-color: $yellow;
+    background-image: url($greenSpray);
+  }
 
   /* box-shadow: 10px 10px 0px 0px $pink; */
 
@@ -204,8 +282,10 @@ $yellowSpray: nth($yellowImages, random(length($yellowImages)));
 }
 
 .track-2 {
-  background-color: $lightBlue;
-  background-image: url($yellowSpray);
+  .front {
+    background-color: $lightBlue;
+    background-image: url($yellowSpray);
+  }
   /* box-shadow: 10px 10px 0px 0px $red; */
 
   .session-timestamp-box {
@@ -219,6 +299,7 @@ $yellowSpray: nth($yellowImages, random(length($yellowImages)));
   padding: 0.5em;
   margin-bottom: 1em;
   border-radius: 2px;
+  max-height: 34px;
 }
 
 .session-speaker-wrapper {
@@ -226,6 +307,7 @@ $yellowSpray: nth($yellowImages, random(length($yellowImages)));
   justify-content: space-evenly;
   flex-wrap: wrap;
   flex-direction: row;
+  width: 100%;
 
   h4 {
     font-size: 18px;

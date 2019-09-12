@@ -39,30 +39,6 @@
           11:30
         </h2>
 
-        <div class="session session-11 track-2" style="grid-column: track-2; grid-row: time-1130 / time-1230;">
-          <div class="session-timestamp-box">
-            <span class="session-track">Track 2</span>
-            <span> | </span>
-            <span>11:30 - 12:30</span>
-          </div>
-          <span class="session-time">11:30 - 12:30</span>
-          <h3 class="session-title">
-            !The Teenage Mutant Ninja Turtles lorem ip  Guide to Color Theory lorem ipsum sit do Line 3 if title talk is very long pixels
-          </h3>
-          <hr>
-          <div class="session-speaker-wrapper">
-            <span class="left">
-              <h4 class="session-presenter">
-                Louisa Barrett
-              </h4>
-              <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias animi sit velit</p>
-            </span>
-            <span class="right">
-              <img src="http://place-puppy.com/250x250" alt="speaker">
-            </span>
-          </div>
-        </div>
-
         <h2 class="time-slot" style="grid-row: time-1200;">
           12:00
         </h2>
@@ -154,7 +130,7 @@ export default {
           sessiondescription:
             'Come to this session and you’ll understand how paint worklets, well, work. But the really good stuff will be in all the inspired experimentation that can come from experimenting with the programatic generation of art and graphics, and how we can practically use it in our designs. If the intersection between weird and usable is your thing, you’ll feel right at home with paint worklets!',
           speakerdescription:
-            'Jeremy Wagner is an independent web performance consultant, author, and speaker from Minnesota doing his level best to make the web faster for everyone, everywhere.',
+            'Jeremy Wagner is an independent web performance consultant, author, and speaker.',
           image: "'",
           tracknumber: 1,
           timestart: '10:00',
@@ -165,8 +141,7 @@ export default {
           sessiontitle: '???',
           speakername: 'Lee Boonstra',
           sessiondescription: "'",
-          speakerdescription:
-            'Sales engineer in the Google Cloud team where she assist the sales team with technical knowledge about cloud computing and machine learning for the financial industry.',
+          speakerdescription: 'Sales engineer in the Google Cloud team.',
           image: "'",
           tracknumber: 2,
           timestart: '10:00',
@@ -241,7 +216,7 @@ export default {
           sessiondescription:
             'We need to talk about JavaScript performance on the desktop. Why does it seem like so many Electron apps consume more resources than their native counterparts? Felix explores the architectural tricks separating slow and fast Electron apps.',
           speakerdescription:
-            'Felix is a Senior Staff Engineer and Tech Lead at Slack. He is a co-maintainer of Electron and maintainer of numerous open source libraries, focusing on JavaScript and Node.js',
+            'Felix is a Senior Staff Engineer and Tech Lead at Slack.',
           image: "'",
           tracknumber: 1,
           timestart: '14:00',
@@ -253,8 +228,7 @@ export default {
           speakername: 'Tal Ater',
           sessiondescription:
             "An adventure story with drones, robots, autonomous boats, astronauts, and JavaScript… and what it means for tomorrow's autonomous cars.",
-          speakerdescription:
-            "Founder and CTO of the DAV Foundation, the creator of a number of popular open source libraries,  an O'Reilly published autho and an W3C Invited Expert.",
+          speakerdescription: 'Founder and CTO of the DAV Foundation.',
           image: "'",
           tracknumber: 2,
           timestart: '14:00',
@@ -303,7 +277,7 @@ export default {
           speakername: 'Andre Staltz',
           sessiondescription: "'",
           speakerdescription:
-            'Freelancer builds open source software, teaches programming, and write articles. His Areas of focus are: JavaScript, user interfaces, reactive programming, React Native, and peer-to-peer networks.',
+            'Freelancer builds open source software, teaches programming, and write articles.',
           image: "'",
           tracknumber: 1,
           timestart: '16:30',
@@ -469,11 +443,11 @@ $blackShadow: rgba(0, 0, 0, 0.3);
 }
 
 .slot-1 {
-  background: $pink;
+  background: $green;
 }
 
 .slot-2 {
-  background: $red;
+  background: $lightBlue;
 }
 
 .track-all {
