@@ -1,11 +1,11 @@
 <template>
   <vue-flip
     class="session"
-    :class="`track-${tracknumber}`"
+    :class="[`track-${tracknumber}`, isMinified && 'minified' ]"
     width="100%"
     height="100%"
     :style="gridStyle"
-    :active-hover="true"
+    :active-hover="isMinified ? false : true"
   >
     <div slot="front">
       <div class="session-timestamp-box">
@@ -28,7 +28,7 @@
             <h4 class="session-presenter">
               {{ speakername }}
             </h4>
-            <p v-if="speakerdescription.length > 1">{{ speakerdescription }}</p>
+            <p v-if="speakerdescription.length > 1" class="speaker-description">{{ speakerdescription }}</p>
           </span>
           <span class="right">
             <img v-if="image.length > 1" :src="image" alt="speaker">
@@ -51,6 +51,10 @@ export default {
     'vue-flip': VueFlip
   },
   props: {
+    isMinified: {
+      type: Boolean,
+      required: true
+    },
     tracknumber: {
       type: Number,
       required: true
@@ -96,7 +100,9 @@ export default {
               grid-row: time-${this.timestart.replace(
                 ':',
                 ''
-              )} / time-${this.timeend.replace(':', '')};`
+              )} / time-${this.timeend.replace(':', '')};
+              ${this.isMinified && 'min-height: 110px !important;'}
+              `
     }
   }
 }
@@ -179,7 +185,7 @@ $yellowSpray: nth($yellowImages, random(length($yellowImages)));
     .session,
     .front,
     .back {
-      min-height: 250px !important;
+      min-height: 250px;
     }
   }
 }
@@ -213,11 +219,10 @@ $yellowSpray: nth($yellowImages, random(length($yellowImages)));
     background: black;
     color: $white;
     padding: 1em;
-    min-height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 16px;
+    font-size: 13px;
     text-align: center;
   }
 
@@ -226,13 +231,13 @@ $yellowSpray: nth($yellowImages, random(length($yellowImages)));
     width: 20%;
     clear: both;
     display: block;
-    margin: 2em 0;
+    margin: 1em 0;
     padding: 0;
   }
 
   h3 {
     color: $black;
-    font-size: 25px;
+    font-size: 19px;
     display: block;
     width: 100%;
 
@@ -261,10 +266,6 @@ $yellowSpray: nth($yellowImages, random(length($yellowImages)));
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
-  }
-
-  .bottom-part {
-    //  @TODO: HOW DO I ALIGN IT !!!
   }
 }
 
@@ -316,6 +317,7 @@ $yellowSpray: nth($yellowImages, random(length($yellowImages)));
 
   p {
     line-height: 1rem;
+    font-size: 14px;
   }
   .left {
     flex: 1;
@@ -326,6 +328,79 @@ $yellowSpray: nth($yellowImages, random(length($yellowImages)));
       box-shadow: 4px 4px 0px 0px $white;
       transform: rotate(-14deg);
       max-width: 100px;
+    }
+  }
+}
+
+@mixin minifiedHeight {
+  min-height: auto !important;
+}
+
+/* Minified styles for easier scanning  */
+.minified {
+  .flip-container,
+  .session,
+  .flipper,
+  .front {
+    @include minifiedHeight;
+  }
+
+  .top-part {
+    min-height: 0;
+  }
+
+  .session-presenter {
+    margin: 0.5em 0;
+    font-weight: 500;
+  }
+
+  .session-timestamp-box {
+    transform: none;
+    padding: 0;
+    margin: 0 0 0.5em;
+    width: auto;
+    display: block;
+    font-weight: initial;
+    background: none;
+  }
+
+  .session-time {
+    padding: 0;
+  }
+
+  .speaker-description {
+    display: none;
+  }
+  .front {
+    background: white !important;
+    border: 1px solid #000;
+    background: none;
+    min-height: 110px;
+
+    p,
+    h2,
+    h3,
+    h4,
+    span {
+      font-size: 12px !important;
+      color: #000 !important;
+    }
+  }
+
+  .back {
+    display: none;
+  }
+
+  hr {
+    display: none !important;
+  }
+
+  @media screen and (max-width: 700px) {
+    .flip-container,
+    .session,
+    .flipper,
+    .front {
+      min-height: 100px !important;
     }
   }
 }

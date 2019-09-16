@@ -1,19 +1,28 @@
 <template>
   <app-section :full-width="true" background="/images/bg-white.jpg">
-    <div class="schedule-wrapper">
+    <div class="schedule-wrapper" :class="{ minified: isMinified}">
       <img src="~assets/images/schedule/schedule.svg" alt="schedule">
       <div class="schedule" aria-labelledby="schedule-heading">
         <span class="track-slot slot-1" aria-hidden="true" style="grid-column: track-1; grid-row: tracks;"><p>Track 1</p></span>
         <span class="track-slot slot-2" aria-hidden="true" style="grid-column: track-2; grid-row: tracks;"><p>Track 2</p></span>
+        <button class="custom-btn" :class="{ active: isMinified }" @click="handleToggle">
+          {{ isMinified ? 'Detail View' : 'Simple Styles' }}
+        </button>
 
         <h2 class="time-slot" style="grid-row: time-0900;">
           9:00
         </h2>
 
-        <div class="session track-all" style="grid-column: track-1-start / track-2-end; grid-row: time-0900 / time-0930;">
+        <div class="session track-all" style="grid-column: track-1-start / track-2-end; grid-row: time-0900 / time-1000;">
+          <span class="track-all-session-time">
+            09:00 - 10:00
+          </span>
           <h3 class="session-title">
             Opening Show
           </h3>
+          <span class="track-all-subtitle">
+            Seb Lee Delisle
+          </span>
         </div>
 
         <h2 class="time-slot" style="grid-row: time-0930;">
@@ -24,8 +33,8 @@
           10:00
         </h2>
 
-        <schedule-card v-bind="sessions.session2a" />
-        <schedule-card v-bind="sessions.session2b" />
+        <schedule-card v-bind="sessions.session2a" :is-minified="isMinified" />
+        <schedule-card v-bind="sessions.session2b" :is-minified="isMinified" />
 
         <h2 class="time-slot" style="grid-row: time-1030;">
           10:30
@@ -71,7 +80,7 @@
           15:30
         </h2>
 
-        <div class="session session-7 track-all" style="grid-column: track-1-start / track-2-end; grid-row: time-1530 / time-1600;">
+        <div class="session session-7 track-all" style="grid-column: track-1-start / track-2-end; grid-row: time-1600 / time-1630;">
           <h3 class="session-title">
             Take a break!
           </h3>
@@ -108,9 +117,9 @@ export default {
   components: {
     ScheduleCard
   },
-
   data() {
     return {
+      isMinified: false,
       sessions: {
         session1a: {
           sessiontitle: 'Opening Show',
@@ -321,6 +330,13 @@ export default {
         }
       }
     }
+  },
+  methods: {
+    handleToggle() {
+      this.isMinified = !this.isMinified
+      // eslint-disable-next-line no-console
+      console.log('foo')
+    }
   }
 }
 </script>
@@ -335,6 +351,7 @@ const data = {
 }
 
 <style lang="scss">
+// @TODO:  fix copy pasted code
 $pink: #ea5297; // Brilliant Rose
 $yellow: #ffed00; // Turbo
 $blue: #00afcb; // Pacific Bluee
@@ -436,9 +453,19 @@ $blackShadow: rgba(0, 0, 0, 0.3);
   margin: 0 auto;
 }
 
+.track-slot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media screen and (max-width: 850px) {
   .schedule-wrapper {
     padding: 0 !important;
+  }
+
+  .track-slot {
+    display: none; /* hidden on small screens and browsers without grid support */
   }
 }
 
@@ -456,15 +483,79 @@ $blackShadow: rgba(0, 0, 0, 0.3);
   align-items: center;
   background: $black;
   box-shadow: none;
-  text-transform: uppercase;
-  font-size: 2em;
+  padding: 0.5em 0;
+  flex-direction: column;
+  color: $white;
+
+  .track-all-session-time {
+    margin-bottom: 0.2em;
+  }
 
   h3 {
+    text-transform: uppercase;
     color: $yellow;
+    text-shadow: none;
+    text-align: center;
+    font-size: 19px;
+  }
+
+  .track-all-subtitle {
+    font-size: 14px;
   }
 }
 
 .time-slot {
   font-size: 1em;
+}
+
+.custom-btn {
+  display: inline-block;
+  font-size: 13px;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.15em;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #9fa1a7;
+  box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
+  text-align: center;
+  position: relative;
+  padding: 0.5em;
+}
+
+.active {
+  top: 0.1em;
+  background-color: $green;
+  background-image: url('~assets/images/schedule/spray_fat_yellow.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $black;
+}
+
+/* Minified styles for easier reading */
+
+.minified {
+  .track-all {
+    border: 1px solid black;
+    background: $white;
+    h3 {
+      color: $black;
+    }
+
+    .track-all-subtitle {
+      color: $black;
+    }
+  }
+
+  .track-slot {
+    background: $white;
+
+    p {
+      color: $black;
+      font-size: 16px;
+    }
+  }
 }
 </style>
