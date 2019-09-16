@@ -12,18 +12,7 @@
         <h2 class="time-slot" style="grid-row: time-0900;">
           9:00
         </h2>
-
-        <div class="session track-all" style="grid-column: track-1-start / track-2-end; grid-row: time-0900 / time-1000;">
-          <span class="track-all-session-time">
-            09:00 - 10:00
-          </span>
-          <h3 class="session-title">
-            Opening Show
-          </h3>
-          <span class="track-all-subtitle">
-            Seb Lee Delisle
-          </span>
-        </div>
+        <schedule-card v-bind="sessions.session1" :is-minified="isMinified" />
 
         <h2 class="time-slot" style="grid-row: time-0930;">
           9:30
@@ -121,7 +110,7 @@ export default {
     return {
       isMinified: false,
       sessions: {
-        session1a: {
+        session1: {
           sessiontitle: 'Opening Show',
           speakername: 'Seb Lee Delisle',
           sessiondescription: "'",
@@ -129,7 +118,7 @@ export default {
             'Seb Lee-Delisle is a digital artist and speaker who specialises in large scale interactive light installations.',
           image: "'",
           tracknumber: 0,
-          timestart: '9:00',
+          timestart: '09:00',
           timeend: '10:00',
           twitterurl: "'"
         },
@@ -183,7 +172,7 @@ export default {
           twitterurl: "'"
         },
         session4: {
-          sessiontitle: 'Break',
+          sessiontitle: 'Lunch Break',
           speakername: 'FrontMania',
           sessiondescription: "'",
           speakerdescription: "'",
@@ -334,8 +323,6 @@ export default {
   methods: {
     handleToggle() {
       this.isMinified = !this.isMinified
-      // eslint-disable-next-line no-console
-      console.log('foo')
     }
   }
 }
@@ -477,33 +464,6 @@ $blackShadow: rgba(0, 0, 0, 0.3);
   background: $lightBlue;
 }
 
-.track-all {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: $black;
-  box-shadow: none;
-  padding: 0.5em 0;
-  flex-direction: column;
-  color: $white;
-
-  .track-all-session-time {
-    margin-bottom: 0.2em;
-  }
-
-  h3 {
-    text-transform: uppercase;
-    color: $yellow;
-    text-shadow: none;
-    text-align: center;
-    font-size: 19px;
-  }
-
-  .track-all-subtitle {
-    font-size: 14px;
-  }
-}
-
 .time-slot {
   font-size: 1em;
 }
@@ -523,6 +483,10 @@ $blackShadow: rgba(0, 0, 0, 0.3);
   text-align: center;
   position: relative;
   padding: 0.5em;
+
+  &:active {
+    box-shadow: none;
+  }
 }
 
 .active {
@@ -532,30 +496,5 @@ $blackShadow: rgba(0, 0, 0, 0.3);
   background-repeat: no-repeat;
   background-size: cover;
   color: $black;
-}
-
-/* Minified styles for easier reading */
-
-.minified {
-  .track-all {
-    border: 1px solid black;
-    background: $white;
-    h3 {
-      color: $black;
-    }
-
-    .track-all-subtitle {
-      color: $black;
-    }
-  }
-
-  .track-slot {
-    background: $white;
-
-    p {
-      color: $black;
-      font-size: 16px;
-    }
-  }
 }
 </style>

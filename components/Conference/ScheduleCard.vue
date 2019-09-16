@@ -1,5 +1,23 @@
 <template>
+  <!-- For both collumns -->
+  <div
+    v-if="tracknumber === 0"
+    class="session track-all"
+    :style="gridStyle"
+  >
+    <span class="track-all-session-time">
+      {{ timestart }} - {{ timeend }}
+    </span>
+    <h3 class="session-title">
+      {{ sessiontitle }}
+    </h3>
+    <span class="track-all-subtitle">
+      {{ speakername }}
+    </span>
+  </div>
+
   <vue-flip
+    v-else
     class="session"
     :class="[`track-${tracknumber}`, isMinified && 'minified' ]"
     width="100%"
@@ -92,17 +110,27 @@ export default {
     }
   },
   computed: {
-    /* Outputs a style tag like this: grid-column: track-1; grid-row: time-1030 / time-1130; */
     gridStyle() {
-      // eslint-disable-next-line no-console
-      console.log('data', this.data)
+      /* generate a timestamp without colons */
+      const timeStamp = ` grid-row: time-${this.timestart.replace(
+        ':',
+        ''
+      )} / time-${this.timeend.replace(':', '')};
+          `
+      /* Outputs a style tag like this: grid-column: track-1; grid-row: time-1030 / time-1130; */
+      const minifiedStyle = `${this.isMinified &&
+        'min-height: 110px !important;'}`
+
+      if (this.tracknumber === 0) {
+        return `grid-column: track-1-start / track-2-end;
+                ${timeStamp}
+                ${minifiedStyle}
+                `
+      }
+
       return `grid-column: track-${this.tracknumber};
-              grid-row: time-${this.timestart.replace(
-                ':',
-                ''
-              )} / time-${this.timeend.replace(':', '')};
-              ${this.isMinified && 'min-height: 110px !important;'}
-              `
+              ${timeStamp}
+              ${minifiedStyle}`
     }
   }
 }
@@ -332,12 +360,68 @@ $yellowSpray: nth($yellowImages, random(length($yellowImages)));
   }
 }
 
+.track-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $black;
+  box-shadow: none;
+  padding: 0.5em 0;
+  flex-direction: column;
+  color: $white;
+
+  .track-all-session-time {
+    margin-bottom: 0.2em;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    color: $yellow;
+    text-shadow: none;
+    text-align: center;
+    font-size: 19px;
+  }
+
+  .track-all-subtitle {
+    font-size: 14px;
+  }
+}
+
+/*************************
+ * MINIFIED STYLES
+ *************************/
+/* Minified styles for easier scanning  */
+
 @mixin minifiedHeight {
   min-height: auto !important;
 }
 
-/* Minified styles for easier scanning  */
 .minified {
+  .track-all {
+    border: 1px solid black;
+    background: $white;
+    .track-all-session-time {
+      color: $black;
+      font-size: 12px;
+    }
+    h3 {
+      color: $black;
+    }
+
+    .track-all-subtitle {
+      color: $black;
+    }
+  }
+
+  .track-slot {
+    background: $white;
+
+    p {
+      color: $black;
+      font-size: 16px;
+    }
+  }
+
   .flip-container,
   .session,
   .flipper,
