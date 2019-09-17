@@ -3,87 +3,19 @@
     <div class="schedule-wrapper" :class="{ minified: isMinified}">
       <img src="~assets/images/schedule/schedule.svg" alt="schedule">
       <div class="schedule" aria-labelledby="schedule-heading">
+        <!-- Top Row -->
         <span class="track-slot slot-1" aria-hidden="true" style="grid-column: track-1; grid-row: tracks;"><p>Track 1</p></span>
         <span class="track-slot slot-2" aria-hidden="true" style="grid-column: track-2; grid-row: tracks;"><p>Track 2</p></span>
         <button class="custom-btn" :class="{ active: isMinified }" @click="handleToggle">
           {{ isMinified ? 'Detail View' : 'Simple Styles' }}
         </button>
 
-        <h2 class="time-slot" style="grid-row: time-0900;">
-          9:00
-        </h2>
-        <h2 class="time-slot" style="grid-row: time-0930;">
-          9:30
-        </h2>
+        <!-- TimeStamps Collumn 1 -->
+        <template v-for="time in timeStamps">
+          <time-stamp :key="time" :time="time" />
+        </template>
 
-        <h2 class="time-slot" style="grid-row: time-1000;">
-          10:00
-        </h2>
-
-        <h2 class="time-slot" style="grid-row: time-1030;">
-          10:30
-        </h2>
-
-        <h2 class="time-slot" style="grid-row: time-1100;">
-          11:00
-        </h2>
-
-        <h2 class="time-slot" style="grid-row: time-1130;">
-          11:30
-        </h2>
-
-        <h2 class="time-slot" style="grid-row: time-1200;">
-          12:00
-        </h2>
-
-        <h2 class="time-slot" style="grid-row: time-1230;">
-          12:30
-        </h2>
-
-        <h2 class="time-slot" style="grid-row: time-1300;">
-          13:00
-        </h2>
-
-        <h2 class="time-slot" style="grid-row: time-1330;">
-          13:30
-        </h2>
-
-        <h2 class="time-slot" style="grid-row: time-1400;">
-          14:00
-        </h2>
-
-        <h2 class="time-slot" style="grid-row: time-1430;">
-          14:30
-        </h2>
-
-        <h2 class="time-slot" style="grid-row: time-1500;">
-          15:00
-        </h2>
-
-        <h2 class="time-slot" style="grid-row: time-1530;">
-          15:30
-        </h2>
-
-        <h2 class="time-slot" style="grid-row: time-1600;">
-          16:00
-        </h2>
-
-        <h2 class="time-slot" style="grid-row: time-1630;">
-          16:30
-        </h2>
-
-        <h2 class="time-slot" style="grid-row: time-1700;">
-          17:00
-        </h2>
-
-        <h2 class="time-slot" style="grid-row: time-1730;">
-          17:30
-        </h2>
-
-        <h2 class="time-slot" style="grid-row: time-1800;">
-          18:00
-        </h2>
-        <!-- Schedules -->
+        <!-- Sessions Collumn 2 & 3 -->
         <template v-for="session in sessions">
           <schedule-card :key="session.speakerName" v-bind="session" :is-minified="isMinified" />
         </template>
@@ -93,14 +25,19 @@
 </template>
 
 <script>
+import { timeArray } from '../../utilities/time'
 import ScheduleCard from '~/components/Conference/ScheduleCard.vue'
+import TimeStamp from '~/components/Conference/TimeStamp.vue'
 
 export default {
   components: {
-    ScheduleCard
+    ScheduleCard,
+    TimeStamp
   },
   data() {
     return {
+      // generate array of timestamps based on start and end time
+      timeStamps: timeArray('9:00', '18:00'),
       isMinified: false,
       sessions: [
         {

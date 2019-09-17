@@ -188,7 +188,8 @@ export default {
   },
   methods: {
     handleClick() {
-      if (!this.isMinified) {
+      // Only allow flipping if the sessiondescription has content
+      if (!this.isMinified && this.sessiondescription.length > 1) {
         this.flipped = !this.flipped
       }
     },
@@ -401,7 +402,7 @@ https://github.com/Owumaro/text-stroke-generator
 
   p {
     line-height: 1rem;
-    font-size: 14px;
+    font-size: 13px;
   }
   .left {
     flex: 1;
