@@ -12,8 +12,6 @@
         <h2 class="time-slot" style="grid-row: time-0900;">
           9:00
         </h2>
-        <schedule-card v-bind="sessions.session1" :is-minified="isMinified" />
-
         <h2 class="time-slot" style="grid-row: time-0930;">
           9:30
         </h2>
@@ -21,9 +19,6 @@
         <h2 class="time-slot" style="grid-row: time-1000;">
           10:00
         </h2>
-
-        <schedule-card v-bind="sessions.session2a" :is-minified="isMinified" />
-        <schedule-card v-bind="sessions.session2b" :is-minified="isMinified" />
 
         <h2 class="time-slot" style="grid-row: time-1030;">
           10:30
@@ -69,12 +64,6 @@
           15:30
         </h2>
 
-        <div class="session session-7 track-all" style="grid-column: track-1-start / track-2-end; grid-row: time-1600 / time-1630;">
-          <h3 class="session-title">
-            Take a break!
-          </h3>
-        </div>
-
         <h2 class="time-slot" style="grid-row: time-1600;">
           16:00
         </h2>
@@ -94,6 +83,13 @@
         <h2 class="time-slot" style="grid-row: time-1800;">
           18:00
         </h2>
+        <!-- Schedules -->
+        <template v-for="session in sessions">
+          <schedule-card :key="session.speakerName" v-bind="session" :is-minified="isMinified" />
+        </template>
+      <!-- <schedule-card v-bind="sessions.session1" :is-minified="isMinified" />
+        <schedule-card v-bind="sessions.session2a" :is-minified="isMinified" />
+        <schedule-card v-bind="sessions.session2b" :is-minified="isMinified" /> -->
       </div>
     </div>
   </app-section>
@@ -260,7 +256,7 @@ export default {
           twitterurl: "'"
         },
         session8: {
-          sessiontitle: 'Break',
+          sessiontitle: 'Coffee Break',
           speakername: 'FrontMania',
           sessiondescription: "'",
           speakerdescription: "'",
@@ -431,12 +427,26 @@ $blackShadow: rgba(0, 0, 0, 0.3);
     }
   }
 }
+
+/* Before sidebar collapses */
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .schedule-wrapper {
+    padding: 0 !important;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .time-slot {
+    display: none;
+  }
+}
+
 /*************************
  * VISUAL STYLES
  *************************/
 
 .schedule-wrapper {
-  padding: 50px;
+  padding: 0 60px 0 40px;
   margin: 0 auto;
 }
 

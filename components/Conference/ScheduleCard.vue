@@ -23,13 +23,13 @@
     width="100%"
     height="100%"
     :style="gridStyle"
-    :active-hover="isMinified ? false : true"
+    :active-click="isMinified ? false : true"
   >
-    <div slot="front">
+    <div slot="front" :style="trackImageStyle">
       <div class="session-timestamp-box">
-        <span class="session-track">Track {{ tracknumber }}</span>
-        <span> | </span>
         <span>{{ timestart }} - {{ timeend }}</span>
+        <span> | </span>
+        <span class="session-track">Track {{ tracknumber }}</span>
       </div>
 
       <div class="top-part">
@@ -110,16 +110,51 @@ export default {
     }
   },
   computed: {
+    trackImageStyle() {
+      if (this.tracknumber === 0 || this.isMinified) {
+        return
+      }
+      // green --> Track1
+      const greenImages = [
+        '/_nuxt/assets/images/schedule/spray_fat_green.svg',
+        '/_nuxt/assets/images/schedule/spray_splat_green.svg',
+        '/_nuxt/assets/images/schedule/spray_streak_green.svg',
+        '/_nuxt/assets/images/schedule/spray_thin_green.svg',
+        '/_nuxt/assets/images/schedule/spray_wide_green.svg',
+        '/_nuxt/assets/images/schedule/spray_zigzag_green.svg'
+      ]
+      // yellow --> Track2
+      const yellowImages = [
+        '/_nuxt/assets/images/schedule/spray_fat_yellow.svg',
+        '/_nuxt/assets/images/schedule/spray_splat_yellow.svg',
+        '/_nuxt/assets/images/schedule/spray_streak_yellow.svg',
+        '/_nuxt/assets/images/schedule/spray_thin_yellow.svg',
+        '/_nuxt/assets/images/schedule/spray_wide_yellow.svg',
+        '/_nuxt/assets/images/schedule/spray_zigzag_yellow.svg'
+      ]
+
+      const image = this.randomItem(
+        this.tracknumber === 1 ? greenImages : yellowImages
+      )
+
+      /* Inline Stlye because vue-flip generates extra divs without classes */
+      return `background-image: url(${image});
+            background-repeat: no-repeat;
+            background-position-y: -120px;
+            background-position-x: -58px;
+            background-size: cover;
+            width: 100%;`
+    },
     gridStyle() {
       /* generate a timestamp without colons */
-      const timeStamp = ` grid-row: time-${this.timestart.replace(
+      const timeStamp = `grid-row: time-${this.timestart.replace(
         ':',
         ''
       )} / time-${this.timeend.replace(':', '')};
           `
       /* Outputs a style tag like this: grid-column: track-1; grid-row: time-1030 / time-1130; */
       const minifiedStyle = `${this.isMinified &&
-        'min-height: 110px !important;'}`
+        'min-height: 55px !important;'}`
 
       if (this.tracknumber === 0) {
         return `grid-column: track-1-start / track-2-end;
@@ -131,6 +166,11 @@ export default {
       return `grid-column: track-${this.tracknumber};
               ${timeStamp}
               ${minifiedStyle}`
+    }
+  },
+  methods: {
+    randomItem(array) {
+      return array[Math.floor(Math.random() * array.length)]
     }
   }
 }
@@ -158,28 +198,6 @@ $red: #e4032e; // Monza
 $white: #fff;
 $black: #000;
 
-$greenImages: (
-  '~assets/images/schedule/spray_fat_green.svg',
-  '~assets/images/schedule/spray_splat_green.svg',
-  '~assets/images/schedule/spray_streak_green.svg',
-  '~assets/images/schedule/spray_thin_green.svg',
-  '~assets/images/schedule/spray_wide_green.svg',
-  '~assets/images/schedule/spray_zigzag_green.svg'
-);
-
-$yellowImages: (
-  '~assets/images/schedule/spray_fat_yellow.svg',
-  '~assets/images/schedule/spray_splat_yellow.svg',
-  '~assets/images/schedule/spray_streak_yellow.svg',
-  '~assets/images/schedule/spray_thin_yellow.svg',
-  '~assets/images/schedule/spray_wide_yellow.svg',
-  '~assets/images/schedule/spray_zigzag_yellow.svg'
-);
-
-// generate a random spray
-$greenSpray: nth($greenImages, random(length($greenImages)));
-$yellowSpray: nth($yellowImages, random(length($yellowImages)));
-
 /* Small-screen & fallback styles */
 .session {
   margin-bottom: 1em;
@@ -204,6 +222,10 @@ $yellowSpray: nth($yellowImages, random(length($yellowImages)));
     .session {
       .top-part {
         min-height: auto !important;
+      }
+
+      .flipper {
+        min-height: 283px !important;
       }
     }
   }
@@ -230,17 +252,12 @@ $yellowSpray: nth($yellowImages, random(length($yellowImages)));
     display: flex;
     align-items: stretch;
     flex-wrap: wrap;
-    min-height: 350px;
+    /* Required min-height because of flipper library */
+    min-height: 250px;
   }
   .front {
     display: flex;
     justify-content: stretch;
-
-    background-repeat: no-repeat;
-    background-position-y: -120px;
-    background-position-x: -58px;
-    background-size: cover;
-    padding: 1em;
   }
 
   .back {
@@ -260,7 +277,7 @@ $yellowSpray: nth($yellowImages, random(length($yellowImages)));
     clear: both;
     display: block;
     margin: 1em 0;
-    padding: 0;
+    padding: 0 1em;
   }
 
   h3 {
@@ -289,21 +306,23 @@ $yellowSpray: nth($yellowImages, random(length($yellowImages)));
     justify-content: space-evenly;
   }
   .top-part {
-    min-height: 150px;
-
+    min-height: 85px;
+    padding: 0 1em;
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
+  }
+
+  .bottom-part {
+    padding: 0 1em;
   }
 }
 
 .track-1 {
   .front {
     background-color: $yellow;
-    background-image: url($greenSpray);
+    /* background-image: url($greenSpray); */
   }
-
-  /* box-shadow: 10px 10px 0px 0px $pink; */
 
   .session-timestamp-box {
     background: $pink;
@@ -313,9 +332,7 @@ $yellowSpray: nth($yellowImages, random(length($yellowImages)));
 .track-2 {
   .front {
     background-color: $lightBlue;
-    background-image: url($yellowSpray);
   }
-  /* box-shadow: 10px 10px 0px 0px $red; */
 
   .session-timestamp-box {
     background: $red;
@@ -440,7 +457,7 @@ $yellowSpray: nth($yellowImages, random(length($yellowImages)));
 
   .session-timestamp-box {
     transform: none;
-    padding: 0;
+    padding: 0.5em 1em 0;
     margin: 0 0 0.5em;
     width: auto;
     display: block;
@@ -459,7 +476,7 @@ $yellowSpray: nth($yellowImages, random(length($yellowImages)));
     background: white !important;
     border: 1px solid #000;
     background: none;
-    min-height: 110px;
+    @include minifiedHeight;
 
     p,
     h2,
@@ -479,12 +496,13 @@ $yellowSpray: nth($yellowImages, random(length($yellowImages)));
     display: none !important;
   }
 
+  /* Mobile Styles */
   @media screen and (max-width: 700px) {
     .flip-container,
     .session,
     .flipper,
     .front {
-      min-height: 100px !important;
+      min-height: 85px !important;
     }
   }
 }
