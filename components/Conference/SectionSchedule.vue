@@ -87,9 +87,6 @@
         <template v-for="session in sessions">
           <schedule-card :key="session.speakerName" v-bind="session" :is-minified="isMinified" />
         </template>
-      <!-- <schedule-card v-bind="sessions.session1" :is-minified="isMinified" />
-        <schedule-card v-bind="sessions.session2a" :is-minified="isMinified" />
-        <schedule-card v-bind="sessions.session2b" :is-minified="isMinified" /> -->
       </div>
     </div>
   </app-section>
@@ -324,28 +321,8 @@ export default {
 }
 </script>
 
-const data = {
-  trackNumber: 1,
-  timeStart: '10:30',
-  timeEnd: '11:30',
-  sessionTitle: 'Learning Vue with Service Workers',
-  speakerName: 'Sherlock Holmes',
-  speakerDescription: 'Foo'
-}
-
 <style lang="scss">
-// @TODO:  fix copy pasted code
-$pink: #ea5297; // Brilliant Rose
-$yellow: #ffed00; // Turbo
-$blue: #00afcb; // Pacific Bluee
-$green: #13a538; // Malachite
-$lightBlue: #69acdf; // Havelock Blue
-$red: #e4032e; // Monza
-$white: #fff;
-$black: #000;
-
-$greyShadow: rgba(255, 255, 255, 0.6);
-$blackShadow: rgba(0, 0, 0, 0.3);
+@import 'assets/scss/colors';
 
 /*************************
  * GRID SCHEDULE LAYOUT
@@ -502,7 +479,7 @@ $blackShadow: rgba(0, 0, 0, 0.3);
 .active {
   top: 0.1em;
   background-color: $green;
-  background-image: url('~assets/images/schedule/spray_fat_yellow.svg');
+  background-image: url('/images/schedule/spray_fat_yellow.svg');
   background-repeat: no-repeat;
   background-size: cover;
   color: $black;

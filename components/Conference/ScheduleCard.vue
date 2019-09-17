@@ -8,7 +8,7 @@
     <span class="track-all-session-time">
       {{ timestart }} - {{ timeend }}
     </span>
-    <h3 class="session-title">
+    <h3>
       {{ sessiontitle }}
     </h3>
     <span class="track-all-subtitle">
@@ -34,7 +34,7 @@
 
       <div class="top-part">
         <span class="session-time">{{ timestart }} - {{ timeend }}</span>
-        <h3 class="session-title">
+        <h3>
           {{ sessiontitle }}
         </h3>
       </div>
@@ -109,41 +109,47 @@ export default {
       required: true
     }
   },
+  data() {
+    return {
+      greenImages: [
+        '/images/schedule/spray_fat_green.svg',
+        '/images/schedule/spray_splat_green.svg',
+        '/images/schedule/spray_streak_green.svg',
+        '/images/schedule/spray_thin_green.svg',
+        '/images/schedule/spray_wide_green.svg',
+        '/images/schedule/spray_zigzag_green.svg'
+      ],
+      yellowImages: [
+        '/images/schedule/spray_fat_yellow.svg',
+        '/images/schedule/spray_splat_yellow.svg',
+        '/images/schedule/spray_streak_yellow.svg',
+        '/images/schedule/spray_thin_yellow.svg',
+        '/images/schedule/spray_wide_yellow.svg',
+        '/images/schedule/spray_zigzag_yellow.svg'
+      ]
+    }
+  },
   computed: {
+    /* Generate a random image for each card */
     trackImageStyle() {
       if (this.tracknumber === 0 || this.isMinified) {
         return
       }
-      // green --> Track1
-      const greenImages = [
-        '/_nuxt/assets/images/schedule/spray_fat_green.svg',
-        '/_nuxt/assets/images/schedule/spray_splat_green.svg',
-        '/_nuxt/assets/images/schedule/spray_streak_green.svg',
-        '/_nuxt/assets/images/schedule/spray_thin_green.svg',
-        '/_nuxt/assets/images/schedule/spray_wide_green.svg',
-        '/_nuxt/assets/images/schedule/spray_zigzag_green.svg'
-      ]
-      // yellow --> Track2
-      const yellowImages = [
-        '/_nuxt/assets/images/schedule/spray_fat_yellow.svg',
-        '/_nuxt/assets/images/schedule/spray_splat_yellow.svg',
-        '/_nuxt/assets/images/schedule/spray_streak_yellow.svg',
-        '/_nuxt/assets/images/schedule/spray_thin_yellow.svg',
-        '/_nuxt/assets/images/schedule/spray_wide_yellow.svg',
-        '/_nuxt/assets/images/schedule/spray_zigzag_yellow.svg'
-      ]
 
       const image = this.randomItem(
-        this.tracknumber === 1 ? greenImages : yellowImages
+        this.tracknumber === 1 ? this.greenImages : this.yellowImages
       )
 
-      /* Inline Stlye because vue-flip generates extra divs without classes */
-      return `background-image: url(${image});
+      /* Inline Stlye because vue-flip generates extra divs without classes
+      we need to inline these styles to the div it generates;
+      */
+      return `background-image: url('${image}');
             background-repeat: no-repeat;
             background-position-y: -120px;
             background-position-x: -58px;
             background-size: cover;
-            width: 100%;`
+            width: 100%;
+            z-index: -1;`
     },
     gridStyle() {
       /* generate a timestamp without colons */
@@ -189,34 +195,27 @@ https://github.com/Owumaro/text-stroke-generator
     $color 0.96017px -0.279415px 0px;
 }
 
-$pink: #ea5297; // Brilliant Rose
-$yellow: #ffed00; // Turbo
-$blue: #00afcb; // Pacific Bluee
-$green: #13a538; // Malachite
-$lightBlue: #69acdf; // Havelock Blue
-$red: #e4032e; // Monza
-$white: #fff;
-$black: #000;
-
 /* Small-screen & fallback styles */
 .session {
   margin-bottom: 1em;
 }
 
 @supports (display: grid) {
+  /** Desktop Styles */
   @media screen and (min-width: 700px) {
     .session {
       margin: 0;
     }
 
     .session-timestamp-box {
-      display: none !important; // hide the timestamp box when on desktop view
+      display: none !important;
     }
   }
 
+  /* Mobile Styles */
   @media screen and (max-width: 700px) {
     .session-time {
-      display: none !important; // hide the timestamp box when on desktop view
+      display: none !important;
     }
 
     .session {
@@ -230,6 +229,7 @@ $black: #000;
     }
   }
 
+  /* Desktop styles before the sidebar collapses into a mobile header */
   @media screen and (min-width: 992px) and (max-width: 1200px) {
     .flip-container,
     .session,
@@ -243,7 +243,7 @@ $black: #000;
 .session {
   border-radius: 2px;
   font-size: 14px;
-  color: $black;
+  color: $white;
   display: flex;
   align-items: stretch;
   flex-wrap: wrap;
@@ -281,12 +281,21 @@ $black: #000;
   }
 
   h3 {
-    color: $black;
     font-size: 19px;
     display: block;
     width: 100%;
 
-    @include textStroke($white);
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+      position: absolute;
+      z-index: -1;
+    }
   }
 
   span {
@@ -311,6 +320,10 @@ $black: #000;
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
+
+    .session-time {
+      color: $black;
+    }
   }
 
   .bottom-part {
@@ -321,7 +334,6 @@ $black: #000;
 .track-1 {
   .front {
     background-color: $yellow;
-    /* background-image: url($greenSpray); */
   }
 
   .session-timestamp-box {
@@ -358,6 +370,7 @@ $black: #000;
   h4 {
     font-size: 18px;
     margin-bottom: 0.5em;
+    color: $yellow;
   }
 
   p {
@@ -477,6 +490,10 @@ $black: #000;
     border: 1px solid #000;
     background: none;
     @include minifiedHeight;
+
+    h3:after {
+      display: none;
+    }
 
     p,
     h2,
