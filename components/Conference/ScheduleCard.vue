@@ -182,10 +182,6 @@ export default {
       }
     }
   },
-  mounted() {
-    // eslint-disable-next-line no-console
-    console.log(this)
-  },
   methods: {
     handleClick() {
       // Only allow flipping if the sessiondescription has content
@@ -201,18 +197,6 @@ export default {
 </script>
 
 <style lang="scss">
-/*
-Cross Browser text stroke generator
-https://github.com/Owumaro/text-stroke-generator
-*/
-
-@mixin textStroke($color) {
-  text-shadow: $color 1px 0px 0px, $color 0.540302px 0.841471px 0px,
-    $color -0.416147px 0.909297px 0px, $color -0.989992px 0.14112px 0px,
-    $color -0.653644px -0.756802px 0px, $color 0.283662px -0.958924px 0px,
-    $color 0.96017px -0.279415px 0px;
-}
-
 /* Small-screen & fallback styles */
 .session {
   margin-bottom: 1em;

@@ -93,7 +93,7 @@ export default {
           sessiontitle: 'What Can We Learn From Javascript Fatigue',
           speakername: 'Lucas Fernandes da Costa',
           sessiondescription:
-            '\nThe whole reason for JS Fatigue is not the huge amount of modules we’ve got available, the real issue is the mindset we have when writing code. With an average of 447 new packages a day and lots of new technologies appearing it seems impossible to keep up with the insane velocity things happen in the JavaScript ecosystem. Explore the goals of software engineers, the UNIX philosophy and the history and causes of JavaScript fatigue. In this talk he creates a parallel between psychology, decision making and JavaScript.',
+            'The whole reason for JS Fatigue is not the huge amount of modules we’ve got available, the real issue is the mindset we have when writing code. With an average of 447 new packages a day and lots of new technologies appearing it seems impossible to keep up with the insane velocity things happen in the JavaScript ecosystem. Explore the goals of software engineers, the UNIX philosophy and the history and causes of JavaScript fatigue. In this talk he creates a parallel between psychology, decision making and JavaScript.',
           speakerdescription: 'Core team member of Chai.js and Sinon.js',
           image: "'"
         },
