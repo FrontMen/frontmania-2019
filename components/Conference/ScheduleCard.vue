@@ -1,5 +1,5 @@
 <template>
-  <!-- For both collumns -->
+  <!-- Session that spans both collumns -->
   <div
     v-if="tracknumber === 0"
     class="session track-all"
@@ -265,6 +265,7 @@ https://github.com/Owumaro/text-stroke-generator
   display: flex;
   align-items: stretch;
   flex-wrap: wrap;
+  cursor: pointer;
 
   .flipper {
     display: flex;
@@ -421,26 +422,54 @@ https://github.com/Owumaro/text-stroke-generator
   display: flex;
   justify-content: center;
   align-items: center;
-  background: $black;
+  background-color: $pink;
   box-shadow: none;
   padding: 0.5em 0;
   flex-direction: column;
   color: $white;
+  background-image: url('/images/schedule/spray_big_white.svg');
+  background-size: cover;
+  background-position-y: -176px;
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    z-index: 1;
+  }
 
   .track-all-session-time {
-    margin-bottom: 0.2em;
+    z-index: 3;
+    background: $white;
+    border-radius: 2px;
+    color: black;
+    padding: 0.5em;
+    margin-bottom: 1em;
   }
 
   h3 {
     text-transform: uppercase;
-    color: $yellow;
+    color: $white;
     text-shadow: none;
     text-align: center;
     font-size: 19px;
+    z-index: 2;
+
+    &::after {
+      display: none;
+    }
   }
 
   .track-all-subtitle {
-    font-size: 14px;
+    font-size: 18px;
+    z-index: 2;
+    color: $yellow;
   }
 }
 
@@ -457,17 +486,31 @@ https://github.com/Owumaro/text-stroke-generator
   .track-all {
     border: 1px solid black;
     background: $white;
+    font-size: 12px;
+
     .track-all-session-time {
-      color: $black;
-      font-size: 12px;
-    }
-    h3 {
       color: $black;
     }
 
-    .track-all-subtitle {
+    h3 {
       color: $black;
+      font-size: 12px;
+      margin-top: 0.5em;
     }
+
+    .track-all-subtitle {
+      margin-top: 0.5em;
+      color: $black;
+      font-size: 12px;
+    }
+  }
+  .track-all-session-time {
+    margin: 0;
+    padding: 0;
+  }
+
+  .session.track-all:after {
+    display: none;
   }
 
   .track-slot {
