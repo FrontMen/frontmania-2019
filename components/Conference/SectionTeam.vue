@@ -76,7 +76,7 @@ export default {
         {
           name: 'Anthony Moendir',
           subTitle: 'Programme Committee',
-          image: 'stefanos',
+          image: 'anthony',
           color: 'blue'
         },
         {
