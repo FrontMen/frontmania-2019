@@ -62,7 +62,7 @@ export default {
   },
   mounted() {
     this.observer = new IntersectionObserver(this.onIntersection.bind(this), {
-      threshold: 0.5
+      threshold: 0.25
     })
 
     this.sectionElements.forEach(section => {
@@ -81,7 +81,7 @@ export default {
 
     onIntersection(changes) {
       changes.forEach(change => {
-        if (change.intersectionRatio > 0.5 && change.isIntersecting) {
+        if (change.intersectionRatio > 0.25 && change.isIntersecting) {
           this.setActiveMenuItem(change.target.getAttribute('id'))
         }
       })
