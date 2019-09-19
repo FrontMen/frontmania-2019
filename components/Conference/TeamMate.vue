@@ -1,5 +1,5 @@
 <template>
-  <div class="team-member flex-shrink-0 relative overflow-hidden max-w-xs w-1/3 h-18" :class="[`bg-app-${color}`]">
+  <div class="team-member flex-shrink-0 relative overflow-hidden" :class="[`bg-app-${color}`]">
     <svg class="absolute bottom-0 left-0 mb-8" viewBox="0 0 375 283" fill="none" style="transform: scale(1.5); opacity: 0.1;">
       <rect
         x="159.52"
@@ -68,5 +68,10 @@ export default {
 img {
   object-fit: contain;
   max-height: 120px;
+}
+
+.team-member {
+  flex: 1 1 0px;
+  flex-basis: 33.33%;
 }
 </style>
