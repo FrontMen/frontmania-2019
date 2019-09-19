@@ -39,7 +39,7 @@ export default {
         },
         {
           name: 'Lasse Capel',
-          subTitle: 'Spice unicorn 🌶',
+          subTitle: 'Spice Unicorn 🌶',
           image: 'lasse',
           color: 'red'
         },
@@ -57,15 +57,39 @@ export default {
         },
         {
           name: 'Steven Straatemans',
-          subTitle: 'Has glasses 👓',
+          subTitle: 'Has Glasses 👓',
           image: 'steven',
           color: 'green'
         },
         {
-          name: 'Stefanos Lignos ',
+          name: 'Stefanos Lignos',
           subTitle: 'Watches football ⚽',
           image: 'stefanos',
           color: 'blue'
+        },
+        {
+          name: 'Ronald Treur',
+          subTitle: 'Programme Committee',
+          image: 'ronald',
+          color: 'green'
+        },
+        {
+          name: 'Anthony Moendir',
+          subTitle: 'Programme Committee',
+          image: 'stefanos',
+          color: 'blue'
+        },
+        {
+          name: 'Eduardo Pedroso ',
+          subTitle: 'Programme Committee',
+          image: 'eduardo',
+          color: 'red'
+        },
+        {
+          name: 'Dominique Rienties ',
+          subTitle: 'Programme Committee',
+          image: 'dominique',
+          color: 'pink'
         }
       ]
     }

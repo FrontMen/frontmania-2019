@@ -27,7 +27,7 @@
     <div class="relative text-white px-3 pb-4 mt-6">
       <span class="block opacity-75 mb-1 text-sm">{{ subTitle }} </span>
       <div class="flex justify-between">
-        <span class="block font-semibold text-lg">{{ name }}</span>
+        <span class="block font-semibold text-md">{{ name }}</span>
       </div>
     </div>
   </div>
@@ -71,7 +71,6 @@ img {
 }
 
 .team-member {
-  flex: 1 1 0px;
   flex-basis: 33.33%;
 }
 </style>
