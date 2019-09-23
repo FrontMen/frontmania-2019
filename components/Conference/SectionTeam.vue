@@ -51,7 +51,7 @@ export default {
         },
         {
           name: 'Janine Lourens',
-          subTitle: 'Resident Unicorn 🦄',
+          subTitle: 'FrontEnd Unicorn 🦄',
           image: 'janine',
           color: 'pink'
         },
@@ -75,7 +75,7 @@ export default {
         },
         {
           name: 'Anthony Moendir',
-          subTitle: 'Programme Committee',
+          subTitle: 'Frontend Freak & Accessibility Avenger',
           image: 'anthony',
           color: 'blue'
         },
