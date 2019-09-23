@@ -33,7 +33,7 @@ export default {
       teamMembers: [
         {
           name: 'Randy Daal',
-          subTitle: 'King Manager 👑',
+          subTitle: 'MC, FrontManiac & Frontend Zombie  🧟‍‍',
           image: 'randyDaal',
           color: 'blue'
         },
