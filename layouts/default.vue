@@ -8,10 +8,10 @@
       <portal-target name="sidebar" />
 
       <div class="sidebar__text absolute pin-l pin-b text-app-white text-left px-8 pb-8">
-        <p class="mb-6 text-base">
+        <p class="mb-6 text-sm">
           FrontMania is a group of people who are crazy about frontend development a.k.a. frontend maniacs.
         </p>
-        <p class="mb-6 text-base">
+        <p class="mb-6 text-sm">
           We as a group believe that frontend development should be fun for everyone!
         </p>
 
