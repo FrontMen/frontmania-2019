@@ -45,7 +45,7 @@ export default {
         },
         {
           name: 'Prashant Palikhe',
-          subTitle: 'Likes Sushi 🍣',
+          subTitle: 'an 🥑 in the making',
           image: 'prashant',
           color: 'pink'
         },
@@ -63,7 +63,7 @@ export default {
         },
         {
           name: 'Stefanos Lignos',
-          subTitle: 'Watches football ⚽',
+          subTitle: 'Frontend 🅰️ngularManiac ',
           image: 'stefanos',
           color: 'blue'
         },
@@ -75,7 +75,7 @@ export default {
         },
         {
           name: 'Anthony Moendir',
-          subTitle: 'Frontend Freak & Accessibility Avenger',
+          subTitle: 'Code Dancer 🐜',
           image: 'anthony',
           color: 'blue'
         },
