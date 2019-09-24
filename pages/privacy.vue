@@ -90,6 +90,7 @@
   padding: 32px;
   background: black;
   color: white;
+  max-width: 800px;
 }
 
 article {
