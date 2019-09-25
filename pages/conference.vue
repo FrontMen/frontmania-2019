@@ -46,7 +46,7 @@ export default {
     SectionConference,
     SectionSponsors,
     SectionTickets,
-    SectionSchedule
+    SectionSchedule,
     SectionTeam
   },
   data() {
