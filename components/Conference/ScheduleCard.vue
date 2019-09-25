@@ -19,7 +19,7 @@
   <vue-flip
     v-else
     class="session"
-    :class="[`track-${tracknumber}`, isMinified && 'minified' ]"
+    :class="cardClasses"
     width="100%"
     height="100%"
     :style="gridStyle"
@@ -111,6 +111,11 @@ export default {
   },
   data() {
     return {
+      cardClasses: {
+        [`track-${this.tracknumber}`]: true,
+        minified: this.isMinified,
+        clickable: !this.isMinified && this.sessiondescription.length > 2
+      },
       flipped: false,
       greenImages: [
         '/images/schedule/spray_fat_green.svg',
@@ -202,6 +207,12 @@ export default {
   margin-bottom: 1em;
 }
 
+.clickable {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 @supports (display: grid) {
   /** Desktop Styles */
   @media screen and (min-width: 700px) {
@@ -249,7 +260,6 @@ export default {
   display: flex;
   align-items: stretch;
   flex-wrap: wrap;
-  cursor: pointer;
 
   .flipper {
     display: flex;
@@ -471,7 +481,6 @@ export default {
     border: 1px solid black;
     background: $white;
     font-size: 12px;
-
     .track-all-session-time {
       color: $black;
     }
@@ -543,6 +552,10 @@ export default {
     background: white !important;
     border: 1px solid #000;
     background: none;
+
+    &:hover {
+      cursor: default !important;
+    }
     @include minifiedHeight;
 
     h3:after {
