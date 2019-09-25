@@ -17,8 +17,13 @@
 
         <app-divider class="mb-4" />
 
-        <nuxt-link to="/privacy" class="text-app-yellow text-base">
+        <nuxt-link to="/privacy" class="text-app-yellow text-base block uppercase cursor-pointer mb-2">
           PRIVACY POLICY
+        </nuxt-link>
+
+
+        <nuxt-link to="/coc" class="text-app-pink text-base block uppercase cursor-pointer">
+          Code of Conduct
         </nuxt-link>
       </div>
     </div>

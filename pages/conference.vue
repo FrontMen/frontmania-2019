@@ -37,6 +37,7 @@ import SectionSponsors from '~/components/Conference/SectionSponsors.vue'
 import SectionTickets from '~/components/Conference/SectionTickets.vue'
 import SectionSchedule from '~/components/Conference/SectionSchedule.vue'
 import twitterCardImage from '~/assets/images/conference/twitter-card.png'
+import SectionTeam from '~/components/Conference/SectionTeam.vue'
 
 export default {
   components: {
@@ -46,6 +47,7 @@ export default {
     SectionSponsors,
     SectionTickets,
     SectionSchedule
+    SectionTeam
   },
   data() {
     return {
@@ -64,7 +66,7 @@ export default {
   },
   mounted() {
     this.observer = new IntersectionObserver(this.onIntersection.bind(this), {
-      threshold: 0.5
+      threshold: 0.25
     })
 
     this.sectionElements.forEach(section => {
@@ -83,7 +85,7 @@ export default {
 
     onIntersection(changes) {
       changes.forEach(change => {
-        if (change.intersectionRatio > 0.5 && change.isIntersecting) {
+        if (change.intersectionRatio > 0.25 && change.isIntersecting) {
           this.setActiveMenuItem(change.target.getAttribute('id'))
         }
       })
