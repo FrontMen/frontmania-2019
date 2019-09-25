@@ -8,7 +8,7 @@
     <div class="text-app-black main bg-app-white">
       <template v-for="workshop in workshops">
         <accordion :key="workshop.speaker" class="w-full" v-bind="workshop">
-          <div class="px-2 py-4">
+          <div class="py-4">
             <h4>Time:  <span class="font-normal">{{ workshop.time }} </span></h4>
             <h4>Location: <span class="font-normal"> {{ workshop.location }} </span> </h4>
 
@@ -17,6 +17,28 @@
               {{ workshop.description }}
             </p>
           </div>
+
+          <h4 class="mb-4">
+            What you'll learn
+          </h4>
+          <ul>
+            <template v-for="item in workshop.whatYoullLearn">
+              <li :key="item.split(' ')[0]" class="leading-normal">
+                {{ item }}
+              </li>
+            </template>
+          </ul>
+
+          <h4 class="my-4">
+            Prerequisites
+          </h4>
+          <ul>
+            <template v-for="item in workshop.requirements">
+              <li :key="item.split(' ')[0]" class="leading-normal">
+                {{ item }}
+              </li>
+            </template>
+          </ul>
         </accordion>
       </template>
     </div>
@@ -44,7 +66,8 @@ export default {
             'Setting up webpack',
             'Learning McopterFlux 18.2',
             'Ui techniques'
-          ]
+          ],
+          image: 'jlwagner'
         },
         {
           title: 'This is another workshop',
@@ -58,7 +81,8 @@ export default {
             'How to build your house',
             'Lorem ipsum',
             'Sit dolor'
-          ]
+          ],
+          image: 'nielsleenheer'
         }
       ]
     }
