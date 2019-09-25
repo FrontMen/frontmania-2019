@@ -5,7 +5,7 @@ export default () => ({
     { name: 'Conference', color: 'green', active: false },
     { name: 'Sponsors', color: 'blue', active: false },
     { name: 'Tickets', color: 'yellow', active: false },
-    { name: 'Schedule', color: 'pink', active: false }
+    { name: 'Schedule', color: 'pink', active: false },
     { name: 'Team', color: 'green', active: false }
   ]
 })
