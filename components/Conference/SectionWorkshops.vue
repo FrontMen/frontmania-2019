@@ -8,11 +8,11 @@
     <div class="text-app-black main bg-app-white">
       <template v-for="workshop in workshops">
         <accordion :key="workshop.speaker" class="w-full" v-bind="workshop">
-          <div>
-            <h3>
-              {{ workshop.title }}
-            </h3>
+          <div class="px-2 py-4">
+            <h4>Time:  <span class="font-normal">{{ workshop.time }} </span></h4>
+            <h4>Location: <span class="font-normal"> {{ workshop.location }} </span> </h4>
 
+            <hr class="thick-hr mx-0 my-4 w-1/4">
             <p>
               {{ workshop.description }}
             </p>
@@ -33,17 +33,17 @@ export default {
     return {
       workshops: [
         {
-          title: 'Workshop Title here',
+          title: 'Learning things with people',
           location: 'See Conference venue for more info',
           time: ' 16:00 - 18:00',
-          speaker: 'Name',
+          speaker: 'Frontend mc FrontFace',
           description:
             'This is the workshop description, here you will learn stuff and things and new frammework and things to study lorem eslint ipsum react redu vue',
           requirements: ['Laptop', 'Node 10+', 'Basic Es6 knowledge'],
           whatYoullLearn: [
-            'How to build your house',
-            'Lorem ipsum',
-            'Sit dolor'
+            'Setting up webpack',
+            'Learning McopterFlux 18.2',
+            'Ui techniques'
           ]
         },
         {
@@ -70,5 +70,9 @@ export default {
 .main {
   width: 40em !important;
   max-width: inherit;
+}
+
+.thick-hr {
+  border-top: 3px double #8c8b8b;
 }
 </style>

@@ -1,5 +1,15 @@
 <template>
   <app-section class="background" background="/images/bg-yellow.jpg">
+    Hiiiii
+
+    <button
+      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+      @click="toggleLoading"
+    >
+      toggleloading
+    </button>
+
+    <span> {{ loading }} </span>
     <div class="bg-app-white">
       <div class="flex flex-wrap items-center">
         <div class="w-full xl:w-1/2 sm:text-center mb-4 px-6 pt-8">
@@ -91,7 +101,13 @@ export default {
           image: 'dominique',
           color: 'pink'
         }
-      ]
+      ],
+      loading: false
+    }
+  },
+  methods: {
+    toggleLoading() {
+      this.loading = !this.loading
     }
   }
 }
