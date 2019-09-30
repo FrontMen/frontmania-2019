@@ -16,57 +16,56 @@
     </span>
   </div>
 
-  <vue-flip
-    v-else
-    class="session"
-    :class="cardClasses"
-    width="100%"
-    height="100%"
-    :style="gridStyle"
-    :bind-with-me="flipped"
-  >
-    <div slot="front" :style="trackImageStyle" @click="handleClick">
-      <div class="session-timestamp-box">
-        <span>{{ timestart }} - {{ timeend }}</span>
-        <span> | </span>
-        <span class="session-track">Track {{ tracknumber }}</span>
-      </div>
+  <no-ssr v-else>
+    <vue-flip
+      class="session"
+      :class="cardClasses"
+      width="100%"
+      height="100%"
+      :style="gridStyle"
+      :bind-with-me="flipped"
+    >
+      <div slot="front" :style="trackImageStyle" @click="handleClick">
+        <div class="session-timestamp-box">
+          <span>{{ timestart }} - {{ timeend }}</span>
+          <span> | </span>
+          <span class="session-track">Track {{ tracknumber }}</span>
+        </div>
 
-      <div class="top-part">
-        <span class="session-time">{{ timestart }} - {{ timeend }}</span>
-        <h3>
-          {{ sessiontitle }}
-        </h3>
-      </div>
+        <div class="top-part">
+          <span class="session-time">{{ timestart }} - {{ timeend }}</span>
+          <h3>
+            {{ sessiontitle }}
+          </h3>
+        </div>
 
-      <div class="bottom-part">
-        <hr>
-        <div class="session-speaker-wrapper">
-          <span class="left">
-            <h4 class="session-presenter">
-              {{ speakername }}
-            </h4>
-            <p v-if="speakerdescription.length > 1" class="speaker-description">{{ speakerdescription }}</p>
-          </span>
-          <span class="right">
-            <img v-if="image.length > 1" :src="image" alt="speaker">
-          </span>
+        <div class="bottom-part">
+          <hr>
+          <div class="session-speaker-wrapper">
+            <span class="left">
+              <h4 class="session-presenter">
+                {{ speakername }}
+              </h4>
+              <p v-if="speakerdescription.length > 1" class="speaker-description">{{ speakerdescription }}</p>
+            </span>
+            <span class="right">
+              <img v-if="image.length > 1" :src="image" alt="speaker">
+            </span>
+          </div>
         </div>
       </div>
-    </div>
-    <div slot="back" @click="handleClick">
-      {{ sessiondescription }}
-    </div>
-  </vue-flip>
+      <div slot="back" @click="handleClick">
+        {{ sessiondescription }}
+      </div>
+    </vue-flip>
+  </no-ssr>
 </template>
 
 <script>
-import VueFlip from 'vue-flip'
-
 export default {
   name: 'ScheduleCard',
   components: {
-    'vue-flip': VueFlip
+    ...(process.client && { 'vue-flip': () => import('vue-flip') })
   },
   props: {
     isMinified: {
