@@ -55,23 +55,23 @@ export default {
           timestart: '10:00',
           timeend: '11:00',
           tracknumber: 1,
-          sessiontitle: 'The Weird—Yet Practical—World of Paint Worklets',
-          speakername: 'Jeremy Wagner',
-          sessiondescription:
-            '\nCome to this session and you’ll understand how paint worklets, well, work. But the really good stuff will be in all the inspired experimentation that can come from experimenting with the programmatic generation of art and graphics, and how we can practically use it in our designs. If the intersection between weird and usable is your thing, you’ll feel right at home with paint worklets!',
+          sessiontitle: '???',
+          speakername: 'Lee Boonstra',
+          sessiondescription: "'",
           speakerdescription:
-            'Jeremy Wagner is an independent web performance consultant, author, and speaker from Minnesota doing his level best to make the web faster for everyone, everywhere.',
+            'Sales engineer in the Google Cloud team where she assist the sales team with technical knowledge about cloud computing and machine learning for the financial industry.',
           image: "'"
         },
         {
           timestart: '10:00',
           timeend: '11:00',
           tracknumber: 2,
-          sessiontitle: '???',
-          speakername: 'Lee Boonstra',
-          sessiondescription: "'",
+          sessiontitle: 'From code to pixels in a Blink',
+          speakername: 'Prashant Palikhe',
+          sessiondescription:
+            "Let's take a journey through the browser's rendering pipeline. How the code that we write, HTML, CSS and JavaScript gets converted into pixels on the screen in a Blink of an eye. And how we can leverage that information to understand why industry best practices are the way they are and how we can write performant applications.",
           speakerdescription:
-            'Sales engineer in the Google Cloud team where she assist the sales team with technical knowledge about cloud computing and machine learning for the financial industry.',
+            'Prashant is a frontend developer from Utrecht, Netherlands. While not coding, he likes to travel, preach about technologies and break a sweat at the basketball court with friends.',
           image: "'"
         },
         {
@@ -114,7 +114,7 @@ export default {
           sessiontitle: 'The Intranet of Things',
           speakername: 'Sebastian Golasch',
           sessiondescription:
-            'The dust around everybody’s fav buzzword from 2015 “IoT” has settled,\nbut do solutions exist  that value our privacy & autonomy? No really.',
+            'The dust around everybody’s fav buzzword from 2015 “IoT” has settled, but do solutions exist  that value our privacy & autonomy? No really.',
           speakerdescription:
             ' Specialist Senior Manager Software Developer at Qivicon, IoT reverse engineer, Long time JavaScript lover',
           image: "'"
@@ -123,10 +123,10 @@ export default {
           timestart: '13:00',
           timeend: '14:00',
           tracknumber: 2,
-          sessiontitle: 'Puppeteer',
+          sessiontitle: 'Puppeteer can automate that!',
           speakername: 'Önder Ceylan',
           sessiondescription:
-            'Talk on Puppeteer: a Node library which provides a high-level API to control headless Chrome or Chromium over the DevTools Protocol. ',
+            "Puppeteer is a node library which provides a high-level API to control Chrome over the DevTools Protocol. When combined with the power of the web technologies, it can be used for automating image processing and batch file generation, creating automated visual testing with device emulation and so much more! We'll explore those capabilities of Puppeteer API with combination of DevTools protocol and cloud functions (FaaS) with a showcase of real life use cases demonstrated by live-examples. Finally, we’ll go through the existing puppeteer based SaaS solutions such as Checkly and Browslerless.",
           speakerdescription:
             ' Self-established JavaScript professional and a Google Developers Expert in Web Technologies',
           image: "'"

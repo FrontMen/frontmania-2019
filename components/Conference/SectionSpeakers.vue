@@ -1,5 +1,5 @@
 <template>
-  <app-section class="background">
+  <app-section class="background" background="/images/bg-red.jpg">
     <div class="bg-app-yellow flex flex-wrap items-center p-4 sm:p-8">
       <p class="w-full sm:w-1/2 xl:w-1/4 sm:pr-4 text-center">
         <img
@@ -21,7 +21,7 @@
         :name="speaker.name"
         class="speaker"
       >
-       {{ speaker.description }}
+        {{ speaker.description }}
       </speaker>
     </article>
   </app-section>
@@ -50,10 +50,10 @@ export default {
             'Contractor for Google, writer about performance on web.dev. and Mozilla Tech Speaker'
         },
         {
-          name: 'Jeremy Wagner',
-          image: 'jlwagner',
+          name: 'Lee Boonstra',
+          image: 'leeBoonstra',
           description:
-            'Jeremy Wagner is an independent web performance consultant, author, and speaker from Minnesota doing his level best to make the web faster for everyone, everywhere.'
+            'Sales engineer in the Google Cloud team where she assist the sales team with technical knowledge about cloud computing and machine learning for the financial industry.'
         },
         {
           name: 'Niels Leenheer',
@@ -82,7 +82,8 @@ export default {
         {
           name: 'Prashant Palikhe',
           image: 'prashantpalikhe',
-          description: 'CTO @Frontmen and co-organizing FrontMania'
+          description:
+            'FrontMania co-organizer. Frontend developer from Utrecht, Netherlands. While not coding, he likes to travel, preach about technologies and break a sweat at the basketball court with friends.'
         },
         {
           name: 'Sebastian Golasch',
