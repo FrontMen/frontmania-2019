@@ -59,7 +59,7 @@ export default {
           speakername: 'Lee Boonstra',
           sessiondescription: "'",
           speakerdescription:
-            'Sales engineer in the Google Cloud team where she assist the sales team with technical knowledge about cloud computing and machine learning for the financial industry.',
+            'Sales engineer in the Google Cloud team where she assists the sales team with technical knowledge about cloud computing and machine learning for the financial industry.',
           image: "'"
         },
         {
