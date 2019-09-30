@@ -45,13 +45,13 @@ export default {
         },
         {
           name: 'Prashant Palikhe',
-          subTitle: 'Likes Sushi 🍣',
+          subTitle: 'An 🥑 in the making',
           image: 'prashant',
           color: 'pink'
         },
         {
           name: 'Janine Lourens',
-          subTitle: 'Resident Unicorn 🦄',
+          subTitle: 'FrontEnd Unicorn 🦄',
           image: 'janine',
           color: 'pink'
         },
@@ -63,7 +63,7 @@ export default {
         },
         {
           name: 'Stefanos Lignos',
-          subTitle: 'Watches football ⚽',
+          subTitle: 'Frontend 🅰️ngularManiac ',
           image: 'stefanos',
           color: 'blue'
         },
@@ -75,7 +75,7 @@ export default {
         },
         {
           name: 'Anthony Moendir',
-          subTitle: 'Programme Committee',
+          subTitle: 'Code Dancer 🐜',
           image: 'anthony',
           color: 'blue'
         },
