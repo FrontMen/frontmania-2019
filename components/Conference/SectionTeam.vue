@@ -45,7 +45,7 @@ export default {
         },
         {
           name: 'Prashant Palikhe',
-          subTitle: 'an 🥑 in the making',
+          subTitle: 'An 🥑 in the making',
           image: 'prashant',
           color: 'pink'
         },
