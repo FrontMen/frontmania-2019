@@ -35,8 +35,14 @@
 </template>
 
 <style lang="scss" scoped>
-@media screen and (max-height: 685px) {
+@media screen and (max-height: 777px) {
   .sidebar__text p {
+    display: none;
+  }
+}
+
+@media screen and (max-height: 557px) {
+  .sidebar__text {
     display: none;
   }
 }
