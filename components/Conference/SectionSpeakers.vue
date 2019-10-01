@@ -111,6 +111,11 @@ export default {
           name: 'Albert Groothedde',
           image: 'albertgroothedde',
           description: `Albert is a Frontmaniac @Frontmen, the creator of Ortum and GraphQL enthusiast. He also created graphql-query-path and uses Colemak.`
+        },
+        {
+          name: 'Önder Ceylan',
+          image: 'onder',
+          description: `Self-established JavaScript professional and a Google Developers Expert in Web Technologies`
         }
       ]
     }
