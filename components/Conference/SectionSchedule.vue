@@ -55,7 +55,7 @@ export default {
           timestart: '10:00',
           timeend: '11:00',
           tracknumber: 1,
-          sessiontitle: '???',
+          sessiontitle: 'Dialog Flow!',
           speakername: 'Lee Boonstra',
           sessiondescription: "'",
           speakerdescription:
