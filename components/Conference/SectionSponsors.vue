@@ -14,6 +14,11 @@
       </a>
     </div>
     <div class="flex items-center p-4 md:px-8 bg-app-white">
+
+      <a class="w-1/2 sm:w-1/3 w-auto text-center" href="https://cloud.google.com/" target="_blank" rel="noopener noreferrer" title="to google cloud website">
+        <img src="~/assets/images/sponsors/google_cloud.png" alt="Google Cloud sponsor">
+      </a>
+
       <a class="w-1/2 sm:w-1/3 w-auto text-center" href="https://saucelabs.com/" target="_blank" rel="noopener noreferrer" title="to Saucelabs website">
         <img src="~/assets/images/sponsors/saucelabs.jpg" alt="Saucelabs sponsor">
       </a>
