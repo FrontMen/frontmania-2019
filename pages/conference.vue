@@ -36,6 +36,7 @@ import SectionConference from '~/components/Conference/SectionConference.vue'
 import SectionSponsors from '~/components/Conference/SectionSponsors.vue'
 import SectionTickets from '~/components/Conference/SectionTickets.vue'
 import SectionSchedule from '~/components/Conference/SectionSchedule.vue'
+import SectionVenue from '~/components/Conference/SectionVenue.vue'
 import twitterCardImage from '~/assets/images/conference/twitter-card.png'
 import SectionTeam from '~/components/Conference/SectionTeam.vue'
 
@@ -47,6 +48,7 @@ export default {
     SectionSponsors,
     SectionTickets,
     SectionSchedule,
+    SectionVenue,
     SectionTeam
   },
   data() {
