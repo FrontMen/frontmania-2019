@@ -30,12 +30,12 @@
     <div class="flex items-center p-4 md:px-8 bg-app-white">
 
       <a
-      class="w-1/2 sm:w-1/3 w-auto text-center"
+      class="sm:w-1/3 w-auto text-center"
       href="https://www.thatrecruitmentcompany.com/"
       target="_blank"
       rel="noopener noreferrer"
       title="to That Recruitment Company website">
-        <img src="~/assets/images/sponsors/that-recruitment-company-logo.png" alt="That Recruitment Company sponsor">
+        <img class="that-recruitment-company" src="~/assets/images/sponsors/that-recruitment-company-logo.png" alt="That Recruitment Company sponsor">
       </a>
     </div>
 
@@ -53,5 +53,8 @@
 img {
   object-fit: contain;
   max-height: 120px;
+}
+.that-recruitment-company {
+  padding: 16px;
 }
 </style>
