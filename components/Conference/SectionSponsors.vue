@@ -27,6 +27,17 @@
         <img src="~/assets/images/sponsors/honeypot.jpg" alt="Honeypot sponsor">
       </a>
     </div>
+    <div class="flex items-center p-4 md:px-8 bg-app-white">
+
+      <a
+      class="sm:w-1/3 w-auto text-center"
+      href="https://www.thatrecruitmentcompany.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      title="to That Recruitment Company website">
+        <img class="that-recruitment-company" src="~/assets/images/sponsors/that-recruitment-company-logo.png" alt="That Recruitment Company sponsor">
+      </a>
+    </div>
 
     <div class="bg-app-yellow flex flex-wrap items-center p-4 sm:p-8">
       <p class="w-full sm:w-1/2 xl:w-3/4 sm:pr-4 text-center">
@@ -42,5 +53,8 @@
 img {
   object-fit: contain;
   max-height: 120px;
+}
+.that-recruitment-company {
+  padding: 16px;
 }
 </style>
