@@ -64,7 +64,7 @@ export default {
           sessiondescription:
             'As an AI-first company, Google aims to develop the benefits of machine learning for everyone. Building inclusive machine learning algorithms is crucial to help make the world’s information universally useful and accessible. ML fairness is a critical consideration in machine learning development. This session will present a few lessons Google has learned through our products and research and how developers can apply these learnings in their own efforts. This session will enable developers to proactively think about fairness in product development.',
           speakerdescription:
-            'Sales engineer in the Google Cloud team where she assists the sales team with technical knowledge about cloud computing and machine learning for the financial industry.',
+            'Lee Boonstra works as a developer advocate for Dialogflow at Google based in Amsterdam, and an O’Reilly published author.',
           image: "'"
         },
         {
