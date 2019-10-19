@@ -53,7 +53,7 @@ export default {
           name: 'Lee Boonstra',
           image: 'leeBoonstra',
           description:
-            'Sales engineer in the Google Cloud team where she assists the sales team with technical knowledge about cloud computing and machine learning for the financial industry.'
+            'Lee Boonstra works as a developer advocate for Dialogflow at Google based in Amsterdam, and an O’Reilly published author.'
         },
         {
           name: 'Niels Leenheer',
