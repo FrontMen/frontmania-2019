@@ -221,11 +221,12 @@ export default {
           timestart: '17:30',
           timeend: '18:30',
           tracknumber: 0,
-          sessiontitle: 'AI',
+          sessiontitle:
+            'There’s no talent (or luck or favoritism), just hard work - but is it worth it?',
           speakername: 'Katerina Skroumpelou',
-          sessiondescription: "'",
+          sessiondescription: '',
           speakerdescription:
-            'Google Developer Expert in Angular and Web Technologies',
+            'Frontend developer at This Dot, Inc and co-organizing AngularAthens',
           image: "'"
         }
       ]

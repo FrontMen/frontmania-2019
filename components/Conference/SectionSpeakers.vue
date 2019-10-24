@@ -77,7 +77,7 @@ export default {
           name: 'Katerina Skroumpelou',
           image: 'KaterinaSkroumpelou',
           description:
-            'Frontend developer at Upstream and co-organizing AngularAthens'
+            'Frontend developer at This Dot, Inc and co-organizing AngularAthens'
         },
         {
           name: 'Prashant Palikhe',
