@@ -32,7 +32,6 @@
 import { mapActions, mapState } from 'vuex'
 import SectionHome from '~/components/Conference/SectionHome.vue'
 import SectionSpeakers from '~/components/Conference/SectionSpeakers.vue'
-import SectionConference from '~/components/Conference/SectionConference.vue'
 import SectionSponsors from '~/components/Conference/SectionSponsors.vue'
 import SectionTickets from '~/components/Conference/SectionTickets.vue'
 import SectionSchedule from '~/components/Conference/SectionSchedule.vue'
@@ -44,7 +43,6 @@ export default {
   components: {
     SectionHome,
     SectionSpeakers,
-    SectionConference,
     SectionSponsors,
     SectionTickets,
     SectionSchedule,
