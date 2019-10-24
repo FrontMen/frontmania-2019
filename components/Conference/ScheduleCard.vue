@@ -1,7 +1,7 @@
 <template>
   <!-- Session that spans both collumns -->
   <div
-    v-if="tracknumber === 0"
+    v-if="tracknumber === 0 && sessiondescription.length < 2"
     class="session track-all"
     :style="gridStyle"
   >

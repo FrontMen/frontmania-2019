@@ -224,7 +224,9 @@ export default {
           sessiontitle:
             'There’s no talent (or luck or favoritism), just hard work - but is it worth it?',
           speakername: 'Katerina Skroumpelou',
-          sessiondescription: '',
+          sessiondescription:
+            'If you’re sitting there wondering “How did they manage that?“, well, you now have the answer. In this talk we’ll go through all the clichés and myths concerning “life achievements”, including the term “life achievements”. In our culture, in our age and time, and in our industry, burnout and the impostor syndrome are real. But so are toxic environments that ask you to overwork yourself. And so are toxic people who like to think that those who “made it” (another cliché we’ll talk about) did so because they got lucky or favored.\n' +
+            'But let’s take a step back and think for a second. Let’s redefine our goals and choices and let’s think about what drives them. Is a “life achievement” a generally accepted standard? When will you feel that you finally “made it”? Is our perception of success driven by what we really want, or rather by movies, rockstar developers, and the life of Steve Jobs?',
           speakerdescription:
             'Frontend developer at This Dot, Inc and co-organizing AngularAthens',
           image: "'"
