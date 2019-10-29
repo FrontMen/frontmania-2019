@@ -415,7 +415,7 @@ export default {
   max-height: 34px;
   color: $white;
 
-  &[session-type='tech'] {
+  &[session-type='TECH'] {
     background: $red;
   }
 }
