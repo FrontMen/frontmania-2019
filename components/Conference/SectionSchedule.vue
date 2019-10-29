@@ -127,7 +127,7 @@ export default {
           timeend: '14:00',
           tracknumber: 1,
           sessiontitle: 'The Intranet of Things',
-          type: TYPES.INSPIRATIONAL,
+          type: TYPES.TECH,
           speakername: 'Sebastian Golasch',
           sessiondescription:
             'The dust around everybody’s fav buzzword from 2015 “IoT” has settled, but do solutions exist  that value our privacy & autonomy? No really.',
@@ -140,7 +140,7 @@ export default {
           timeend: '14:00',
           tracknumber: 2,
           sessiontitle: 'Puppeteer can automate that!',
-          type: TYPES.INSPIRATIONAL,
+          type: TYPES.TECH,
           speakername: 'Önder Ceylan',
           sessiondescription:
             "Puppeteer is a node library which provides a high-level API to control Chrome over the DevTools Protocol. When combined with the power of the web technologies, it can be used for automating image processing and batch file generation, creating automated visual testing with device emulation and so much more! We'll explore those capabilities of Puppeteer API with combination of DevTools protocol and cloud functions (FaaS) with a showcase of real life use cases demonstrated by live-examples. Finally, we’ll go through the existing puppeteer based SaaS solutions such as Checkly and Browslerless.",
@@ -153,7 +153,7 @@ export default {
           timeend: '15:00',
           tracknumber: 1,
           sessiontitle: 'JavaScript on the Desktop, Fast and Slow',
-          type: TYPES.INSPIRATIONAL,
+          type: TYPES.TECH,
           speakername: 'Felix Rieseberg',
           sessiondescription:
             'We need to talk about JavaScript performance on the desktop. Why does it seem like so many Electron apps consume more resources than their native counterparts? Felix explores the architectural tricks separating slow and fast Electron apps.',
@@ -179,7 +179,7 @@ export default {
           timeend: '16:00',
           tracknumber: 1,
           sessiontitle: 'JavaScript on Microcontrollers',
-          type: TYPES.INSPIRATIONAL,
+          type: TYPES.TECH,
           speakername: 'Niels Leenheer',
           sessiondescription:
             'Building an IoT device feels out of reach to a lot of web developers. Most of us didn’t study electrical engineering, and never learned to solder. And programming a microcontroller is on a completely different level than building a website.\n\nBut that is just not true anymore. Nowadays microcontrollers have become powerful enough to run JavaScript. And that opens up IoT to all of us.',
