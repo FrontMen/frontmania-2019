@@ -30,10 +30,13 @@
           <span>{{ timestart }} - {{ timeend }}</span>
           <span> | </span>
           <span class="session-track">Track {{ tracknumber }}</span>
+          <span> | </span>
+          <span>{{ type }}</span>
         </div>
 
         <div class="top-part">
           <span class="session-time">{{ timestart }} - {{ timeend }}</span>
+          <span class="session-type" :session-type="type" >{{ type }}</span>
           <h3>
             {{ sessiontitle }}
           </h3>
@@ -98,6 +101,10 @@ export default {
     speakername: {
       type: String,
       required: true
+    },
+    type: {
+      type: String,
+      required: false
     },
     speakerdescription: {
       type: String,
@@ -207,8 +214,33 @@ export default {
 }
 
 .clickable {
+  .front:after {
+    content: 'Click for details';
+    position: absolute;
+    opacity: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    padding: 1em;
+    right: 0;
+    background: rgba(0, 0, 0, 0.3);
+    color: $white;
+    transition: opacity 0.2s linear;
+  }
   &:hover {
     cursor: pointer;
+    .front:after {
+      opacity: 1;
+    }
+  }
+}
+.minified {
+  .clickable {
+    &:hover {
+      .front:after {
+        display: none;
+      }
+    }
   }
 }
 
@@ -226,7 +258,8 @@ export default {
 
   /* Mobile Styles */
   @media screen and (max-width: 700px) {
-    .session-time {
+    .session-time,
+    .session-type {
       display: none !important;
     }
 
@@ -325,7 +358,7 @@ export default {
 
   .session-timestamp-box {
     position: relative;
-    width: 277px;
+    width: 370px;
     margin-left: -13px;
     transform: rotate(-2deg);
     display: flex;
@@ -337,7 +370,7 @@ export default {
   }
   .top-part {
     min-height: 85px;
-    padding: 0 1em;
+    padding: 1em 1em 0;
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
@@ -372,13 +405,23 @@ export default {
   }
 }
 
-.session-time {
-  background: $white;
+.session-time,
+.session-type {
+  background: $green;
   display: inline-block;
   padding: 0.5em;
   margin-bottom: 1em;
   border-radius: 2px;
   max-height: 34px;
+  color: $white;
+
+  &[session-type='tech'] {
+    background: $red;
+  }
+}
+.session-time {
+  background: $white;
+  color: $black;
 }
 
 .session-speaker-wrapper {
@@ -542,6 +585,10 @@ export default {
 
   .session-time {
     padding: 0;
+  }
+  .session-type {
+    background: $white;
+    color: $black;
   }
 
   .speaker-description {
