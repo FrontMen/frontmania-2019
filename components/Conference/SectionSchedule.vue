@@ -39,6 +39,11 @@ export default {
     TimeStamp
   },
   data() {
+    const TYPES = {
+      TECH: 'TECH',
+      INSPIRATIONAL: 'INSPIRATIONAL'
+    }
+
     return {
       // generate array of timestamps based on start and end time
       timeStamps: timeArray('9:00', '18:00'),
@@ -49,6 +54,7 @@ export default {
           timeend: '10:00',
           tracknumber: 0,
           sessiontitle: 'Opening Show',
+          type: TYPES.INSPIRATIONAL,
           speakername: 'Seb Lee Delisle',
           sessiondescription: "'",
           speakerdescription:
@@ -60,6 +66,7 @@ export default {
           timeend: '11:00',
           tracknumber: 1,
           sessiontitle: 'ML Fairness',
+          type: TYPES.INSPIRATIONAL,
           speakername: 'Lee Boonstra',
           sessiondescription:
             'As an AI-first company, Google aims to develop the benefits of machine learning for everyone. Building inclusive machine learning algorithms is crucial to help make the world’s information universally useful and accessible. ML fairness is a critical consideration in machine learning development. This session will present a few lessons Google has learned through our products and research and how developers can apply these learnings in their own efforts. This session will enable developers to proactively think about fairness in product development.',
@@ -72,6 +79,7 @@ export default {
           timeend: '11:00',
           tracknumber: 2,
           sessiontitle: 'From code to pixels in a Blink',
+          type: TYPES.TECH,
           speakername: 'Prashant Palikhe',
           sessiondescription:
             "Let's take a journey through the browser's rendering pipeline. How the code that we write, HTML, CSS and JavaScript gets converted into pixels on the screen in a Blink of an eye. And how we can leverage that information to understand why industry best practices are the way they are and how we can write performant applications.",
@@ -84,6 +92,7 @@ export default {
           timeend: '12:00',
           tracknumber: 1,
           sessiontitle: 'WebAssembly: Binary in Plain English',
+          type: TYPES.TECH,
           speakername: 'Milica Mihajlija',
           sessiondescription:
             'Think about cases where you need to use software outside of the browser: video games, 3D rendering, music production and more. These things require a high degree of performance and that’s where WebAssembly steps in - a standardized compilation target for languages that are good at this kind of stuff. You do not write WebAssembly, you compile other languages, like C++ or Rust, to it. All major browsers support it and they are steadily working on adding new features.\nThis will be your gentle, illustrated guide into how WebAssembly works, why we need it and how you can benefit from it in your next project (even if you continue to work with JavaScript only). The future is here now and it looks fast and bright.',
@@ -96,6 +105,7 @@ export default {
           timeend: '12:00',
           tracknumber: 2,
           sessiontitle: 'What Can We Learn From Javascript Fatigue',
+          type: TYPES.INSPIRATIONAL,
           speakername: 'Lucas Fernandes da Costa',
           sessiondescription:
             'The whole reason for JS Fatigue is not the huge amount of modules we’ve got available, the real issue is the mindset we have when writing code. With an average of 447 new packages a day and lots of new technologies appearing it seems impossible to keep up with the insane velocity things happen in the JavaScript ecosystem. Explore the goals of software engineers, the UNIX philosophy and the history and causes of JavaScript fatigue. In this talk he creates a parallel between psychology, decision making and JavaScript.',
@@ -117,6 +127,7 @@ export default {
           timeend: '14:00',
           tracknumber: 1,
           sessiontitle: 'The Intranet of Things',
+          type: TYPES.INSPIRATIONAL,
           speakername: 'Sebastian Golasch',
           sessiondescription:
             'The dust around everybody’s fav buzzword from 2015 “IoT” has settled, but do solutions exist  that value our privacy & autonomy? No really.',
@@ -129,6 +140,7 @@ export default {
           timeend: '14:00',
           tracknumber: 2,
           sessiontitle: 'Puppeteer can automate that!',
+          type: TYPES.INSPIRATIONAL,
           speakername: 'Önder Ceylan',
           sessiondescription:
             "Puppeteer is a node library which provides a high-level API to control Chrome over the DevTools Protocol. When combined with the power of the web technologies, it can be used for automating image processing and batch file generation, creating automated visual testing with device emulation and so much more! We'll explore those capabilities of Puppeteer API with combination of DevTools protocol and cloud functions (FaaS) with a showcase of real life use cases demonstrated by live-examples. Finally, we’ll go through the existing puppeteer based SaaS solutions such as Checkly and Browslerless.",
@@ -141,6 +153,7 @@ export default {
           timeend: '15:00',
           tracknumber: 1,
           sessiontitle: 'JavaScript on the Desktop, Fast and Slow',
+          type: TYPES.INSPIRATIONAL,
           speakername: 'Felix Rieseberg',
           sessiondescription:
             'We need to talk about JavaScript performance on the desktop. Why does it seem like so many Electron apps consume more resources than their native counterparts? Felix explores the architectural tricks separating slow and fast Electron apps.',
@@ -153,6 +166,7 @@ export default {
           timeend: '15:00',
           tracknumber: 2,
           sessiontitle: 'Raising $24 million to Build an Open Source Skynet',
+          type: TYPES.INSPIRATIONAL,
           speakername: 'Tal Ater',
           sessiondescription:
             "An adventure story with drones, robots, autonomous boats, astronauts, and JavaScript… and what it means for tomorrow's autonomous cars.",
@@ -165,6 +179,7 @@ export default {
           timeend: '16:00',
           tracknumber: 1,
           sessiontitle: 'JavaScript on Microcontrollers',
+          type: TYPES.INSPIRATIONAL,
           speakername: 'Niels Leenheer',
           sessiondescription:
             'Building an IoT device feels out of reach to a lot of web developers. Most of us didn’t study electrical engineering, and never learned to solder. And programming a microcontroller is on a completely different level than building a website.\n\nBut that is just not true anymore. Nowadays microcontrollers have become powerful enough to run JavaScript. And that opens up IoT to all of us.',
@@ -177,6 +192,7 @@ export default {
           timeend: '16:00',
           tracknumber: 2,
           sessiontitle: 'Cloudflare Workers and the application with GraphQL',
+          type: TYPES.TECH,
           speakername: 'Albert Groothedde',
           sessiondescription:
             "GraphQL is a great technology. But... your backend developers might not want to convert just yet. That's where Cloudflare Workers can step in. In the talk we'll talk about example application leveraging Cloudflare workers using Graphql, seeing how to deal with the limitations of the workers and how to make use Cloudflare's cache.",
@@ -199,6 +215,7 @@ export default {
           timeend: '17:30',
           tracknumber: 1,
           sessiontitle: 'Node.js on mobile apps',
+          type: TYPES.TECH,
           speakername: 'Andre Staltz',
           sessiondescription:
             "If you're building a React Native app, you don't have access to Node APIs such as the filesystem, TCP, and others, and the alternative is to build support for these in Java (Android) and ObjectiveC (iOS) yourself. Recently, though, a new library exists called nodejs-mobile, which allows you to run a real Node.js process on mobile devices. In this talk, you can learn exactly how to do this, and when it is beneficial to your project.",
@@ -211,6 +228,7 @@ export default {
           timeend: '17:30',
           tracknumber: 2,
           sessiontitle: 'How to build Javascript-powered Smartglasses',
+          type: TYPES.INSPIRATIONAL,
           speakername: 'Ruben van der Leun',
           sessiondescription:
             'After having worked at an AR-focused company with the Vuzix, a Google Glass-like product, Ruben had a lot of fun with the hardware and really wanted to have one at home to play around with. Unfortunately, they are too expensive to get one just for hobby purposes. This session will cover what was required to build his own wearable, the pitfalls, the compromises, and the sheer joy of saying "Screw it, I\'ll build it myself!".',
@@ -223,6 +241,7 @@ export default {
           tracknumber: 0,
           sessiontitle:
             'There’s no talent (or luck or favoritism), just hard work - but is it worth it?',
+          type: TYPES.INSPIRATIONAL,
           speakername: 'Katerina Skroumpelou',
           sessiondescription:
             'If you’re sitting there wondering “How did they manage that?“, well, you now have the answer. In this talk we’ll go through all the clichés and myths concerning “life achievements”, including the term “life achievements”. In our culture, in our age and time, and in our industry, burnout and the impostor syndrome are real. But so are toxic environments that ask you to overwork yourself. And so are toxic people who like to think that those who “made it” (another cliché we’ll talk about) did so because they got lucky or favored.\n' +
