@@ -90,6 +90,12 @@ export default {
           subTitle: 'Programme Committee',
           image: 'dominique',
           color: 'pink'
+        },
+        {
+          name: 'Justus Romijn ',
+          subTitle: 'Web Worker 🛠',
+          image: 'justus',
+          color: 'green'
         }
       ]
     }
