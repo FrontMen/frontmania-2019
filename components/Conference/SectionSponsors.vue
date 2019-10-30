@@ -27,13 +27,30 @@
     <div class="flex items-center p-4 md:px-8 bg-app-white">
 
       <a
-      class="sm:w-1/3 w-auto text-center"
+      class="w-1/2 sm:w-1/3 w-auto text-center"
       href="https://www.thatrecruitmentcompany.com/"
       target="_blank"
       rel="noopener noreferrer"
       title="to That Recruitment Company website">
         <img class="that-recruitment-company" src="~/assets/images/sponsors/that-recruitment-company-logo.png" alt="That Recruitment Company sponsor">
       </a>
+      <a
+      class="w-1/2 sm:w-1/3 w-auto text-center"
+      href="https://passionatepeople.io/"
+      target="_blank"
+      rel="noopener noreferrer"
+      title="to Passionate People website">
+        <img src="~/assets/images/sponsors/passionate-people.png" alt="Passionate People sponsor">
+      </a>
+      <a
+      class="w-1/2 sm:w-1/3 w-auto text-center"
+      href="https://frontenddeveloperlove.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      title="to Frontend Developer Love website">
+        <img src="~/assets/images/sponsors/jslove.png" alt="Frontend Developer Love sponsor">
+      </a>
+
     </div>
 
     <div class="bg-app-yellow flex flex-wrap items-center p-4 sm:p-8">
