@@ -40,7 +40,7 @@
       target="_blank"
       rel="noopener noreferrer"
       title="to Passionate People website">
-        <img src="~/assets/images/sponsors/passionate-people.png" alt="Passionate People sponsor">
+        <img src="~/assets/images/sponsors/passionate-people.jpeg" alt="Passionate People sponsor">
       </a>
       <a
       class="w-1/2 sm:w-1/3 w-auto text-center"
