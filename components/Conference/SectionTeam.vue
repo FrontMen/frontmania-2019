@@ -44,10 +44,16 @@ export default {
           color: 'red'
         },
         {
+          name: 'Kim van der Ven ',
+          subTitle: 'RaboManiac',
+          image: 'kim',
+          color: 'pink'
+        },
+        {
           name: 'Prashant Palikhe',
           subTitle: 'An 🥑 in the making',
           image: 'prashant',
-          color: 'pink'
+          color: 'green'
         },
         {
           name: 'Janine Lourens',
