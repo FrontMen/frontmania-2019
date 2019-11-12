@@ -75,13 +75,13 @@ export default {
         },
         {
           name: 'Ronald Treur',
-          subTitle: 'Programme Committee',
+          subTitle: 'MC, dr. CSStrange 🔮',
           image: 'ronald',
           color: 'green'
         },
         {
           name: 'Anthony Moendir',
-          subTitle: 'Code Dancer 🐜',
+          subTitle: 'MC, Code Dancer 🐜',
           image: 'anthony',
           color: 'blue'
         },
