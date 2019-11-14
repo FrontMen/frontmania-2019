@@ -3,7 +3,7 @@
     <div class="flex flex-col justify-center text-white">
       <img src="~/assets/images/conference/venue.svg" alt="Venue">
         <p class="text-4xl w-full my-4">
-          CROESELAAN 15, 3521 CB UTRECHT
+          CROESELAAN 18, 3521 CB UTRECHT
         </p>
         <p class="w-full my-4">
           On the 15th of November Rabobank opens its doors to a stunning location in the middle of Utrecht were we will have the 2nd edition of FrontMania.
