@@ -4,8 +4,6 @@
 https://frontmania.nl/* https://frontmania.com/:splat 301!
 https://www.frontmania.nl/* https://frontmania.com/:splat 301!
 
-# redirect to conference page
-/ /conference 302
 
 # Optional: Redirect default Netlify subdomain to primary domain
 # https://dreamy-mcnulty-dc0b12.netlify.com/* https://frontmania.com/:splat 301!
