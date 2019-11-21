@@ -1,11 +1,11 @@
 {
-    "color": "#EA5297",
-    "linktext": "Meetup info",
-    "city": "Herentals, BE",
-    "date": "2019-10-31T18:00:00.037Z",
-    "address": "Zavelheide 15",
-    "title": "VueJS Meetup",
-    "type": "meetup",
-    "link": "https://www.meetup.com/en-AU/vuejs-belgium/events/265311038/",
-    "rotation": "1.5"
+  "color": "#EA5297",
+  "linktext": "Meetup info",
+  "city": "Utrecht",
+  "date": "2019-12-12T18:00:00.037Z",
+  "address": "Stationsplein 17",
+  "title": "Angular Meetup",
+  "type": "meetup",
+  "link": "https://www.meetup.com/FrontMania/events/266552746/",
+  "rotation": "1.5"
 }
